@@ -1,383 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Portfolio</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maaz Qureshi · Robotics & AI Research Engineer</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <div class="nav-content">
+      <div class="nav-logo">Maaz Qureshi</div>
+
+      <ul class="nav-links">
+        <li><a href="#profile">Home</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-toggle" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
       </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Maaz Qureshi</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#profile" onclick="toggleMenu()">Home</a>
+      <a href="#research" onclick="toggleMenu()">Research</a>
+      <a href="#experience" onclick="toggleMenu()">Experience</a>
+      <a href="#contact" onclick="toggleMenu()">Contact</a>
+    </div>
+  </nav>
+
+
+  <!-- HERO / PROFILE -->
+  <section id="profile" class="section hero">
+    <div class="hero-grid">
+      <div class="hero-image-container">
+        <img src="./assets/profile-pic.jpg" alt="Maaz Profile" class="hero-image" />
       </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.jpg" alt="Maaz profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Maaz Qureshi</h1>
-        <p class="section__text__p2">AI/ML-Robotics Software Development Engineer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume-example.pdf')"
-          >
+
+      <div class="hero-text">
+        <p class="hello">Hello, I'm</p>
+        <h1 class="hero-title">Maaz Qureshi</h1>
+        <p class="hero-subtitle">Robotics & AI Research Engineer</p>
+
+        <p class="hero-desc">
+          I am a robotics & AI research engineer with a passion for building intelligent systems 
+          that help people work safer, faster, and better. My work spans multi-robot SLAM, 
+          collaborative manipulation, mmWave radar automation, distributed 5G-connected robotics, 
+          and high-fidelity computational physics of biological swimmers.
+        </p>
+
+        <p class="hero-desc">
+          I have developed large-scale robotics systems integrating perception, communication, 
+          motion planning, and simulation across academic and industry labs — including 
+          emerging technologies in multi-agent autonomy and real-time robotic sensing.
+        </p>
+
+        <div class="hero-buttons">
+          <button class="btn dark" onclick="window.open('./assets/resume.pdf')">
             Download CV
           </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+
+          <button class="btn light" onclick="location.href='#contact'">
             Contact Info
           </button>
         </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/maaz-ahmad-046c/"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/Maaz-qureshi98"
-          />
+
+        <div class="social-icons">
+          <img src="./assets/linkedin.png" class="icon"
+            onclick="location.href='https://www.linkedin.com/in/maaz-ahmad-046c/'" />
+          <img src="./assets/github.png" class="icon"
+            onclick="location.href='https://github.com/Maaz-qureshi98'" />
+          <img src="./assets/google-scholar.png" class="icon"
+            onclick="location.href='https://scholar.google.ca/citations?user=hC7tswoAAAAJ&hl=en'" />
         </div>
       </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2+ years <br />Frontend Development</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-              reprehenderit et laborum, rem, dolore eum quod voluptate
-              exercitationem nobis, nihil esse debitis maxime facere minus sint
-              delectus velit in eos quo officiis explicabo deleniti dignissimos.
-              Eligendi illum libero dolorum cum laboriosam corrupti quidem,
-              reiciendis ea magnam? Nulla, impedit fuga!
-            </p>
-          </div>
-        </div>
+    </div>
+  </section>
+
+
+  <!-- RESEARCH SECTION -->
+  <section id="research" class="section">
+    <h2 class="section-title">Research</h2>
+
+    <div class="research-block">
+      <h3>Education</h3>
+      <ul class="edu-list">
+        <li><strong>MASc – Mechatronics Engineering</strong>, University of Waterloo</li>
+        <li><strong>BSc – Mechanical Engineering</strong>, FAST University</li>
+      </ul>
+    </div>
+
+    <div class="research-block">
+      <h3>Research Projects</h3>
+
+      <div class="research-item">
+        <h4>CRADMap – Distributed Multi-Robot SLAM & 5G Mapping</h4>
+        <p>
+          A volumetric mapping framework integrating ORB-SLAM3, COVINS, and 4D mmWave radar for 
+          distributed mapping using lightweight AMRs connected over 5G.
+        </p>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SASS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Material UI</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
+
+      <div class="research-item">
+        <h4>RAPTAR – Automated Radar Pattern Measurement</h4>
+        <p>
+          A collaborative robotics framework using a 7-DoF cobot to automate mmWave radar scanning 
+          with synchronized motion planning and data acquisition.
+        </p>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-        </div>
+
+      <div class="research-item">
+        <h4>Swarm Autobots – Y-Pattern Firefighting Robots</h4>
+        <p>
+          A master-slave swarm robotics architecture enabling triangular/Y-formation navigation 
+          and coordinated firefighting.
+        </p>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:examplemail@gmail.com">Example@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
-        </div>
+
+      <div class="research-item">
+        <h4>Hexacopter Swarm “Locust-One”</h4>
+        <p>
+          A UAV swarm project exploring decentralized formation control, flocking dynamics, 
+          and bio-inspired motion strategies.
+        </p>
       </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; Maaz. All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+
+    </div>
+  </section>
+
+
+  <!-- EXPERIENCE SECTION -->
+  <section id="experience" class="section">
+    <h2 class="section-title">Experience</h2>
+
+    <div class="experience-grid">
+
+      <div class="exp-card">
+        <h3>Cobionix Corporation</h3>
+        <p class="role">Robotics & Vision Engineer</p>
+        <p>
+          Developed high-fidelity simulation modules, robotic vision pipelines, and SLAM 
+          infrastructure for autonomous robotic systems.
+        </p>
+      </div>
+
+      <div class="exp-card">
+        <h3>Apple (Future Aspirational)</h3>
+        <p class="role">Special Projects Group</p>
+        <p>
+          Placeholder experience section for future robotics/AI role or internship.
+        </p>
+      </div>
+
+      <div class="exp-card">
+        <h3>Rogers Communications</h3>
+        <p class="role">5G Robotics Research Engineer</p>
+        <p>
+          Performed 5G NSA/SA latency and reliability experiments using AMRs for real-time SLAM.
+        </p>
+      </div>
+
+      <div class="exp-card">
+        <h3>Keysight Technologies</h3>
+        <p class="role">Robotics Researcher</p>
+        <p>
+          Designed automated radar-scanning trajectories, robotic control flows, and benchmarking 
+          systems for 3D antenna measurements.
+        </p>
+      </div>
+
+      <div class="exp-card">
+        <h3>University of Waterloo</h3>
+        <p class="role">Graduate Researcher</p>
+        <p>
+          Multi-robot SLAM, 5G robotics, collaborative manipulation, and CFD simulations.
+        </p>
+      </div>
+
+      <div class="exp-card">
+        <h3>Abyss</h3>
+        <p class="role">Robotics Engineer Intern</p>
+        <p>
+          Assisted in prototyping and testing robotic subsystems for field applications.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="section">
+    <h2 class="section-title">Contact</h2>
+
+    <div class="contact-container">
+
+      <div class="contact-item">
+        <img src="./assets/email.png" class="icon" />
+        <a href="mailto:Maazqureshi919@gmail.com">Maazqureshi919@gmail.com</a>
+      </div>
+
+      <div class="contact-item">
+        <img src="./assets/linkedin.png" class="icon" />
+        <a href="https://www.linkedin.com/in/maaz-ahmad-046c/">LinkedIn</a>
+      </div>
+
+      <div class="contact-item">
+        <img src="./assets/github.png" class="icon" />
+        <a href="https://github.com/Maaz-qureshi98">GitHub</a>
+      </div>
+
+      <div class="contact-item">
+        <img src="./assets/google-scholar.png" class="icon" />
+        <a href="https://scholar.google.ca/citations?user=hC7tswoAAAAJ&hl=en">Google Scholar</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Maaz Qureshi. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
-<!-- rebuild -->
