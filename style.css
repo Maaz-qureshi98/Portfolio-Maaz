@@ -395,7 +395,7 @@ section {
 /* PROJECT IMAGE */
 .project-thumb {
   width: 100%;
-  max-width: 260px;      /* increase to make images larger */
+  max-width: 360px;      /* increase to make images larger */
   border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 0 10px rgba(0,0,0,0.15);
