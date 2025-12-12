@@ -366,17 +366,18 @@ section {
 
 
 
+/* ========================================================= */
+/* ==================== PROJECTS LAYOUT ==================== */
+/* ========================================================= */
 
-/* MOBILE FIX — STACK PROJECTS */
-
-/* PROJECTS — Apple-Style Horizontal Layout */
-
+/* Container for all projects */
 .project-wrapper {
   width: 92%;
   margin: auto;
   margin-top: 2rem;
 }
 
+/* Each project row (image + text) */
 .project-box {
   display: flex;
   flex-direction: row;
@@ -385,22 +386,28 @@ section {
   align-items: flex-start;
 }
 
+/* LEFT SIDE: Image container */
 .project-left {
-  width: 22%;
+  width: 20%;            /* adjust to control how much space image gets */
+  margin-left: -20px;    /* pushes image slightly left */
 }
 
+/* PROJECT IMAGE */
 .project-thumb {
   width: 100%;
-  max-width: 180px;
+  max-width: 260px;      /* increase to make images larger */
   border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  margin-left: -10px;    /* fine adjustment for pushing image left */
 }
 
+/* RIGHT SIDE: Text + buttons */
 .project-right {
-  width: 78%;
+  width: 80%;
 }
 
+/* Title styling */
 .project-title {
   font-weight: 600;
   font-size: 1.35rem;
@@ -408,27 +415,52 @@ section {
   margin-bottom: 0.4rem;
 }
 
+/* Small subtitle text */
 .project-sub {
   font-size: 0.9rem;
   color: #666;
 }
 
+/* Description paragraph */
 .project-desc {
   color: rgb(70, 70, 70);
   line-height: 1.55;
   margin-bottom: 1rem;
 }
 
+/* Button row styling */
 .project-btn-row {
   display: flex;
   gap: 1rem;
 }
 
+/* Horizontal line between projects */
 .project-wrapper hr {
   border: none;
   border-bottom: 1px solid rgba(0,0,0,0.16);
   margin: 1.5rem 0;
 }
+
+/* ========================================================= */
+/* ===================== MOBILE VERSION ===================== */
+/* ========================================================= */
+
+@media (max-width: 900px) {
+  .project-box {
+    flex-direction: column;  /* stacks image above text */
+    text-align: center;
+  }
+  .project-left, .project-right {
+    width: 100%;
+  }
+  .project-thumb {
+    margin: auto;            /* center image on small screens */
+  }
+}
+
+
+
+
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 900px) {
