@@ -450,86 +450,192 @@
         class="icon arrow"
         onclick="location.href='./#projects'"
       />
-    </section>
+
+
+
+
+
+
+
+
+
+
     <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Maaz-qureshi98'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Maaz-qureshi98'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
+  <p class="section__text__p1">Browse My Recent</p>
+  <h1 class="title">Projects</h1>
+
+  <div class="projects-wrapper">
+
+    <!-- CRADMap -->
+    <div class="proj-row">
+      <div class="proj-left">
+        <img src="./assets/cradmap.png" class="proj-img" />
+      </div>
+
+      <div class="proj-right">
+        <h2 class="proj-title">Advanced Volumetric Mapping (SLAM) with 5G-Connected Multi-Robots & 4D Radar</h2>
+        <h3 class="proj-sub">MASc Research — UW RoboHub & WSDL Labs<br/>
+            Supervisor: Dr. William Melek & Dr. George Shaker<br/>
+            Industry Partner: Rogers Communications
+        </h3>
+        <p class="proj-desc">
+          Developed a distributed SLAM system combining RGB-D sensing, 4D mmWave radar,
+          and 5G offloading for large-scale factory and warehouse mapping. Enables mapping
+          through occlusions, detection of hidden structures, and real-time multi-robot
+          collaboration using edge compute offload.
+        </p>
+
+        <div class="proj-links">
+          <a href="http://surl.li/xgfpxd" target="_blank" class="proj-link">GitHub Repository</a>
+          <a href="#" target="_blank" class="proj-link">View Project Video</a>
         </div>
       </div>
+    </div>
+
+    <hr/>
+
+    <!-- RAPTAR / Cobots -->
+    <div class="proj-row">
+      <div class="proj-left">
+        <img src="./assets/cobot.png" class="proj-img" />
+      </div>
+
+      <div class="proj-right">
+        <h2 class="proj-title">CoBots — Panda Franka Emika Motion Planning for Radar Measurement</h2>
+        <h3 class="proj-sub">Industry Partner: Keysight Technologies</h3>
+        <p class="proj-desc">
+          Developed motion-planning algorithms using OMPL RRT-Connect integrated with
+          quaternion-based kinematics for precise hemispherical radar measurements.
+          Includes automated scanning, safety constraints, and real-world deployment.
+        </p>
+
+        <div class="proj-links">
+          <a href="#" target="_blank" class="proj-link">View Project Video</a>
+        </div>
+      </div>
+    </div>
+
+    <hr/>
+
+    <!-- Humanoid Robots -->
+    <div class="proj-row">
+      <div class="proj-left">
+        <img src="./assets/nao.png" class="proj-img" />
+      </div>
+
+      <div class="proj-right">
+        <h2 class="proj-title">Humanoid Robots — Human-Robot Interaction with NAO</h2>
+        <h3 class="proj-sub">LLM-based gesture & task communication</h3>
+        <p class="proj-desc">
+          Developed a non-verbal communication & LLM-driven interaction framework enabling
+          NAO to collaborate with humans during meal-preparation tasks. Integrated gesture
+          recognition and autonomous task execution (with ethics approval).
+        </p>
+
+        <div class="proj-links">
+          <a href="#" target="_blank" class="proj-link">View Research Document</a>
+        </div>
+      </div>
+    </div>
+
+    <hr/>
+
+    <!-- Swarm Robotics -->
+    <div class="proj-row">
+      <div class="proj-left">
+        <img src="./assets/swarm.png" class="proj-img" />
+      </div>
+
+      <div class="proj-right">
+        <h2 class="proj-title">Swarm Robotics — Multi-Robot Coordination System</h2>
+        <h3 class="proj-sub">BASc Thesis Research</h3>
+        <p class="proj-desc">
+          Designed and implemented a swarm system for formation control and coordinated
+          navigation using 4 ground robots communicating via Bluetooth. Developed custom
+          behavior-tree-based algorithms for fire-extinguishing missions in an arena.
+        </p>
+
+        <div class="proj-links">
+          <a href="#" target="_blank" class="proj-link">View Project Video</a>
+        </div>
+      </div>
+    </div>
+
+    <hr/>
+
+    <!-- Underwater DAM Inspection -->
+    <div class="proj-row">
+      <div class="proj-left">
+        <img src="./assets/dam1.png" class="proj-img" />
+      </div>
+
+      <div class="proj-right">
+        <h2 class="proj-title">Underwater Digital-Twin DAM Inspection Using ROV/AUV</h2>
+        <h3 class="proj-sub">Collaboration: Hibbard Inshore (USA) & Saab Sabertooth</h3>
+        <p class="proj-desc">
+          Conducted one-year digital-twin inspection of the NJHEP dam using multi-beam sonar,
+          profiling sonar, and monochrome camera on ROVs/AUVs over 18 km of tethered operation —
+          the largest inspection of its kind in South Asia.
+        </p>
+
+        <div class="proj-links">
+          <a href="#" target="_blank" class="proj-link">View Documents</a>
+        </div>
+      </div>
+    </div>
+
+    <hr/>
+
+    <!-- Canal Inspection -->
+    <div class="proj-row">
+      <div class="proj-left">
+        <img src="./assets/dam2.png" class="proj-img" />
+      </div>
+
+      <div class="proj-right">
+        <h2 class="proj-title">Canal Crack-Propagation Inspection Using ROV + Sonar</h2>
+        <h3 class="proj-sub">Field Robotics Operations</h3>
+        <p class="proj-desc">
+          Integrated Oculus 750d sonar on a custom ROV frame and performed underwater
+          crack-propagation analysis at 9m depth and 2.3 m/s water velocity.
+        </p>
+
+        <div class="proj-links">
+          <a href="#" target="_blank" class="proj-link">View Highlights</a>
+        </div>
+      </div>
+    </div>
+
+    <hr/>
+
+    <!-- Healthcare Robot -->
+    <div class="proj-row">
+      <div class="proj-left">
+        <img src="./assets/healthbot.png" class="proj-img" />
+      </div>
+
+      <div class="proj-right">
+        <h2 class="proj-title">Autonomous Pill-Dispensing Healthcare Robot (COVID-19)</h2>
+        <h3 class="proj-sub">Deep Learning + RFID navigation</h3>
+        <p class="proj-desc">
+          Designed an autonomous robot integrating facial recognition, RFID-based path tracking,
+          and multi-pill dispensing for safe patient-care workflows during COVID-19.
+        </p>
+
+        <div class="proj-links">
+          <a href="#" target="_blank" class="proj-link">View Project Video</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
       <img
         src="./assets/arrow.png"
         alt="Arrow icon"
