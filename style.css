@@ -369,21 +369,81 @@ section {
 
 /* MOBILE FIX — STACK PROJECTS */
 
+/* PROJECTS — Apple-Style Horizontal Layout */
+
+.project-wrapper {
+  width: 92%;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.project-box {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  padding: 2rem 0;
+  align-items: flex-start;
+}
+
+.project-left {
+  width: 22%;
+}
+
+.project-thumb {
+  width: 100%;
+  max-width: 180px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+.project-right {
+  width: 78%;
+}
+
+.project-title {
+  font-weight: 600;
+  font-size: 1.35rem;
+  color: black;
+  margin-bottom: 0.4rem;
+}
+
+.project-sub {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.project-desc {
+  color: rgb(70, 70, 70);
+  line-height: 1.55;
+  margin-bottom: 1rem;
+}
+
+.project-btn-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-wrapper hr {
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0,0.16);
+  margin: 1.5rem 0;
+}
+
+/* MOBILE RESPONSIVE */
 @media (max-width: 900px) {
-  .proj-row {
+  .project-box {
     flex-direction: column;
     text-align: center;
   }
-
-  .proj-left, .proj-right {
+  .project-left, .project-right {
     width: 100%;
   }
-
-  .proj-img {
-    max-width: 300px;
-    margin: 0 auto;
+  .project-thumb {
+    margin: auto;
   }
 }
+
 
 /* CONTACT */
 

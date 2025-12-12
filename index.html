@@ -445,178 +445,182 @@
 
 
 
-    <section id="projects">
-  <p class="section__text__p1">Selected Research</p>
+  <section id="projects">
+  <p class="section__text__p1">Browse My Recent</p>
   <h1 class="title">Projects</h1>
 
-  <div class="projects-wrapper">
+  <div class="project-wrapper">
 
-    <!-- CRADMap -->
-    <div class="proj-row">
-      <div class="proj-left">
-        <img src="./assets/project1.jpg" class="proj-img" />
+    <!-- PROJECT 1 -->
+    <div class="project-box">
+      <div class="project-left">
+        <img src="./assets/project1.jpg" class="project-thumb" alt="CRADMap Project">
       </div>
 
-      <div class="proj-right">
-        <h2 class="proj-title">CRADMap: Applied Distributed Volumetric Mapping with 5G-Connected Multi-Robots and 4D Radar Perception</h2>
-        <h3 class="proj-sub">MASc Research — UW RoboHub & WSDL Labs<br/>
-            Supervisor: Dr. William Melek & Dr. George Shaker<br/>
-            Industry Partner: Rogers Communications Canada Inc
-        </h3>
-        <p class="proj-desc">
-          Developed a distributed SLAM system combining RGB-D sensing, 4D mmWave radar,
-          and 5G offloading for large-scale factory and warehouse mapping. Enables mapping
-          through occlusions, detection of hidden structures, and real-time multi-robot
-          collaboration using edge compute offload.
+      <div class="project-right">
+        <p class="project-title">
+          CRADMap: Applied Distributed Volumetric Mapping with 5G-Connected Multi-Robots and 4D Radar Perception
         </p>
 
-        <div class="proj-links">
-          <a href="https://github.com/Maaz-qureshi98/CRADMap-Beyond-the-Visible" target="_blank" class="proj-link">GitHub Repository</a>
-          <a href="https://www.youtube.com/watch?v=eTLxCY2rRMA" target="_blank" class="proj-link">View Project Video</a>
+        <p class="project-desc">
+          Developed a full-scale SLAM-mapping pipeline integrating ORB-SLAM3, TSDF-Octree fusion,
+          4D mmWave radar perception, and distributed 5G computation for real-time multi-robot mapping
+          under occlusions and degraded visibility.
+        </p>
+
+        <div class="project-btn-row">
+          <button class="btn btn-color-2 project-btn" onclick="location.href='https://www.youtube.com/watch?v=eTLxCY2rRMA'">Video</button>
+          <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Maaz-qureshi98/CRADMap-Beyond-the-Visible'">GitHub</button>
+          <button class="btn btn-color-2 project-btn" onclick="location.href='https://arxiv.org/pdf/2503.00262'">Publication</button>
         </div>
       </div>
     </div>
 
-    <hr/>
+    <hr>
 
-    <!-- RAPTAR / Cobots -->
-    <div class="proj-row">
-      <div class="proj-left">
-        <img src="./assets/project2.jpg" class="proj-img" />
+    <!-- PROJECT 2 -->
+    <div class="project-box">
+      <div class="project-left">
+        <img src="./assets/project2.jpg" class="project-thumb" alt="RAPTAR Project">
       </div>
 
-      <div class="proj-right">
-        <h2 class="proj-title">CoBots — Panda Franka Emika Motion Planning for Radar Measurement</h2>
-        <h3 class="proj-sub">Industry Partner: Keysight Technologies</h3>
-        <p class="proj-desc">
-          Developed motion-planning algorithms using OMPL RRT-Connect integrated with
-          quaternion-based kinematics for precise hemispherical radar measurements.
-          Includes automated scanning, safety constraints, and real-world deployment.
+      <div class="project-right">
+        <p class="project-title">
+          RAPTAR: Radar Radiation Pattern Acquisition through Automated Collaborative Robotics
         </p>
 
-        <div class="proj-links">
-          <a href="#" target="_blank" class="https://github.com/Maaz-qureshi98/RAPTAR-Motion-Planning?tab=readme-ov-file">View Project Video</a>
-           <a href="https://github.com/Maaz-qureshi98/RAPTAR-Motion-Planning?tab=readme-ov-file" target="_blank" class="proj-link">GitHub Repository</a>
-         
+        <p class="project-desc">
+          Designed a collaborative-robot measurement system using OMPL RRT-Connect planners and
+          quaternion kinematics for mmWave antenna scanning, achieving highly repeatable,
+          automated 3D radiation pattern acquisition.
+        </p>
+
+        <div class="project-btn-row">
+          <button class="btn btn-color-2 project-btn" onclick="location.href='https://www.youtube.com/watch?v=fgeb6k_P9mg'">Video</button>
+          <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Maaz-qureshi98/RAPTAR-Motion-Planning'">GitHub</button>
+          <button class="btn btn-color-2 project-btn" onclick="location.href='https://arxiv.org/pdf/2507.16988'">Preprint</button>
         </div>
       </div>
     </div>
 
-    <hr/>
+    <hr>
 
-    <!-- Humanoid Robots -->
-    <div class="proj-row">
-      <div class="proj-left">
-        <img src="./assets/project3.png" class="proj-img" />
+    <!-- PROJECT 3 -->
+    <div class="project-box">
+      <div class="project-left">
+        <img src="./assets/project3.jpg" class="project-thumb" alt="Humanoid HRI Project">
       </div>
 
-      <div class="proj-right">
-        <h2 class="proj-title">Humanoid Robots — Human-Robot Interaction with NAO</h2>
-        <h3 class="proj-sub">LLM-based gesture & task communication</h3>
-        <p class="proj-desc">
-          Developed a non-verbal communication & LLM-driven interaction framework enabling
-          NAO to collaborate with humans during meal-preparation tasks. Integrated gesture
-          recognition and autonomous task execution (with ethics approval).
+      <div class="project-right">
+        <p class="project-title">Humanoid Robotics: Non-Verbal Gesture Learning</p>
+
+        <p class="project-desc">
+          Integrated LLaMA-3 with real-time gesture and vision sensing for NAO robot control,
+          enabling non-verbal HRI using IMU-based motion interpretation and multimodal decision frameworks.
         </p>
 
-        <div class="proj-links">
-          <a href="https://drive.google.com/file/d/1IvIz7Xvnk-jjGcVKldO5CLgQ5YhUBckr/view" target="_blank" class="proj-link">View Research Document</a>
+        <div class="project-btn-row">
+          <button class="btn btn-color-2 project-btn" onclick="location.href='https://drive.google.com/file/d/1IvIz7Xvnk-jjGcVKldO5CLgQ5YhUBckr/view'">Preprint</button>
         </div>
       </div>
     </div>
 
-    <hr/>
+    <hr>
 
-    <!-- Swarm Robotics -->
-    <div class="proj-row">
-      <div class="proj-left">
-        <img src="./assets/project4.png" class="proj-img" />
+    <!-- PROJECT 4 -->
+    <div class="project-box">
+      <div class="project-left">
+        <img src="./assets/project4.png" class="project-thumb" alt="Swarm Autobots">
       </div>
 
-      <div class="proj-right">
-        <h2 class="proj-title">Swarm Robotics — Multi-Robot Coordination System</h2>
-        <h3 class="proj-sub">BASc Thesis Research</h3>
-        <p class="proj-desc">
-          Designed and implemented a swarm system for formation control and coordinated
-          navigation using 4 ground robots communicating via Bluetooth. Developed custom
-          behavior-tree-based algorithms for fire-extinguishing missions in an arena.
+      <div class="project-right">
+        <p class="project-title">
+          SWARM Autobots: Robust Synchronized Control for Multi-Robot Path-Planning
         </p>
 
-        <div class="proj-links">
-          <a href="https://www.youtube.com/watch?v=2UYPGOTPboM" target="_blank" class="proj-link">View Project Video</a>
+        <p class="project-desc">
+          Designed a synchronization framework for multi-robot UGV teams enabling robust formation control,
+          peer-to-peer communication, and real-time trajectory coordination in constrained indoor environments.
+        </p>
+
+        <div class="project-btn-row">
+          <button class="btn btn-color-2 project-btn" onclick="location.href='https://www.youtube.com/watch?v=2UYPGOTPboM'">Video</button>
         </div>
       </div>
     </div>
 
-    <hr/>
+    <hr>
 
-    <!-- Underwater DAM Inspection -->
-    <div class="proj-row">
-      <div class="proj-left">
-        <img src="./assets/project5.jpg" class="proj-img" />
+    <!-- PROJECT 5 -->
+    <div class="project-box">
+      <div class="project-left">
+        <img src="./assets/project5.jpg" class="project-thumb" alt="Underwater DAM Inspection">
       </div>
 
-      <div class="proj-right">
-        <h2 class="proj-title">Underwater Digital-Twin DAM Inspection Using ROV/AUV</h2>
-        <h3 class="proj-sub">Collaboration: Hibbard Inshore (USA) & Saab Sabertooth</h3>
-        <p class="proj-desc">
-          Conducted one-year digital-twin inspection of the NJHEP dam using multi-beam sonar,
-          profiling sonar, and monochrome camera on ROVs/AUVs over 18 km of tethered operation —
-          the largest inspection of its kind in South Asia.
+      <div class="project-right">
+        <p class="project-title">
+          Underwater Digital-Twin DAM Inspection Using ROV/AUV  
+          <span class="project-sub">(Hibbard Inshore USA & Saab Sabertooth)</span>
         </p>
 
-        <div class="proj-links">
-          <a href="#" target="_blank" class="proj-link">View Documents</a>
+        <p class="project-desc">
+          Conducted 18 km offshore structural inspection of NJHEP dam using multi-beam sonar,
+          profiling sonar, and monochrome vision — the largest underwater inspection project in South Asia.
+        </p>
+
+        <div class="project-btn-row">
+          <button class="btn btn-color-2 project-btn" onclick="location.href='https://drive.google.com/drive/folders/18bYmCwY1LIwICQbEdHR-Cqnino6fR8KQ'">Documents</button>
         </div>
       </div>
     </div>
 
-    <hr/>
+    <hr>
 
-    <!-- Canal Inspection -->
-    <div class="proj-row">
-      <div class="proj-left">
-        <img src="./assets/project6.jpg" class="proj-img" />
+    <!-- PROJECT 6 -->
+    <div class="project-box">
+      <div class="project-left">
+        <img src="./assets/project6.jpg" class="project-thumb" alt="Canal ROV Sonar Inspection">
       </div>
 
-      <div class="proj-right">
-        <h2 class="proj-title">Canal Crack-Propagation Inspection Using ROV + Sonar</h2>
-        <h3 class="proj-sub">Field Robotics Operations</h3>
-        <p class="proj-desc">
-          Integrated Oculus 750d sonar on a custom ROV frame and performed underwater
-          crack-propagation analysis at 9m depth and 2.3 m/s water velocity.
+      <div class="project-right">
+        <p class="project-title">Canal Crack-Propagation Inspection Using ROV + Sonar</p>
+
+        <p class="project-desc">
+          Integrated Oculus 750d sonar into a custom ROV for underwater crack diagnosis at 9 m depth,
+          analyzing bed erosion and propagation under 2.3 m/s water flow.
         </p>
 
-        <div class="proj-links">
-          <a href="#" target="_blank" class="proj-link">View Highlights</a>
+        <div class="project-btn-row">
+          <button class="btn btn-color-2 project-btn" onclick="location.href='https://drive.google.com/drive/folders/1DCBUf8P2L1ouxMgX6NgQNlcq-DcO5vRq'">Documents</button>
         </div>
       </div>
     </div>
 
-    <hr/>
+    <hr>
 
-    <!-- Healthcare Robot -->
-    <div class="proj-row">
-      <div class="proj-left">
-        <img src="./assets/project7.jpg" class="proj-img" />
+    <!-- PROJECT 7 -->
+    <div class="project-box">
+      <div class="project-left">
+        <img src="./assets/project7.jpg" class="project-thumb" alt="Pill Dispensing Robot">
       </div>
 
-      <div class="proj-right">
-        <h2 class="proj-title">Autonomous Pill-Dispensing Healthcare Robot (COVID-19)</h2>
-        <h3 class="proj-sub">Deep Learning + RFID navigation</h3>
-        <p class="proj-desc">
-          Designed an autonomous robot integrating facial recognition, RFID-based path tracking,
-          and multi-pill dispensing for safe patient-care workflows during COVID-19.
+      <div class="project-right">
+        <p class="project-title">Autonomous Pill-Dispensing Healthcare Robot (COVID-19)</p>
+
+        <p class="project-desc">
+          Built a deep-learning based facial recognition + RFID navigation robot capable of precise
+          multi-pill dispensing and autonomous path following for safe patient-care during COVID-19.
         </p>
 
-        <div class="proj-links">
-          <a href="#" target="_blank" class="proj-link">View Project Video</a>
+        <div class="project-btn-row">
+          <button class="btn btn-color-2 project-btn" onclick="location.href='https://drive.google.com/drive/folders/1-T06cVyxKgZP9MekK_Ysm3ULUgkmd1S9'">Video</button>
         </div>
       </div>
     </div>
 
   </div>
 </section>
+
 
 
 
