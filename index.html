@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Maaz | ProRobo</title>
+  <title>MQ | ProRobo</title>
 
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="mediaqueries.css" />
@@ -15,7 +15,7 @@
 
   <!-- ===================== NAVIGATION ===================== -->
   <nav id="desktop-nav" class="container">
-    <div class="logo">Portfolio</div>
+    <div class="logo">Maaz Qureshi</div>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
@@ -25,11 +25,12 @@
   </nav>
 
   <nav id="hamburger-nav" class="container">
-    <div class="logo">Maaz Qureshi</div>
+    <div class="logo">Portfolio</div>
     <div class="hamburger-menu">
       <button class="hamburger-icon" type="button" aria-label="Open menu" onclick="toggleMenu()">
         <span></span><span></span><span></span>
       </button>
+
       <div class="menu-links" id="menuLinks">
         <a href="#about" onclick="toggleMenu()">About</a>
         <a href="#experience" onclick="toggleMenu()">Experience</a>
@@ -56,25 +57,25 @@
         <h1 class="title">Maaz Qureshi</h1>
 
         <!-- Stronger title -->
-        <p class="section__text__p2"> Software Engineer (AI/ML, Robotics Perception-Autonomy)</p>
+        <p class="section__text__p2">Software Engineer (AI/ML, Robotics, Perception & Autonomy)</p>
 
         <!-- ===================== HERO TREE (CLICKABLE) ===================== -->
         <div class="logo-tree" aria-label="Career and education tree">
 
-          <!-- SVG lines: connect BOX BOUNDARIES (no dots) -->
+          <!-- SVG lines (kept your coordinates) -->
           <svg class="tree-lines" viewBox="0 0 720 260" preserveAspectRatio="none" aria-hidden="true">
-            <!-- TOP ROW connectors: between box edges (mid-height) -->
+            <!-- TOP ROW connectors -->
             <line x1="170" y1="43" x2="190" y2="43"></line>  <!-- Cobionix -> UW -->
             <line x1="350" y1="43" x2="370" y2="43"></line>  <!-- UW -> Abyss -->
             <line x1="530" y1="43" x2="550" y2="43"></line>  <!-- Abyss -> Bahria -->
 
-            <!-- UW down to junction (from UW bottom edge) -->
+            <!-- UW down to junction -->
             <line x1="270" y1="86" x2="270" y2="120"></line>
 
-            <!-- Junction horizontal to bottom nodes (touching their top centers via stubs) -->
+            <!-- Junction horizontal -->
             <line x1="180" y1="120" x2="540" y2="120"></line>
 
-            <!-- Stubs down to bottom boxes top boundary -->
+            <!-- Stubs down to bottom boxes -->
             <line x1="180" y1="120" x2="180" y2="140"></line> <!-- Apple -->
             <line x1="360" y1="120" x2="360" y2="140"></line> <!-- Keysight -->
             <line x1="540" y1="120" x2="540" y2="140"></line> <!-- Rogers -->
@@ -120,18 +121,21 @@
 
         <!-- Buttons -->
         <div class="btn-container">
-          <button class="btn btn-color-2" onclick="window.open('./assets/Resume_Maaz.pdf')">Download CV</button>
-          <button class="btn btn-color-1" onclick="location.href='#contact'">Contact Info</button>
+          <button class="btn btn-color-2" type="button" onclick="window.open('./assets/Resume_Maaz.pdf')">Download CV</button>
+          <button class="btn btn-color-1" type="button" onclick="location.href='#contact'">Contact Info</button>
         </div>
 
-        <!-- Social icons -->
+        <!-- Social icons (clean links) -->
         <div id="socials-container">
-          <img src="./assets/linkedin.png" class="icon" alt="LinkedIn"
-               onclick="location.href='https://www.linkedin.com/in/maaz-ahmad-046c/'" />
-          <img src="./assets/github.png" class="icon" alt="GitHub"
-               onclick="location.href='https://github.com/Maaz-qureshi98'" />
-          <img src="./assets/google-scholar.png" class="icon" alt="Google Scholar"
-               onclick="location.href='https://scholar.google.ca/citations?user=hC7tswoAAAAJ&hl=en'" />
+          <a href="https://www.linkedin.com/in/maaz-ahmad-046c/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <img src="./assets/linkedin.png" class="icon" alt="LinkedIn" />
+          </a>
+          <a href="https://github.com/Maaz-qureshi98" target="_blank" rel="noopener" aria-label="GitHub">
+            <img src="./assets/github.png" class="icon" alt="GitHub" />
+          </a>
+          <a href="https://scholar.google.ca/citations?user=hC7tswoAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">
+            <img src="./assets/google-scholar.png" class="icon" alt="Google Scholar" />
+          </a>
         </div>
       </div>
 
@@ -149,7 +153,7 @@
     <div class="about-layout">
       <div class="about-text">
         <p class="justify">
-          Maaz build intelligent software dev that combine robot perception, autonomy, and AI/ML software engineering.
+          I build intelligent software systems that combine robotic perception, autonomy, and AI/ML engineering.
           My work spans multi-robot SLAM and volumetric mapping, collaborative manipulation and motion planning,
           mmWave 4D radar + RGB-D perception, and connected robotics over 5G.
         </p>
@@ -163,7 +167,9 @@
         </p>
 
         <p class="justify">
-          Earlier in my journey, I developed a strong interest in swarm robotics, which led to a 3rd-place award for the Best Engineering Science. Later, I supervised a NUST University  team for the Aerotech IMechE (United Kingdom) 2022 competition, where we developed a hexacopter for a locust-swarm autonomy mission.
+          Earlier in my journey, I developed a strong interest in swarm robotics, earning 3rd place for the Best Engineering Science Final Year Project.
+          Later, I mentored a NUST (Islamabad) team for the Aerotech IMechE (UK) 2022 competition, where we developed a hexacopter concept
+          for a locust-swarm autonomy mission.
         </p>
       </div>
 
@@ -210,7 +216,6 @@
           <p class="edu-detail"><strong>CGPA:</strong> 3.49 / 4.00</p>
           <p class="edu-duration">Sept 2017 – Aug 2021</p>
           <div class="edu-btn-row">
-            <!-- Replace with your thesis link when ready -->
             <a class="mini-btn" href="BSC_THESIS_LINK_HERE" target="_blank" rel="noopener">Thesis</a>
             <a class="mini-btn" href="https://www.youtube.com/watch?v=2UYPGOTPboM" target="_blank" rel="noopener">Video</a>
           </div>
@@ -369,7 +374,6 @@
     <p class="section__text__p1">Browse My</p>
     <h1 class="title">Research</h1>
 
-    <!-- Google Scholar shortcut -->
     <div class="scholar-badge">
       <a href="https://scholar.google.ca/citations?user=hC7tswoAAAAJ&hl=en" target="_blank" rel="noopener">
         <img src="./assets/google-scholar.png" class="icon" alt="Google Scholar Profile" />
@@ -377,7 +381,6 @@
       <p>Google Scholar Profile</p>
     </div>
 
-    <!-- Filters -->
     <div class="filters">
       <button class="filter-btn active" data-filter="all">All</button>
       <button class="filter-btn" data-filter="robotics">Robotics</button>
@@ -387,7 +390,6 @@
 
     <div class="research-wrapper">
 
-      <!-- 1: CRADMap -->
       <div class="research-box" data-tags="robotics ai">
         <div class="research-media">
           <img src="./assets/project1.png" class="project-thumb-lg" alt="CRADMap Project" />
@@ -409,7 +411,6 @@
 
       <hr />
 
-      <!-- 2: RAPTAR -->
       <div class="research-box" data-tags="robotics ai">
         <div class="research-media">
           <img src="./assets/project2.png" class="project-thumb-lg" alt="RAPTAR Project" />
@@ -430,10 +431,9 @@
 
       <hr />
 
-      <!-- 3: NAO HRI -->
       <div class="research-box" data-tags="ai robotics">
         <div class="research-media">
-          <img src="./assets/project" class="project-thumb-lg" alt="Humanoid Robotics Project" />
+          <img src="./assets/project3.1.png" class="project-thumb-lg" alt="Humanoid Robotics Project" />
         </div>
         <div class="research-text">
           <h2 class="project-title">Humanoid Robotics: Non-Verbal Gesture Learning</h2>
@@ -449,7 +449,6 @@
 
       <hr />
 
-      <!-- 4: Swarm -->
       <div class="research-box" data-tags="robotics">
         <div class="research-media">
           <img src="./assets/project4.png" class="project-thumb-lg" alt="Swarm Autobots Project" />
@@ -468,7 +467,6 @@
 
       <hr />
 
-      <!-- 5: Dam inspection -->
       <div class="research-box" data-tags="field robotics">
         <div class="research-media">
           <img src="./assets/project5.jpg" class="project-thumb-lg" alt="DAM Inspection Project" />
@@ -487,7 +485,6 @@
 
       <hr />
 
-      <!-- 6: Canal -->
       <div class="research-box" data-tags="field robotics">
         <div class="research-media">
           <img src="./assets/project6.jpg" class="project-thumb-lg" alt="Canal Inspection Project" />
@@ -506,7 +503,6 @@
 
       <hr />
 
-      <!-- 7: Healthcare robot -->
       <div class="research-box" data-tags="ai robotics">
         <div class="research-media">
           <img src="./assets/project7.jpg" class="project-thumb-lg" alt="Healthcare Robot Project" />
