@@ -104,7 +104,7 @@ p { color: rgb(70,70,70); }
 }
 
 .title{
-  font-size: 3.2rem;
+  font-size: 2.6rem;
   line-height: 1.05;
 }
 
@@ -137,7 +137,7 @@ p { color: rgb(70,70,70); }
   max-width: 520px;
 }
 .hero-photo img{
-  width:100%;
+  width:80%;
   height:auto;
   display:block;
   object-fit: cover;
@@ -227,7 +227,7 @@ p { color: rgb(70,70,70); }
 .tree-node img{
   height: 28px;
   width:auto;
-  max-width: 85%;
+  max-width: 75%;
   object-fit: contain;
   display:block;
 }
