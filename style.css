@@ -137,7 +137,7 @@ p { color: rgb(70,70,70); }
   max-width: 520px;
 }
 .hero-photo img{
-  width:100%;
+  width:80%;
   height:auto;
   display:block;
   object-fit: cover;
@@ -151,8 +151,8 @@ p { color: rgb(70,70,70); }
   margin-top: 1.0rem;
 }
 .icon{
-  width: 34px;
-  height: 34px;
+  width: 30px;
+  height: 30px;
   cursor:pointer;
   object-fit: contain;
 }
