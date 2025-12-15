@@ -1,37 +1,26 @@
 function toggleMenu() {
-  const menuLinks = document.querySelector(".menu-links");
-  const hamburgerIcon = document.querySelector(".hamburger-icon");
-  menuLinks.classList.toggle("open");
-  hamburgerIcon.classList.toggle("open");
+  const menu = document.getElementById("menuLinks");
+  if (!menu) return;
+  menu.classList.toggle("open");
 }
 
 /* ===================== RESEARCH FILTERS ===================== */
-document.addEventListener("DOMContentLoaded", () => {
-  const buttons = document.querySelectorAll(".filter-btn");
-  const items = document.querySelectorAll(".research-item");
+const filterButtons = document.querySelectorAll(".filter-btn");
+const researchCards = document.querySelectorAll(".research-box");
 
-  function setActive(btn){
-    buttons.forEach(b => b.classList.remove("active"));
+filterButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    filterButtons.forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
-  }
 
-  function applyFilter(filter){
-    items.forEach(item => {
-      const tags = (item.dataset.tags || "").toLowerCase();
-      if (filter === "all") {
-        item.classList.remove("hidden");
-        return;
-      }
-      if (tags.includes(filter)) item.classList.remove("hidden");
-      else item.classList.add("hidden");
-    });
-  }
+    const filter = btn.dataset.filter;
 
-  buttons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const filter = btn.dataset.filter;
-      setActive(btn);
-      applyFilter(filter);
+    researchCards.forEach(card => {
+      const tags = (card.dataset.tags || "").split(" ");
+      const show = (filter === "all") || tags.includes(filter);
+
+      card.classList.toggle("hidden", !show);
     });
   });
+
 });
