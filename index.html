@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Maaz| ProRobo</title>
 
   <link rel="stylesheet" href="style.css" />
@@ -12,7 +11,6 @@
 </head>
 
 <body>
-
   <!-- ===================== NAVIGATION ===================== -->
   <nav id="desktop-nav" class="container">
     <div class="logo">Portfolio</div>
@@ -24,17 +22,18 @@
     </ul>
   </nav>
 
-  <nav id="hamburger-nav" class="container">
+  <nav id="hamburger-nav" class="container" aria-label="Mobile Navigation">
     <div class="logo">Maaz Qureshi</div>
     <div class="hamburger-menu">
-      <button class="hamburger-icon" type="button" aria-label="Open menu" onclick="toggleMenu()">
+      <button class="hamburger-icon" id="hamburgerBtn" type="button"
+              aria-label="Open menu" aria-expanded="false" aria-controls="menuLinks">
         <span></span><span></span><span></span>
       </button>
       <div class="menu-links" id="menuLinks">
-        <a href="#about" onclick="toggleMenu()">About</a>
-        <a href="#experience" onclick="toggleMenu()">Experience</a>
-        <a href="#research" onclick="toggleMenu()">Research</a>
-        <a href="#contact" onclick="toggleMenu()">Contact</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#research">Research</a>
+        <a href="#contact">Contact</a>
       </div>
     </div>
   </nav>
@@ -42,89 +41,73 @@
   <!-- ===================== PROFILE / HERO ===================== -->
   <section id="profile" class="container">
     <div class="hero-grid">
-
-      <!-- Left: portrait -->
       <div class="hero-left">
         <div class="hero-photo">
-          <img src="./assets/profile-pic.jpg" alt="Maaz Qureshi portrait" />
+          <img src="./assets/profile-pic.jpg" alt="Maaz Qureshi portrait" loading="lazy" />
         </div>
       </div>
 
-      <!-- Right: text + tree -->
       <div class="hero-right">
         <p class="section__text__p1">Hi, this is</p>
         <h1 class="title">Maaz Qureshi</h1>
-
-        <!-- Stronger title -->
         <p class="section__text__p2">Robotics Software Engineer (AI/ML, Perception & Autonomy)</p>
 
         <!-- ===================== HERO TREE (CLICKABLE) ===================== -->
         <div class="logo-tree" aria-label="Career and education tree">
-
-          <!-- SVG lines: connect BOX BOUNDARIES (no dots) -->
           <svg class="tree-lines" viewBox="0 0 720 260" preserveAspectRatio="none" aria-hidden="true">
-            <!-- TOP ROW connectors: between box edges (mid-height) -->
-            <line x1="170" y1="43" x2="190" y2="43"></line>  <!-- Cobionix -> UW -->
-            <line x1="350" y1="43" x2="370" y2="43"></line>  <!-- UW -> Abyss -->
-            <line x1="530" y1="43" x2="550" y2="43"></line>  <!-- Abyss -> Bahria -->
+            <line x1="170" y1="43" x2="190" y2="43"></line>
+            <line x1="350" y1="43" x2="370" y2="43"></line>
+            <line x1="530" y1="43" x2="550" y2="43"></line>
 
-            <!-- UW down to junction (from UW bottom edge) -->
             <line x1="270" y1="86" x2="270" y2="120"></line>
-
-            <!-- Junction horizontal to bottom nodes (touching their top centers via stubs) -->
             <line x1="180" y1="120" x2="540" y2="120"></line>
 
-            <!-- Stubs down to bottom boxes top boundary -->
-            <line x1="180" y1="120" x2="180" y2="140"></line> <!-- Apple -->
-            <line x1="360" y1="120" x2="360" y2="140"></line> <!-- Keysight -->
-            <line x1="540" y1="120" x2="540" y2="140"></line> <!-- Rogers -->
+            <line x1="180" y1="120" x2="180" y2="140"></line>
+            <line x1="360" y1="120" x2="360" y2="140"></line>
+            <line x1="540" y1="120" x2="540" y2="140"></line>
           </svg>
 
-          <!-- TOP ROW -->
           <a class="tree-node node-cobionix" href="https://www.cobionix.com/en/" target="_blank" rel="noopener">
-            <img src="./assets/cobionix.png" alt="Cobionix" />
+            <img src="./assets/cobionix.png" alt="Cobionix" loading="lazy" />
             <span>2025–Present</span>
           </a>
 
           <a class="tree-node node-uw" href="https://uwaterloo.ca/" target="_blank" rel="noopener">
-            <img src="./assets/uwaterloo.jpeg" alt="University of Waterloo" />
+            <img src="./assets/uwaterloo.jpeg" alt="University of Waterloo" loading="lazy" />
             <span>MASc (2024–2025)</span>
           </a>
 
           <a class="tree-node node-abyss" href="https://abysssolutions.co/" target="_blank" rel="noopener">
-            <img src="./assets/abyss.png" alt="Abyss Solutions" />
+            <img src="./assets/abyss.png" alt="Abyss Solutions" loading="lazy" />
             <span>2022–2023</span>
           </a>
 
           <a class="tree-node node-bahria" href="https://bahria.edu.pk/" target="_blank" rel="noopener">
-            <img src="./assets/bahria_university.jpeg" alt="Bahria University" />
+            <img src="./assets/bahria_university.jpeg" alt="Bahria University" loading="lazy" />
             <span>BSc (2017–2021)</span>
           </a>
 
-          <!-- BOTTOM ROW -->
           <a class="tree-node node-apple" href="https://www.apple.com/" target="_blank" rel="noopener">
-            <img src="./assets/apple.png" alt="Apple" />
+            <img src="./assets/apple.png" alt="Apple" loading="lazy" />
             <span>2024–2025</span>
           </a>
 
           <a class="tree-node node-keysight" href="https://www.keysight.com/us/en/home.html" target="_blank" rel="noopener">
-            <img src="./assets/keysight.png" alt="Keysight" />
+            <img src="./assets/keysight.png" alt="Keysight" loading="lazy" />
             <span>2024</span>
           </a>
 
           <a class="tree-node node-rogers" href="https://www.rogers.com/" target="_blank" rel="noopener">
-            <img src="./assets/rogers.png" alt="Rogers" />
+            <img src="./assets/rogers.png" alt="Rogers" loading="lazy" />
             <span>2024–2025</span>
           </a>
         </div>
 
-        <!-- Buttons -->
         <div class="btn-container">
           <button class="btn btn-color-2" onclick="window.open('./assets/Resume_Maaz.pdf')">Download CV</button>
           <button class="btn btn-color-1" onclick="location.href='#contact'">Contact Info</button>
         </div>
 
-        <!-- Social icons -->
         <div id="socials-container">
           <img src="./assets/linkedin.png" class="icon" alt="LinkedIn"
                onclick="location.href='https://www.linkedin.com/in/maaz-ahmad-046c/'" />
@@ -134,8 +117,10 @@
                onclick="location.href='https://scholar.google.ca/citations?user=hC7tswoAAAAJ&hl=en'" />
         </div>
       </div>
-
     </div>
+  </section>
+
+
   </section>
 
   <hr class="section-divider" />
