@@ -444,3 +444,137 @@ footer{
   text-align: center;
   color: rgba(0,0,0,0.60);
 }
+
+
+
+/* =========================================================
+   IMAGE + LAYOUT STABILITY FIX (PASTE AT END OF style.css)
+   ========================================================= */
+
+/* Global image safety */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- HERO LAYOUT STABILITY ---------- */
+#profile {
+  flex-wrap: wrap;              /* prevents layout “break” on smaller widths */
+  align-items: center;
+}
+
+.hero-pic {
+  flex: 0 0 420px;
+  width: 420px;
+  height: 420px;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.hero-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;            /* keeps face/photo nice */
+  object-position: center;
+}
+
+/* ---------- LOGO TREE: prevent huge logo images ---------- */
+.tree-node {
+  width: 150px;
+  height: 92px;
+  overflow: hidden;             /* stop any logo overflow */
+}
+
+.tree-node img {
+  height: 28px;                 /* fixed logo height */
+  width: auto;
+  max-width: 80%;
+  object-fit: contain;          /* no cropping for logos */
+}
+
+/* ---------- ABOUT LAYOUT: text left, image right, stable ---------- */
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(420px, 1fr) 340px;
+  gap: 2.2rem;
+  align-items: start;
+}
+
+.about-image {
+  justify-content: flex-end;
+}
+
+.about-pic {
+  width: 320px;
+  height: 320px;
+  border-radius: 18px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ---------- EDUCATION / EXPERIENCE LOGOS: keep contained ---------- */
+.edu-logo,
+.exp-logo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  background: #fff;
+}
+
+/* ---------- RESEARCH: text LEFT, image RIGHT, consistent thumbnail ---------- */
+.research-box {
+  display: grid;
+  grid-template-columns: 1fr minmax(320px, 380px); /* right column for image */
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.research-desc {
+  text-align: justify;
+}
+
+.research-media {
+  display: flex;
+  justify-content: flex-end;  /* push image to the right */
+}
+
+.research-media img {
+  width: clamp(320px, 30vw, 380px);  /* bigger but controlled */
+  aspect-ratio: 16 / 10;             /* consistent shape */
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;                  /* crop nicely */
+  object-position: center;
+  border: 1px solid rgba(0,0,0,0.10);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.07);
+}
+
+/* ---------- Mobile fixes ---------- */
+@media (max-width: 980px) {
+  .hero-pic {
+    width: 340px;
+    height: 340px;
+    flex: 0 0 340px;
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    justify-content: center;
+  }
+
+  .research-box {
+    grid-template-columns: 1fr;
+  }
+
+  .research-media {
+    justify-content: center;
+  }
+
+  .research-media img {
+    width: min(92vw, 420px);
+  }
+}
