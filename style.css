@@ -127,7 +127,7 @@ p { color: rgb(70,70,70); }
 .hero-grid{
   display:grid;
   grid-template-columns: 1.05fr 1fr;
-  gap: 2.2rem;
+  gap: 1.4rem;
   align-items: center;
 }
 
