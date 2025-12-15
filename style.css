@@ -17,7 +17,7 @@ a:hover { color: #555; }
 p { color: rgb(70,70,70); }
 
 .container{
-  width: min(1180px, 92%);
+  width: min(1180px, 96%);
   margin: 0 auto;
 }
 
