@@ -14,7 +14,7 @@
 
   <!-- ===================== NAVIGATION ===================== -->
   <nav id="desktop-nav">
-    <div class="logo">Maaz Qureshi</div>
+    <div class="logo">Portfolio</div>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
@@ -49,47 +49,62 @@
       <h1 class="title">Maaz Qureshi</h1>
       <p class="section__text__p2">AI/ML & Robotics Research Engineer</p>
 
-      <!-- ===================== CLICKABLE LOGO STRIP ===================== -->
-      <!-- FIXED: Each item is a single <a> (not a div + empty a). -->
-      <div class="logo-strip">
+     <!-- ===================== CLICKABLE LOGO MAP (TOP LAYER + UW TREE) ===================== -->
+<div class="logo-strip">
 
-        <a class="logo-chip" href="https://www.cobionix.com/en/" target="_blank" rel="noopener">
-          <img src="./assets/cobionix.png" alt="Cobionix" />
-          <span>2025–Present</span>
-        </a>
+  <!-- Top layer: Cobionix -->
+  <a class="logo-chip" href="https://www.cobionix.com/en/" target="_blank" rel="noopener">
+    <img src="./assets/cobionix.png" alt="Cobionix" />
+    <span>2025–Present</span>
+  </a>
 
-        <a class="logo-chip" href="https://www.apple.com/" target="_blank" rel="noopener">
+  <!-- Top layer: UWaterloo (HUB) + Tree below -->
+  <div class="logo-uw-group">
+
+    <!-- Hub logo (clickable) -->
+    <a class="logo-chip logo-chip--hub" href="https://uwaterloo.ca/" target="_blank" rel="noopener">
+      <img src="./assets/uwaterloo.jpeg" alt="University of Waterloo" />
+      <span>MASc (2024–2025)</span>
+    </a>
+
+    <!-- Tree connections -->
+    <div class="logo-uw-tree">
+      <div class="logo-uw-children">
+
+        <a class="logo-chip logo-chip--child" href="https://www.apple.com/" target="_blank" rel="noopener">
           <img src="./assets/apple.png" alt="Apple" />
           <span>2024–2025</span>
         </a>
 
-        <a class="logo-chip" href="https://www.keysight.com/us/en/home.html" target="_blank" rel="noopener">
+        <a class="logo-chip logo-chip--child" href="https://www.keysight.com/us/en/home.html" target="_blank" rel="noopener">
           <img src="./assets/keysight.png" alt="Keysight" />
           <span>2024</span>
         </a>
 
-        <a class="logo-chip" href="https://www.rogers.com/" target="_blank" rel="noopener">
+        <a class="logo-chip logo-chip--child" href="https://www.rogers.com/" target="_blank" rel="noopener">
           <img src="./assets/rogers.png" alt="Rogers" />
           <span>2024–2025</span>
         </a>
 
-        <a class="logo-chip" href="https://uwaterloo.ca/" target="_blank" rel="noopener">
-          <img src="./assets/uwaterloo.jpeg" alt="University of Waterloo" />
-          <span>MASc</span>
-        </a>
-
-        <a class="logo-chip" href="https://abysssolutions.co/" target="_blank" rel="noopener">
-          <img src="./assets/abyss.png" alt="Abyss Solutions" />
-          <span>2022–2023</span>
-        </a>
-
-        <!-- ✅ ADDED: Bahria University BSc after Abyss -->
-        <a class="logo-chip" href="https://bahria.edu.pk/" target="_blank" rel="noopener">
-          <img src="./assets/bahria_university.jpeg" alt="Bahria University" />
-          <span>BSc (2017–2021)</span>
-        </a>
-
       </div>
+    </div>
+
+  </div>
+
+  <!-- Top layer: Abyss -->
+  <a class="logo-chip" href="https://abysssolutions.co/" target="_blank" rel="noopener">
+    <img src="./assets/abyss.png" alt="Abyss Solutions" />
+    <span>2022–2023</span>
+  </a>
+
+  <!-- Top layer: Bahria BSc -->
+  <a class="logo-chip" href="https://bahria.edu.pk/" target="_blank" rel="noopener">
+    <img src="./assets/bahria_university.jpeg" alt="Bahria University" />
+    <span>BSc (2017–2021)</span>
+  </a>
+
+</div>
+
 
       <div class="btn-container">
         <button class="btn btn-color-2" onclick="window.open('./assets/Resume_Maaz.pdf')">
