@@ -1,368 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MQ-Maaz</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Portfolio</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    
-    <nav id="hamburger-nav">
-      <div class="logo">Maaz Qureshi</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.jpg" alt="Maaz profile picture" />
-      </div>
-      <div class="section__text">
-    
-        <p class="section__text__p1">Hi, this is</p>
-<h1 class="title">Maaz Qureshi</h1>
-<p class="section__text__p2">AI/ML & Robotics Research Engineer</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maaz Qureshi | AI & Robotics Research Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+</head>
 
+<body>
 
-<p class="hero-desc">
-  Maaz is mechatronics engineer M.A.Sc with a passion for building intelligent robots to work better. 
-  My research work spans software development of multi-robot SLAM autonomy, manipulator motion planning, mmWave 4D radar & RGB-D sensor fusion, 
-  distributed 5G-connected robotics, and computational intelligence: reinforcenment learning (RL/IL).
-</p>
+<!-- ===================== NAVIGATION ===================== -->
 
-</p>
+<nav id="desktop-nav">
+  <div class="logo">Maaz Qureshi</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/Resume_Maaz.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/maaz-ahmad-046c/"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/Maaz-qureshi98"
-          />
-        </div>
-      </div>
-    </section>
-  
-  
-  
-  
-   <section id="about"> 
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.jpg"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2+ years <br />Frontend Development</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-             
-  During my M.A.Sc (applied research) studies, I spent time at the University of Waterloo 
-  (with <a href="https://uwaterloo.ca/mechanical-mechatronics-engineering/profile/wmelek" target="_blank">Dr. William Melek</a> 
-  and <a href="https://uwaterloo.ca/electrical-computer-engineering/profile/gshaker" target="_blank">Dr. George Shaker</a>),  
-  APPLE Inc., UW Robohub, Keysight Technologies Inc., and Rogers Communications Canada Inc., 
-  where I worked on connected robotics technology.
-</p>
+<nav id="hamburger-nav">
+  <div class="logo">Maaz Qureshi</div>
+  <div class="hamburger-menu">
+    <div class="hamburger-icon" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="menu-links">
+      <li><a href="#about" onclick="toggleMenu()">About</a></li>
+      <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+      <li><a href="#research" onclick="toggleMenu()">Research</a></li>
+      <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+    </div>
+  </div>
+</nav>
 
-  Earlier in my life, I developed a passion for swarm robotics, which led to winning 3rd place  
-  in Best Engineering Science Final Year Project during my B.Sc. Later, I was selected to supervise  
-  a NUST University Islamabad team for the Aerotech IMECHE United Kingdom 2022 competition,  
-  developing a hexacopter for a locust-swarm autonomy mission.
-            </p>
-          </div>
-        </div>
-      </div>
+<!-- ===================== PROFILE ===================== -->
 
-      
-      <!-- ========================= EDUCATION DETAILS ========================= -->
+<section id="profile">
+  <div class="section__pic-container">
+    <img src="./assets/profile-pic.jpg" alt="Maaz Qureshi profile picture" />
+  </div>
 
-<!-- ========================= ACADEMIC BACKGROUND ========================= -->
-<h2 class="academic-heading">Academic Background</h2>
+  <div class="section__text">
+    <p class="section__text__p1">Hi, this is</p>
+    <h1 class="title">Maaz Qureshi</h1>
+    <p class="section__text__p2">AI/ML & Robotics Research Engineer</p>
 
-<div class="education-wrapper">
+    <p class="hero-desc">
+      M.A.Sc. Mechatronics engineer focused on intelligent robotic systems.
+      My work spans multi-robot SLAM, collaborative manipulation, mmWave radar perception,
+      distributed 5G robotics, and AI/ML-driven autonomy.
+    </p>
 
-  <!-- ========================= UNIVERSITY OF WATERLOO ========================= -->
-  <div class="edu-box">
-    <div class="edu-left">
-      <img src="./assets/uwaterloo.jpeg" class="edu-logo" alt="University of Waterloo Logo" />
+    <div class="btn-container">
+      <button class="btn btn-color-2" onclick="window.open('./assets/Resume_Maaz.pdf')">
+        Download CV
+      </button>
+      <button class="btn btn-color-1" onclick="location.href='#contact'">
+        Contact Info
+      </button>
     </div>
 
-    <div class="edu-right">
-      <h2 class="edu-title">University of Waterloo, Canada</h2>
-      <p class="edu-degree">Masters of Applied Sciences (MASc), Mechatronics Engineering</p>
+    <div id="socials-container">
+      <img src="./assets/linkedin.png" class="icon"
+        onclick="location.href='https://www.linkedin.com/in/maaz-ahmad-046c/'" />
+      <img src="./assets/github.png" class="icon"
+        onclick="location.href='https://github.com/Maaz-qureshi98'" />
+      <img src="./assets/google-scholar.png" class="icon"
+        onclick="location.href='https://scholar.google.ca/citations?user=hC7tswoAAAAJ&hl=en'" />
+    </div>
+  </div>
+</section>
 
-      <p class="edu-detail">
-        <strong>Thesis:</strong> Intelligent Multi-Robot Autonomy with Connected AMRs and Manipulators for SMART Factory(s)
-      </p>
-      <p class="edu-detail"><strong>CGPA:</strong> 93.5% (A+)</p>
-      <p class="edu-duration">Jan 2024 – August 2025</p>
+<!-- ===================== ABOUT ===================== -->
 
-      <!-- Academic Links -->
-      <div class="edu-btn-row">
-        <a href="https://uwspace.uwaterloo.ca/items/17af2309-7924-47ad-802d-10f313d2a378" target="_blank" class="edu-btn">Thesis</a>
-        <a href="https://www.youtube.com/watch?v=eTLxCY2rRMA" target="_blank" class="edu-btn">Video 1: Autonomy</a>
-        <a href="https://www.youtube.com/watch?v=fgeb6k_P9mg" target="_blank" class="edu-btn">Video 2: Motion Planning</a>
+<section id="about">
+  <p class="section__text__p1">Get To Know More</p>
+  <h1 class="title">About Me</h1>
+
+  <div class="section-container">
+    <div class="section__pic-container">
+      <img src="./assets/about-pic.jpg" class="about-pic" />
+    </div>
+
+    <div class="about-details-container">
+      <div class="text-container">
+        <p>
+          During my M.A.Sc. at the University of Waterloo, I worked with
+          <a href="https://uwaterloo.ca/mechanical-mechatronics-engineering/profile/wmelek" target="_blank">Dr. William Melek</a>
+          and
+          <a href="https://uwaterloo.ca/electrical-computer-engineering/profile/gshaker" target="_blank">Dr. George Shaker</a>,
+          collaborating with Apple, Rogers, Keysight, and UW RoboHub on connected robotics systems.
+        </p>
       </div>
     </div>
   </div>
 
-  <hr class="edu-divider">
+  <img src="./assets/arrow.png" class="icon arrow" onclick="location.href='#experience'" />
+</section>
 
-  <!-- ========================= BAHRIA UNIVERSITY ========================= -->
-  <div class="edu-box">
-    <div class="edu-left">
-      <img src="./assets/bahria_university.jpeg" class="edu-logo" alt="Bahria University Logo" />
-    </div>
+<!-- ===================== EXPERIENCE ===================== -->
 
-    <div class="edu-right">
-      <h2 class="edu-title">Bahria University</h2>
-      <p class="edu-degree">Bachelors of Applied Sciences (BASc), Electrical Engineering</p>
-
-      <p class="edu-detail">
-        <strong>Thesis:</strong> Swarm Robotics — Multi-Robot Path Planning
-      </p>
-      <p class="edu-detail"><strong>CGPA:</strong> 80.0% (A+)</p>
-      <p class="edu-duration">September 2017 – August 2021</p>
-
-      <!-- Academic Links -->
-      <div class="edu-btn-row">
-        <a href="BSC_THESIS_LINK_HERE" target="_blank" class="edu-btn">Thesis</a>
-        <a href="https://www.youtube.com/watch?v=2UYPGOTPboM&feature=youtu.be" target="_blank" class="edu-btn">Video</a>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-
-      
-
-
-
-
-
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-
-
-
-
-    </section>
-    <section id="experience">
-
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SASS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Material UI</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-  
-
-
-
-  
-      
-        <section id="experience">
+<section id="experience">
   <p class="section__text__p1">Explore My</p>
   <h1 class="title">Experience</h1>
 
   <div class="exp-wrapper">
 
-    <!-- EXPERIENCE 1 - COBIONIX -->
+    <!-- ===================== COBIONIX ===================== -->
     <div class="exp-box">
       <div class="exp-left">
-        <img src="./assets/cobionix.png" class="exp-logo" alt="Cobionix Logo">
+        <img src="./assets/cobionix.png" class="exp-logo" alt="Cobionix Corporation Logo">
         <p class="exp-date">Sept 2025 – Present</p>
         <p class="exp-location">Kitchener, Canada</p>
       </div>
@@ -372,41 +124,41 @@
         <p class="exp-company">Cobionix Corporation</p>
 
         <ul class="exp-desc">
-          <li>AI algorithm development for Jetson Orin real-time vision pipelines using ONNX.</li>
-          <li>Optimized TensorRT models with quantization and GPU profiling to meet latency budgets.</li>
-          <li>Designed adaptive firmware-style GPU/CPU monitoring loops for dynamic inference rates.</li>
+          <li>Developing AI algorithms for real-time computer vision pipelines on NVIDIA Jetson Orin using ONNX.</li>
+          <li>Optimizing TensorRT models with quantization and GPU profiling to meet strict edge latency and power budgets.</li>
+          <li>Implementing firmware-style GPU/CPU monitoring loops to adapt inference rates dynamically on-device.</li>
         </ul>
       </div>
     </div>
 
     <hr>
 
-    <!-- EXPERIENCE 2 - APPLE -->
+    <!-- ===================== APPLE ===================== -->
     <div class="exp-box">
       <div class="exp-left">
-        <img src="./assets/apple.png" class="exp-logo" alt="Apple Logo">
+        <img src="./assets/apple.png" class="exp-logo" alt="Apple Inc. Logo">
         <p class="exp-date">Jan 2024 – July 2025</p>
         <p class="exp-location">Waterloo, Canada</p>
       </div>
 
       <div class="exp-right">
         <p class="exp-role">Research Assistant — Software Engineering</p>
-        <p class="exp-company">Apple Inc. (NDA Project)</p>
+        <p class="exp-company">Apple Inc. (Confidential / NDA)</p>
 
         <ul class="exp-desc">
-          <li>Optimized SDR WiFi OTA pipeline in C++/Python on embedded Linux.</li>
-          <li>Profiling CPU/memory/I/O to identify low-level performance bottlenecks.</li>
-          <li>RF & Telemetry ML-based link tuning for stable throughput across OTA tests.</li>
+          <li>Optimized SDR Wi-Fi over-the-air data paths in C++/Python on embedded Linux systems.</li>
+          <li>Profiled CPU, memory, and I/O to identify performance bottlenecks and guide low-level optimizations.</li>
+          <li>Applied Python/ML analysis on RF and telemetry logs to tune link parameters for stable throughput.</li>
         </ul>
       </div>
     </div>
 
     <hr>
 
-    <!-- EXPERIENCE 3 - UW ROBOHUB -->
+    <!-- ===================== UW ROBOHUB ===================== -->
     <div class="exp-box">
       <div class="exp-left">
-        <img src="./assets/robohub.png" class="exp-logo" alt="UW Logo">
+        <img src="./assets/robohub.png" class="exp-logo" alt="University of Waterloo RoboHub Logo">
         <p class="exp-date">Jan 2024 – Sept 2025</p>
         <p class="exp-location">Waterloo, Canada</p>
       </div>
@@ -416,19 +168,19 @@
         <p class="exp-company">University of Waterloo — ROBOHUB</p>
 
         <ul class="exp-desc">
-          <li>Developed multi-robot SLAM achieving 85% performance improvement vs SOTA.</li>
-          <li>Radar + RGB-D fusion achieving 92% perception accuracy.</li>
-          <li>Implemented TSDF-Octree mapping with real-time GPU/CPU optimization.</li>
+          <li>Developed a multi-robot SLAM framework achieving 85% performance improvement over SOTA baselines.</li>
+          <li>Fused mmWave 4D radar with RGB-D sensing, achieving 92% perception accuracy in low-visibility environments.</li>
+          <li>Implemented TSDF-Octree volumetric mapping optimized for real-time GPU/CPU execution.</li>
         </ul>
       </div>
     </div>
 
     <hr>
 
-    <!-- EXPERIENCE 4 - KEYSIGHT -->
+    <!-- ===================== KEYSIGHT ===================== -->
     <div class="exp-box">
       <div class="exp-left">
-        <img src="./assets/keysight.png" class="exp-logo" alt="Keysight Logo">
+        <img src="./assets/keysight.png" class="exp-logo" alt="Keysight Technologies Logo">
         <p class="exp-date">Sept 2024 – Dec 2024</p>
         <p class="exp-location">Waterloo, Canada</p>
       </div>
@@ -438,19 +190,19 @@
         <p class="exp-company">Keysight Technologies</p>
 
         <ul class="exp-desc">
-          <li>Developed OMPL-based 7-DoF motion planning for the Franka Emika Panda.</li>
-          <li>ML-augmented RRT planners deployed with CI-ready benchmarking.</li>
-          <li>Sim-to-real validation with automated configuration pipelines.</li>
+          <li>Developed OMPL-based 7-DoF motion planning algorithms for the Franka Emika Panda robot.</li>
+          <li>Deployed ML-augmented RRT planners with CI-ready benchmarking across custom scenarios.</li>
+          <li>Validated sim-to-real deployment using automated configuration and hardware-in-the-loop testing.</li>
         </ul>
       </div>
     </div>
 
     <hr>
 
-    <!-- EXPERIENCE 5 - ROGERS -->
+    <!-- ===================== ROGERS ===================== -->
     <div class="exp-box">
       <div class="exp-left">
-        <img src="./assets/rogers.png" class="exp-logo" alt="Rogers Logo">
+        <img src="./assets/rogers.png" class="exp-logo" alt="Rogers Communications Logo">
         <p class="exp-date">Jan 2024 – Aug 2025</p>
         <p class="exp-location">Waterloo, Canada</p>
       </div>
@@ -460,21 +212,21 @@
         <p class="exp-company">Rogers Communications Canada</p>
 
         <ul class="exp-desc">
-          <li>Integrated 5G with SLAM on Jetson using optimized C++ low-latency stacks.</li>
-          <li>Built Python/ML models to predict congestion & tune network parameters.</li>
-          <li>Containerized ROS2 compute with real-time 28GHz channel throughput.</li>
+          <li>Integrated 5G networking with AI-SLAM pipelines on NVIDIA Jetson embedded platforms.</li>
+          <li>Developed Python/ML models to predict network congestion and tune wireless parameters.</li>
+          <li>Containerized ROS2 services using Docker for real-time edge compute over 28 GHz 5G channels.</li>
         </ul>
       </div>
     </div>
 
     <hr>
 
-    <!-- EXPERIENCE 6 - ABYSS -->
+    <!-- ===================== ABYSS ===================== -->
     <div class="exp-box">
       <div class="exp-left">
-        <img src="./assets/abyss.png" class="exp-logo" alt="Abyss Logo">
+        <img src="./assets/abyss.png" class="exp-logo" alt="Abyss Solutions Logo">
         <p class="exp-date">May 2022 – Dec 2023</p>
-        <p class="exp-location">Islamabad + Australia</p>
+        <p class="exp-location">Islamabad, Pakistan & Australia</p>
       </div>
 
       <div class="exp-right">
@@ -482,9 +234,9 @@
         <p class="exp-company">Abyss Solutions Inc.</p>
 
         <ul class="exp-desc">
-          <li>Built C++/TensorFlow sonar + camera CV pipelines for defect detection.</li>
-          <li>Optimized batch inference to handle massive offshore inspection datasets.</li>
-          <li>Led 10-engineer team processing 18,000+ assets for BP Clair Ridge.</li>
+          <li>Developed C++/TensorFlow computer-vision pipelines for sonar and camera-based offshore inspection.</li>
+          <li>Optimized large-scale batch inference pipelines under tight memory and runtime constraints.</li>
+          <li>Led a 10-engineer team processing 18,000+ assets for BP Clair Ridge, achieving 91% inspection accuracy.</li>
         </ul>
       </div>
     </div>
@@ -494,40 +246,28 @@
 
 
 
+<!-- ===================== RESEARCH ===================== -->
 
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
+<section id="research">
+  <p class="section__text__p1">Browse My</p>
+  <h1 class="title">Research</h1>
 
-
-
-
-
-
-
-
-
-
-<!-- ========================================================= -->
-<!-- ===================== PROJECTS SECTION =================== -->
-<!-- ========================================================= -->
-
-<section id="projects">
-  <p class="section__text__p1">Browse My Recent</p>
-  <h1 class="title">Projects</h1>
+  <!-- Google Scholar shortcut -->
+  <div style="text-align:center; margin-bottom:2rem;">
+    <a href="https://scholar.google.ca/citations?user=hC7tswoAAAAJ&hl=en" target="_blank">
+      <img src="./assets/google-scholar.png" class="icon" alt="Google Scholar Profile">
+    </a>
+    <p style="font-size:0.9rem;">Google Scholar Profile</p>
+  </div>
 
   <div class="project-wrapper">
 
-    <!-- ========================================================= -->
-    <!-- ======================== PROJECT 1 ======================== -->
-    <!-- ========================================================= -->
+    <!-- ===================== PROJECT 1 ===================== -->
     <div class="project-box">
       <div class="project-left">
-        <!-- Project image -->
-        <img src="./assets/project1.jpg" class="project-thumb" alt="CRADMap Project">
+        <img src="./assets/project1.jpg"
+             class="project-thumb"
+             alt="CRADMap multi-robot SLAM with 4D radar and 5G">
       </div>
 
       <div class="project-right">
@@ -536,28 +276,30 @@
         </p>
 
         <p class="project-desc">
-          Developed a full-scale SLAM-mapping pipeline integrating ORB-SLAM3, TSDF-Octree fusion,
-          4D mmWave radar perception, and distributed 5G computation for real-time multi-robot mapping
-          under occlusions and degraded visibility.
+          Developed a full-scale distributed SLAM pipeline integrating ORB-SLAM3, TSDF–Octree fusion,
+          4D mmWave radar perception, and 5G offloading for real-time multi-robot mapping under occlusions
+          and degraded visual conditions.
         </p>
 
-        <!-- Buttons (Video + GitHub + Publication) -->
         <div class="project-btn-row">
-          <button class="btn btn-color-2 project-btn" onclick="location.href='https://www.youtube.com/watch?v=eTLxCY2rRMA'">Video</button>
-          <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Maaz-qureshi98/CRADMap-Beyond-the-Visible'">GitHub</button>
-          <button class="btn btn-color-2 project-btn" onclick="location.href='https://arxiv.org/pdf/2503.00262'">Publication</button>
+          <button class="btn btn-color-2 project-btn"
+            onclick="location.href='https://www.youtube.com/watch?v=eTLxCY2rRMA'">Video</button>
+          <button class="btn btn-color-2 project-btn"
+            onclick="location.href='https://github.com/Maaz-qureshi98/CRADMap-Beyond-the-Visible'">GitHub</button>
+          <button class="btn btn-color-2 project-btn"
+            onclick="location.href='https://arxiv.org/pdf/2503.00262'">Preprint</button>
         </div>
       </div>
     </div>
 
     <hr>
 
-    <!-- ========================================================= -->
-    <!-- ======================== PROJECT 2 ======================== -->
-    <!-- ========================================================= -->
+    <!-- ===================== PROJECT 2 ===================== -->
     <div class="project-box">
       <div class="project-left">
-        <img src="./assets/project2.jpg" class="project-thumb" alt="RAPTAR Project">
+        <img src="./assets/project2.jpg"
+             class="project-thumb"
+             alt="RAPTAR radar radiation pattern measurement system">
       </div>
 
       <div class="project-right">
@@ -566,197 +308,193 @@
         </p>
 
         <p class="project-desc">
-          Designed a collaborative-robot measurement system using OMPL RRT-Connect planners and
-          quaternion kinematics for mmWave antenna scanning, achieving highly repeatable,
-          automated 3D radiation pattern acquisition.
+          Designed an automated collaborative-robot framework using OMPL RRT-Connect and quaternion
+          kinematics for high-precision mmWave antenna radiation pattern measurement in 3D space.
         </p>
 
         <div class="project-btn-row">
-          <button class="btn btn-color-2 project-btn" onclick="location.href='https://www.youtube.com/watch?v=fgeb6k_P9mg'">Video</button>
-          <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Maaz-qureshi98/RAPTAR-Motion-Planning'">GitHub</button>
-          <button class="btn btn-color-2 project-btn" onclick="location.href='https://arxiv.org/pdf/2507.16988'">Preprint</button>
+          <button class="btn btn-color-2 project-btn"
+            onclick="location.href='https://www.youtube.com/watch?v=fgeb6k_P9mg'">Video</button>
+          <button class="btn btn-color-2 project-btn"
+            onclick="location.href='https://github.com/Maaz-qureshi98/RAPTAR-Motion-Planning'">GitHub</button>
+          <button class="btn btn-color-2 project-btn"
+            onclick="location.href='https://arxiv.org/pdf/2507.16988'">Preprint</button>
         </div>
       </div>
     </div>
 
     <hr>
 
-    <!-- ========================================================= -->
-    <!-- ======================== PROJECT 3 ======================== -->
-    <!-- ========================================================= -->
+    <!-- ===================== PROJECT 3 ===================== -->
     <div class="project-box">
       <div class="project-left">
-        <img src="./assets/project3.jpg" class="project-thumb" alt="Humanoid Robotics Project">
-      </div>
-
-      <div class="project-right">
-        <p class="project-title">Humanoid Robotics: Non-Verbal Gesture Learning</p>
-
-        <p class="project-desc">
-          Integrated LLaMA-3 with real-time gesture and vision sensing for NAO robot control,
-          enabling non-verbal HRI via IMU-based motion interpretation and a multimodal decision pipeline.
-        </p>
-
-        <div class="project-btn-row">
-          <button class="btn btn-color-2 project-btn" onclick="location.href='https://drive.google.com/file/d/1IvIz7Xvnk-jjGcVKldO5CLgQ5YhUBckr/view'">Preprint</button>
-        </div>
-      </div>
-    </div>
-
-    <hr>
-
-    <!-- ========================================================= -->
-    <!-- ======================== PROJECT 4 ======================== -->
-    <!-- ========================================================= -->
-    <div class="project-box">
-      <div class="project-left">
-        <img src="./assets/project4.jpg" class="project-thumb" alt="Swarm Autobots">
+        <img src="./assets/project3.jpg"
+             class="project-thumb"
+             alt="Humanoid robot non-verbal gesture learning">
       </div>
 
       <div class="project-right">
         <p class="project-title">
-          SWARM Autobots: Robust Synchronized Control for Multi-Robot Path-Planning
+          Humanoid Robotics: Non-Verbal Gesture Learning
         </p>
 
         <p class="project-desc">
-          Designed a synchronization and formation-control framework for multi-robot UGV teams enabling
-          coordinated planning, wireless peer-to-peer communication, and real-time trajectory execution.
+          Integrated LLaMA-3 with vision and IMU-based gesture sensing for real-time multimodal
+          control of the NAO humanoid robot, enabling non-verbal human–robot interaction.
         </p>
 
         <div class="project-btn-row">
-          <button class="btn btn-color-2 project-btn" onclick="location.href='https://www.youtube.com/watch?v=2UYPGOTPboM'">Video</button>
+          <button class="btn btn-color-2 project-btn"
+            onclick="location.href='https://drive.google.com/file/d/1IvIz7Xvnk-jjGcVKldO5CLgQ5YhUBckr/view'">
+            Preprint
+          </button>
         </div>
       </div>
     </div>
 
     <hr>
 
-    <!-- ========================================================= -->
-    <!-- ======================== PROJECT 5 ======================== -->
-    <!-- ========================================================= -->
+    <!-- ===================== PROJECT 4 ===================== -->
     <div class="project-box">
       <div class="project-left">
-        <img src="./assets/project5.jpg" class="project-thumb" alt="DAM Inspection ROV/AUV">
+        <img src="./assets/project4.jpg"
+             class="project-thumb"
+             alt="Swarm Autobots multi-robot coordination">
       </div>
 
       <div class="project-right">
         <p class="project-title">
-          Underwater Digital-Twin DAM Inspection Using ROV/AUV  
-          <span class="project-sub">(Hibbard Inshore USA & Saab Sabertooth)</span>
+          SWARM Autobots: Robust Synchronized Control for Multi-Robot Path Planning
         </p>
 
         <p class="project-desc">
-          Completed an 18 km underwater inspection of NJHEP dam using multi-beam sonar and profiling sonar.
-          Produced a digital-twin reconstruction — the largest inspection operation in South Asia.
+          Developed synchronized control and formation algorithms for multi-robot UGV teams,
+          enabling coordinated navigation, wireless peer-to-peer communication, and real-time execution.
         </p>
 
         <div class="project-btn-row">
-          <button class="btn btn-color-2 project-btn" onclick="location.href='https://drive.google.com/drive/folders/18bYmCwY1LIwICQbEdHR-Cqnino6fR8KQ'">Documents</button>
+          <button class="btn btn-color-2 project-btn"
+            onclick="location.href='https://www.youtube.com/watch?v=2UYPGOTPboM'">Video</button>
         </div>
       </div>
     </div>
 
     <hr>
 
-    <!-- ========================================================= -->
-    <!-- ======================== PROJECT 6 ======================== -->
-    <!-- ========================================================= -->
+    <!-- ===================== PROJECT 5 ===================== -->
     <div class="project-box">
       <div class="project-left">
-        <img src="./assets/project6.jpg" class="project-thumb" alt="Canal Sonar ROV Inspection">
+        <img src="./assets/project5.jpg"
+             class="project-thumb"
+             alt="Underwater dam inspection using ROV and AUV">
       </div>
 
       <div class="project-right">
-        <p class="project-title">Canal Crack-Propagation Inspection Using ROV + Sonar</p>
+        <p class="project-title">
+          Underwater Digital-Twin DAM Inspection Using ROV/AUV
+          <span class="project-sub">(Hibbard Inshore, USA & Saab Sabertooth)</span>
+        </p>
 
         <p class="project-desc">
-          Integrated Oculus 750d sonar into a custom ROV for crack-propagation detection at 9 m depth,
-          performing underwater analysis under 2.3 m/s turbulent flow.
+          Conducted an 18 km underwater inspection of the NJHEP dam using multi-beam and profiling sonar,
+          producing a digital-twin reconstruction — the largest inspection of its kind in South Asia.
         </p>
 
         <div class="project-btn-row">
-          <button class="btn btn-color-2 project-btn" onclick="location.href='https://drive.google.com/drive/folders/1DCBUf8P2L1ouxMgX6NgQNlcq-DcO5vRq'">Documents</button>
+          <button class="btn btn-color-2 project-btn"
+            onclick="location.href='https://drive.google.com/drive/folders/18bYmCwY1LIwICQbEdHR-Cqnino6fR8KQ'">
+            Documents
+          </button>
         </div>
       </div>
     </div>
 
     <hr>
 
-    <!-- ========================================================= -->
-    <!-- ======================== PROJECT 7 ======================== -->
-    <!-- ========================================================= -->
+    <!-- ===================== PROJECT 6 ===================== -->
     <div class="project-box">
       <div class="project-left">
-        <img src="./assets/project7.jpg" class="project-thumb" alt="Healthcare Robot">
+        <img src="./assets/project6.jpg"
+             class="project-thumb"
+             alt="Canal crack inspection using sonar-equipped ROV">
       </div>
 
       <div class="project-right">
-        <p class="project-title">Autonomous Pill-Dispensing Healthcare Robot (COVID-19)</p>
+        <p class="project-title">
+          Canal Crack-Propagation Inspection Using ROV + Sonar
+        </p>
 
         <p class="project-desc">
-          Designed a facial-recognition + RFID navigation autonomous robot capable of multi-pill dispensing
-          for safe, contactless patient-care workflows during COVID-19.
+          Integrated Oculus 750d sonar on a custom ROV to analyze crack propagation at 9 m depth
+          under high-velocity flow (2.3 m/s) in canal infrastructure.
         </p>
 
         <div class="project-btn-row">
-          <button class="btn btn-color-2 project-btn" onclick="location.href='https://drive.google.com/drive/folders/1-T06cVyxKgZP9MekK_Ysm3ULUgkmd1S9'">Video</button>
+          <button class="btn btn-color-2 project-btn"
+            onclick="location.href='https://drive.google.com/drive/folders/1DCBUf8P2L1ouxMgX6NgQNlcq-DcO5vRq'">
+            Documents
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- ===================== PROJECT 7 ===================== -->
+    <div class="project-box">
+      <div class="project-left">
+        <img src="./assets/project7.jpg"
+             class="project-thumb"
+             alt="Autonomous healthcare robot for COVID-19">
+      </div>
+
+      <div class="project-right">
+        <p class="project-title">
+          Autonomous Pill-Dispensing Healthcare Robot (COVID-19)
+        </p>
+
+        <p class="project-desc">
+          Designed an autonomous healthcare robot combining facial recognition, RFID-based navigation,
+          and multi-pill dispensing to enable safe, contactless patient care during COVID-19.
+        </p>
+
+        <div class="project-btn-row">
+          <button class="btn btn-color-2 project-btn"
+            onclick="location.href='https://drive.google.com/drive/folders/1-T06cVyxKgZP9MekK_Ysm3ULUgkmd1S9'">
+            Video
+          </button>
         </div>
       </div>
     </div>
 
   </div>
+
+  <img src="./assets/arrow.png" class="icon arrow" onclick="location.href='#contact'" />
 </section>
 
 
+<!-- ===================== CONTACT ===================== -->
 
+<section id="contact">
+  <p class="section__text__p1">Get In Touch</p>
+  <h1 class="title">Contact Me</h1>
 
+  <div class="contact-info-upper-container">
+    <div class="contact-info-container">
+      <img src="./assets/email.png" class="icon contact-icon email-icon" />
+      <p><a href="mailto:m23qures@uwaterloo.ca">m23qures@uwaterloo.ca</a></p>
+    </div>
+    <div class="contact-info-container">
+      <img src="./assets/linkedin.png" class="icon contact-icon" />
+      <p><a href="https://www.linkedin.com/in/maaz-ahmad-046c/">LinkedIn</a></p>
+    </div>
+  </div>
+</section>
 
+<footer>
+  <p>© Maaz Qureshi — All Rights Reserved</p>
+</footer>
 
-
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:m23qures@uwaterloo.ca">m23qures@uwaterloo.ca</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/maaz-ahmad-046c/">LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; Maaz. All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+<script src="script.js"></script>
+</body>
 </html>
-<!-- rebuild -->
-
