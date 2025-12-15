@@ -37,7 +37,7 @@ p { color: rgb(70,70,70); }
 }
 
 .logo{
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: 600;
 }
 
@@ -106,12 +106,12 @@ p { color: rgb(70,70,70); }
 }
 
 .title{
-  font-size: 2.3rem;
+  font-size: 2.0rem;
   line-height: 1.08;
 }
 
 .section__text__p2{
-  font-size: 1.20rem;
+  font-size: 1.16rem;
   color: #444;
   margin-top: 0.8rem;
   margin-bottom: 1rem;
@@ -128,7 +128,7 @@ p { color: rgb(70,70,70); }
   display:grid;
   grid-template-columns: 1.05fr 1fr;
   gap: 0.1rem;
-  align-items: center;
+  align-items: right;
 }
 
 .hero-photo{
