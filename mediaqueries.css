@@ -1,103 +1,48 @@
-@media screen and (max-width: 1400px) {
-  #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
-  }
-  .about-containers {
-    flex-wrap: wrap;
-  }
-  #contact,
-  #projects {
-    height: fit-content;
-  }
+@media screen and (max-width: 1200px) {
+  section { margin: 0 4rem; }
+  nav { height: 12vh; }
 }
 
-@media screen and (max-width: 1200px) {
-  #desktop-nav {
-    display: none;
+@media screen and (max-width: 900px) {
+  #desktop-nav { display: none; }
+  #hamburger-nav { display: flex; justify-content: space-around; align-items: center; height: 12vh; }
+
+  #profile{
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 0;
   }
-  #hamburger-nav {
-    display: flex;
+
+  .section__pic-container{
+    width: 260px;
+    height: 260px;
   }
-  #experience,
-  .experience-details-container {
-    margin-top: 2rem;
+
+  .about-layout{
+    flex-direction: column;
   }
-  #profile,
-  .section-container {
-    display: block;
-  }
-  .arrow {
-    display: none;
-  }
-  section,
-  .section-container {
-    height: fit-content;
-  }
-  section {
-    margin: 0 5%;
-  }
-  .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
-  }
-  .about-containers {
-    margin-top: 0;
-  }
+
+  .about-image{ width: 100%; max-width: 420px; margin: 0 auto; }
+  .about-text{ width: 100%; }
+
+  .edu-box{ flex-direction: column; gap: 1rem; }
+  .edu-left{ width: 100%; text-align: center; }
+  .edu-logo{ margin: 0 auto; }
+
+  .exp-box{ flex-direction: column; }
+  .exp-left{ width: 100%; text-align: center; }
+
+  .research-box{ flex-direction: column; }
+  .research-media{ width: 100%; margin-left: 0; }
+  .project-thumb-lg{ max-width: 460px; }
 }
 
 @media screen and (max-width: 600px) {
-  #contact,
-  footer {
-    height: 40vh;
-  }
-  #profile {
-    height: 83vh;
-    margin-bottom: 0;
-  }
-  article {
-    font-size: 1rem;
-  }
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
-  }
-  .about-containers,
-  .contact-info-upper-container,
-  .btn-container {
-    flex-wrap: wrap;
-  }
-  .contact-info-container {
-    margin: 0;
-  }
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 1rem;
-  }
-  .experience-sub-title {
-    font-size: 1.25rem;
-  }
-  .logo {
-    font-size: 1.5rem;
-  }
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
-  }
-  .section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
-  }
-  .section__text__p2 {
-    font-size: 1.25rem;
-  }
-  .title {
-    font-size: 2rem;
-  }
-  .text-container {
-    text-align: justify;
-  }
+  section { margin: 0 1.2rem; }
+  .title { font-size: 2.1rem; }
+
+  .logo-strip { gap: 0.8rem; }
+  .logo-chip { min-width: 84px; }
+
+  .btn { width: 9rem; padding: 0.8rem 1rem; }
 }
