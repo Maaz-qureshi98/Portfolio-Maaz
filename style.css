@@ -17,7 +17,7 @@ a:hover { color: #555; }
 p { color: rgb(70,70,70); }
 
 .container{
-  width: min(180px, 96%);
+  width: min(1180px, 92%);
   margin: 0 auto;
 }
 
@@ -134,7 +134,7 @@ p { color: rgb(70,70,70); }
   overflow:hidden;
   box-shadow: 0 16px 42px rgba(0,0,0,0.10);
   border: 1px solid rgba(0,0,0,0.10);
-  max-width: 350px;
+  max-width: 450px;
 }
 .hero-photo img{
   width:100%;
