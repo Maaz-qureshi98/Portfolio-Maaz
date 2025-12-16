@@ -269,8 +269,11 @@ p { color: rgb(70,70,70); }
 }
 
 .academic-heading{
-  margin-top: 1.7rem;
-  font-size: 1.6rem;
+  margin-top: 1.0rem;
+  font-size: 0.7rem;
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+
+
 }
 
 .education-wrapper{ margin-top: 1rem; width: 100%; }
