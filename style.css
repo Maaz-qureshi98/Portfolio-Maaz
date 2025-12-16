@@ -270,7 +270,7 @@ p { color: rgb(70,70,70); }
 
 .academic-heading{
   margin-top: 1.0rem;
-  font-size: 0.8rem;
+  font-size: 1.0rem;
   border-bottom: 1px solid rgba(0,0,0,0.12);
 
 
@@ -299,9 +299,9 @@ p { color: rgb(70,70,70); }
 }
 
 .edu-title{ font-size: 1.0rem; margin-bottom: 0.2rem; }
-.edu-degree{ color:#444; margin-bottom: 0.4rem; }
-.edu-detail{ margin-bottom: 0.2rem; line-height: 1.55; }
-.edu-duration{ margin-top: 0.5rem; color:#666; }
+.edu-degree{ font-size: 0.80rem; color:#444; margin-bottom: 0.3rem; }
+.edu-detail{ font-size: 0.80rem; margin-bottom: 0.15rem; line-height: 1.35; }
+.edu-duration{ font-size: 0.80rem; margin-top: 0.35rem; color:#666; }
 
 .edu-btn-row{
   display:flex;
