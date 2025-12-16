@@ -270,7 +270,7 @@ p { color: rgb(70,70,70); }
 
 .academic-heading{
   margin-top: 1.0rem;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   border-bottom: 1px solid rgba(0,0,0,0.12);
 
 
@@ -298,7 +298,7 @@ p { color: rgb(70,70,70); }
   object-fit: contain;
 }
 
-.edu-title{ font-size: 1.25rem; margin-bottom: 0.2rem; }
+.edu-title{ font-size: 1.0rem; margin-bottom: 0.2rem; }
 .edu-degree{ color:#444; margin-bottom: 0.4rem; }
 .edu-detail{ margin-bottom: 0.2rem; line-height: 1.55; }
 .edu-duration{ margin-top: 0.5rem; color:#666; }
