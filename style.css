@@ -133,7 +133,7 @@ p { color: rgb(70,70,70); }
 
 /* Nudge the entire right hero column slightly left */
 .hero-right{
-  transform: translateX(-20px); /* try -10px, -15px, -25px */
+  transform: translateX(-50px); /* try -10px, -15px, -25px */
 }
 
 /* Optional: avoid weird shifts on small screens */
