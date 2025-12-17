@@ -141,7 +141,6 @@ p { color: rgb(70,70,70); }
   .hero-right{ transform: none; }
 }
 
-
 .hero-photo{
   border-radius: 18px;
   overflow:hidden;
@@ -194,10 +193,10 @@ p { color: rgb(70,70,70); }
 /* ===================== HERO TREE ===================== */
 .logo-tree{
   position: relative;
-  width: min(720px, 100%);
+  width: 720px;             /* ✅ fixed canvas so SVG + absolute nodes align */
+  max-width: 100%;          /* ✅ responsive on smaller screens */
   height: 240px;
-  margin: 0.1rem 0 0 auto;   /* ✅ pushes the tree to the right */
-  max-width: 100%;
+  margin: 0.1rem 0 0 auto;  /* ✅ pushes the tree to the right */
 }
 
 .tree-lines{
@@ -331,7 +330,6 @@ p { color: rgb(70,70,70); }
   color:#444;
   margin-bottom: 0.03rem;
   line-height: 1.25;
-
 }
 
 .edu-detail{
