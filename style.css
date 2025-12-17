@@ -318,7 +318,7 @@ p { color: rgb(70,70,70); }
 .edu-degree{
   font-size: 0.85rem;         /* readable */
   color:#444;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.03rem;
   line-height: 1.25;
 }
 
@@ -329,7 +329,7 @@ p { color: rgb(70,70,70); }
 }
 
 .edu-duration{
-  font-size: 0.65rem;
+  font-size: 0.85rem;
   margin-top: 0;              /* since it's now under logo */
   color:#666;
   text-align: center;
