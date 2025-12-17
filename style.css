@@ -316,20 +316,20 @@ p { color: rgb(70,70,70); }
 }
 
 .edu-degree{
-  font-size: 0.55rem;         /* readable */
+  font-size: 0.85rem;         /* readable */
   color:#444;
   margin-bottom: 0.25rem;
   line-height: 1.25;
 }
 
 .edu-detail{
-  font-size: 0.55rem;         /* readable */
-  margin-bottom: 0.06rem;     /* tight spacing between Thesis/CGPA */
+  font-size: 0.85rem;         /* readable */
+  margin-bottom: 0.03rem;     /* tight spacing between Thesis/CGPA */
   line-height: 1.25;
 }
 
 .edu-duration{
-  font-size: 0.55rem;
+  font-size: 0.65rem;
   margin-top: 0;              /* since it's now under logo */
   color:#666;
   text-align: center;
