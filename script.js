@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const themeKey = "preferredTheme";
 
   const getSavedTheme = () => localStorage.getItem(themeKey);
-  const getSystemTheme = () => window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   const getCurrentTheme = () => document.body.classList.contains("dark-mode") ? "dark" : "light";
 
   const updateThemeButtons = (theme) => {
@@ -66,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const initTheme = () => {
     const savedTheme = getSavedTheme();
-    const theme = savedTheme || getSystemTheme();
+    const theme = savedTheme || "light"; // ✅ always light by default for first-time visitors
     applyTheme(theme);
   };
 
