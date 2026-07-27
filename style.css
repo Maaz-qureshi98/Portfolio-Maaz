@@ -532,7 +532,7 @@ p { color: var(--text-muted); }
   transform: translate(-50%,-50%);
 }
 
-/* inner -> outer, around the "AI & Robotics" center: Bahria, Abyss, (UW+Rogers+Keysight), Cobionix, Apple */
+/* inner -> outer, around the "ML & Robotics" center: Bahria, Abyss, (UW+Rogers+Keysight), Cobionix, Apple */
 .orbit-1{ width:26%;  height:26%;  animation: spin-cw  14s linear infinite; }
 .orbit-2{ width:44%;  height:44%;  animation: spin-ccw 20s linear infinite; }
 .orbit-3{ width:62%;  height:62%;  animation: spin-cw  28s linear infinite; }
