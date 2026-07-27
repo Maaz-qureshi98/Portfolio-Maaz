@@ -512,22 +512,13 @@ p { color: var(--text-muted); }
 .sun{
   position:absolute;
   top:50%; left:50%;
-  width: clamp(96px, 17vw, 138px);
-  height: clamp(96px, 17vw, 138px);
   transform: translate(-50%,-50%);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding: 10px;
-  background: var(--surface-strong);
-  border: 1px solid var(--border);
-  border-radius: 50%;
-  box-shadow: 0 8px 20px var(--shadow);
-  z-index: 3;
+  max-width: 78px;
   text-align:center;
+  z-index: 3;
 }
 .sun-label{
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-weight: 700;
   line-height: 1.2;
   color: var(--text);
