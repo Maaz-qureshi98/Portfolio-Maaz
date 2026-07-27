@@ -8,6 +8,53 @@
 
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="mediaqueries.css" />
+
+  <!-- ✅ Hero-tree styles pinned inline with !important so the tree always
+       renders correctly even if an older cached/mismatched style.css is
+       being served. This block is the source of truth for the tree. -->
+  <style>
+    .logo-tree{ width:min(720px,100%) !important; margin:0.5rem 0 0 auto !important; position:static !important; }
+    .tree-row{ display:flex !important; position:relative !important; }
+    .tree-top{ justify-content:space-between !important; }
+    .tree-bottom{ justify-content:center !important; gap:4% !important; }
+    .tree-top::before{ content:"" !important; position:absolute !important; left:9% !important; right:9% !important; top:50% !important; height:2px !important; background:rgba(0,0,0,0.30) !important; z-index:0 !important; }
+    .tree-branch{ position:relative !important; height:1.8rem !important; }
+    .tree-branch::before{ content:"" !important; position:absolute !important; left:50% !important; top:0 !important; height:55% !important; width:2px !important; background:rgba(0,0,0,0.30) !important; transform:translateX(-50%) !important; }
+    .tree-branch::after{ content:"" !important; position:absolute !important; left:39% !important; right:39% !important; top:55% !important; height:2px !important; background:rgba(0,0,0,0.30) !important; }
+    .branch-left, .branch-right{ position:absolute !important; top:55% !important; height:45% !important; width:2px !important; background:rgba(0,0,0,0.30) !important; }
+    .branch-left{ left:39% !important; }
+    .branch-right{ left:61% !important; }
+    .tree-node{
+      position:relative !important;
+      left:auto !important; top:auto !important;
+      z-index:1 !important;
+      width:18% !important;
+      height:auto !important;
+      min-height:5.6rem !important;
+      aspect-ratio:auto !important;
+      background:#fff !important;
+      border:1px solid rgba(0,0,0,0.10) !important;
+      border-radius:14px !important;
+      box-shadow:0 10px 22px rgba(0,0,0,0.06) !important;
+      display:flex !important;
+      flex-direction:column !important;
+      align-items:center !important;
+      justify-content:center !important;
+      gap:6px !important;
+      padding:10px 6px !important;
+      text-align:center !important;
+    }
+    .tree-node img{ height:24px !important; width:auto !important; max-width:85% !important; object-fit:contain !important; }
+    .tree-node span{ font-size:0.78rem !important; color:#555 !important; line-height:1.15 !important; }
+    @media (max-width:760px){
+      .tree-row{ flex-wrap:wrap !important; justify-content:center !important; gap:0.8rem !important; }
+      .tree-top::before, .tree-branch{ display:none !important; }
+      .tree-node{ width:42% !important; min-height:78px !important; }
+    }
+    @media (max-width:420px){
+      .tree-node{ width:100% !important; }
+    }
+  </style>
 </head>
 
 <body>
