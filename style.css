@@ -278,11 +278,11 @@ p { color: var(--text-muted); }
 }
 
 .btn-color-1{
-  background:#111;
-  color:#fff;
-  border-color:#111;
+  background: #111;
+  color: #fff;
+  border-color: #111;
 }
-.btn-color-1:hover{ background:#000; }
+.btn-color-1:hover{ background: #000; }
 .btn-color-2:hover{ background: var(--hover-bg); }
 
 /* ===================== HERO TREE ===================== */
@@ -526,7 +526,7 @@ p { color: var(--text-muted); }
 
 .exp-date, .exp-location{
   font-size: 0.95rem;
-  color:#555;
+  color: var(--text-soft);
 }
 
 .exp-right{ flex: 1; min-width: 0; } /* prevents overflow */
@@ -536,7 +536,7 @@ p { color: var(--text-muted); }
   margin-bottom: 0.2rem;
 }
 .exp-company{
-  color:#444;
+  color: var(--text-muted);
   margin-bottom: 0.7rem;
 }
 .exp-desc{
@@ -568,18 +568,19 @@ p { color: var(--text-muted); }
 .filter-btn{
   padding: 0.55rem 0.9rem;
   border-radius: 999px;
-  border: 1px solid rgba(0,0,0,0.18);
-  background: #fff;
+  border: 1px solid var(--border);
+  background: var(--surface-strong);
+  color: var(--text);
   cursor:pointer;
   font-weight: 600;
   font-size: 0.95rem;
   min-height: 40px;
 }
-.filter-btn:hover{ background: rgba(0,0,0,0.05); }
+.filter-btn:hover{ background: var(--hover-bg); }
 .filter-btn.active{
-  background:#111;
-  color:#fff;
-  border-color:#111;
+  background: var(--text);
+  color: var(--surface-strong);
+  border-color: var(--text);
 }
 
 .research-box{
@@ -595,8 +596,8 @@ p { color: var(--text-muted); }
   aspect-ratio: 16 / 10;
   border-radius: 16px;
   object-fit: cover;
-  border: 1px solid rgba(0,0,0,0.10);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.07);
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 30px var(--shadow);
 }
 
 .project-title{
@@ -624,7 +625,7 @@ p { color: var(--text-muted); }
 .contact-info-upper-container{
   margin-top: 1.2rem;
   padding: 1rem 1rem;
-  border: 1px solid rgba(0,0,0,0.12);
+  border: 1px solid var(--border);
   border-radius: 16px;
   display:flex;
   justify-content:center;
