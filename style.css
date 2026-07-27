@@ -489,12 +489,14 @@ p { color: var(--text-muted); }
   border-radius: 999px;
   border: 1px solid rgba(0,0,0,0.18);
   background:#fff;
+  color:#111;               /* ✅ always readable: this pill stays white in both themes */
   font-weight: 600;
   font-size: 0.85rem;
   min-height: 38px;
 }
 .mini-btn:hover{
   background: rgba(0,0,0,0.05);
+  color:#111;
 }
 
 /* ===================== EXPERIENCE ===================== */
