@@ -193,10 +193,9 @@ p { color: rgb(70,70,70); }
 /* ===================== HERO TREE ===================== */
 .logo-tree{
   position: relative;
-  width: 720px;             /* ✅ fixed canvas so SVG + absolute nodes align */
-  max-width: 100%;          /* ✅ responsive on smaller screens */
-  height: 240px;
-  margin: 0.1rem 0 0 auto;  /* ✅ pushes the tree to the right */
+  width: min(900px, 100%);   /* ✅ matches the 900x260 SVG viewBox exactly */
+  aspect-ratio: 900 / 260;   /* ✅ height scales together with width, keeping nodes+lines aligned at any size */
+  margin: 0.6rem 0 0 auto;   /* pushes the tree to the right, extra top space for the branch lines */
 }
 
 .tree-lines{
@@ -215,8 +214,8 @@ p { color: rgb(70,70,70); }
 
 .tree-node{
   position:absolute;
-  width: 150px;
-  height: 80px;
+  width: 16.667%;   /* 150 / 900 */
+  height: 30.77%;   /* 80 / 260 */
   background:#fff;
   border: 1px solid rgba(0,0,0,0.10);
   border-radius: 14px;
@@ -242,11 +241,6 @@ p { color: rgb(70,70,70); }
   object-fit: contain;
 }
 
-/* Bigger Apple logo only */
-.node-apple img{
-  height: 40px;   /* was 28px globally */
-  max-width: 95%;
-}
 
 
 .tree-node span{
@@ -255,14 +249,16 @@ p { color: rgb(70,70,70); }
   line-height: 1.1;
 }
 
-/* Positions for 720px canvas */
-.node-cobionix{ left: 10px;  top: 0px; }
-.node-uw      { left: 190px; top: 0px; }
-.node-abyss   { left: 370px; top: 0px; }
-.node-bahria  { left: 550px; top: 0px; }
-.node-apple   { left: 100px; top: 140px; }
-.node-keysight{ left: 280px; top: 140px; }
-.node-rogers  { left: 460px; top: 140px; }
+/* Positions on the 900x260 grid, expressed as % so the tree scales cleanly at any width.
+   Top row (evenly spaced, 25px gaps at 900px scale): Apple, Cobionix, UW, Abyss, Bahria
+   Bottom row (centered under UW, matching the SVG branch): Keysight, Rogers */
+.node-apple   { left: 2.778%;  top: 0%; }        /* 25 / 900 */
+.node-cobionix{ left: 22.222%; top: 0%; }        /* 200 / 900 */
+.node-uw      { left: 41.667%; top: 0%; }        /* 375 / 900 */
+.node-abyss   { left: 61.111%; top: 0%; }        /* 550 / 900 */
+.node-bahria  { left: 80.556%; top: 0%; }        /* 725 / 900 */
+.node-keysight{ left: 31.111%; top: 65.385%; }   /* left 280/900, top 170/260 */
+.node-rogers  { left: 52.222%; top: 65.385%; }   /* left 470/900, top 170/260 */
 
 /* ===================== ABOUT ===================== */
 #about{ padding: 0.5rem 0 1.2rem; }
