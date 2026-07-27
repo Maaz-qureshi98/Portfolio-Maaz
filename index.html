@@ -72,16 +72,26 @@
   <!-- ===================== NAVIGATION ===================== -->
   <nav id="desktop-nav" class="container">
     <div class="logo">Portfolio</div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <div class="nav-actions">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="themeToggleBtnDesktop" class="theme-toggle" type="button" aria-label="Toggle dark mode">
+        <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+        <span class="theme-toggle__label">Dark</span>
+      </button>
+    </div>
   </nav>
 
   <nav id="hamburger-nav" class="container" aria-label="Mobile Navigation">
     <div class="logo">Maaz Qureshi</div>
+    <button id="themeToggleBtnMobile" class="theme-toggle theme-toggle--mobile" type="button" aria-label="Toggle dark mode">
+      <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+      <span class="theme-toggle__label">Dark</span>
+    </button>
     <div class="hamburger-menu">
       <button class="hamburger-icon" id="hamburgerBtn" type="button"
               aria-label="Open menu" aria-expanded="false" aria-controls="menuLinks">
