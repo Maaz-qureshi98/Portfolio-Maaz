@@ -512,13 +512,26 @@ p { color: var(--text-muted); }
 .sun{
   position:absolute;
   top:50%; left:50%;
-  width: clamp(10px, 2.2vw, 16px);
-  height: clamp(10px, 2.2vw, 16px);
-  background: var(--text);
-  border-radius: 50%;
+  width: clamp(56px, 11vw, 84px);
+  height: clamp(56px, 11vw, 84px);
   transform: translate(-50%,-50%);
-  box-shadow: 0 0 22px 6px var(--shadow);
-  z-index: 1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: var(--surface-strong);
+  border: 2px solid var(--text);
+  border-radius: 50%;
+  box-shadow: 0 0 26px 6px var(--shadow);
+  z-index: 3;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.sun:hover{
+  box-shadow: 0 0 32px 8px var(--shadow);
+}
+.sun img{
+  width: 68%;
+  height: 68%;
+  object-fit: contain;
 }
 
 .orbit{
@@ -529,20 +542,18 @@ p { color: var(--text-muted); }
   transform: translate(-50%,-50%);
 }
 
-/* inner -> outer: Bahria, Abyss, UW, Rogers+Keysight, Cobionix, Apple */
-.orbit-1{ width:20%;  height:20%;  animation: spin-cw  16s linear infinite; }
-.orbit-2{ width:36%;  height:36%;  animation: spin-ccw 22s linear infinite; }
-.orbit-3{ width:52%;  height:52%;  animation: spin-cw  28s linear infinite; }
-.orbit-4{ width:68%;  height:68%;  animation: spin-ccw 34s linear infinite; }
-.orbit-5{ width:84%;  height:84%;  animation: spin-cw  40s linear infinite; }
-.orbit-6{ width:100%; height:100%; animation: spin-ccw 46s linear infinite; }
+/* inner -> outer, orbiting Bahria at the center: Abyss, UW, Rogers+Keysight, Cobionix, Apple */
+.orbit-1{ width:30%;  height:30%;  animation: spin-cw  16s linear infinite; }
+.orbit-2{ width:48%;  height:48%;  animation: spin-ccw 22s linear infinite; }
+.orbit-3{ width:66%;  height:66%;  animation: spin-cw  28s linear infinite; }
+.orbit-4{ width:84%;  height:84%;  animation: spin-ccw 34s linear infinite; }
+.orbit-5{ width:100%; height:100%; animation: spin-cw  40s linear infinite; }
 
 .orbit-1 .planet{ animation: spin-ccw 16s linear infinite; }
 .orbit-2 .planet{ animation: spin-cw  22s linear infinite; }
 .orbit-3 .planet{ animation: spin-ccw 28s linear infinite; }
 .orbit-4 .planet{ animation: spin-cw  34s linear infinite; }
 .orbit-5 .planet{ animation: spin-ccw 40s linear infinite; }
-.orbit-6 .planet{ animation: spin-cw  46s linear infinite; }
 
 @keyframes spin-cw{
   from{ transform: translate(-50%,-50%) rotate(0deg); }
@@ -578,8 +589,8 @@ p { color: var(--text-muted); }
   object-fit: contain;
 }
 
-/* second planet sharing orbit-4 (Rogers + Keysight), placed on the opposite side */
-.orbit-4 .planet-b{ top:100%; }
+/* second planet sharing orbit-3 (Rogers + Keysight), placed on the opposite side */
+.orbit-3 .planet-b{ top:100%; }
 
 /* pause the motion on hover so logos are easy to click */
 .solar-system:hover .orbit,
