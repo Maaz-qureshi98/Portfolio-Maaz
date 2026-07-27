@@ -126,9 +126,9 @@ p { color: rgb(70,70,70); }
 
 .hero-grid{
   display:grid;
-  grid-template-columns: 1.05fr 1fr;
-  gap: 0.1rem;
-  align-items: right;
+  grid-template-columns: minmax(280px, 340px) 1fr;  /* ✅ photo column hugs the photo's actual size instead of leaving dead space */
+  gap: 2.5rem;                                       /* ✅ intentional breathing room instead of a giant empty gap */
+  align-items: start;
 }
 
 /* Nudge the entire right hero column slightly left */
