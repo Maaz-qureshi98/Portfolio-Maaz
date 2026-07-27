@@ -40,33 +40,25 @@
   .title{ font-size: 2.05rem; }
   .section__text__p2{ font-size: 1.05rem; }
 
-  /* ✅ Mobile-safe HERO TREE: convert to grid */
-  .logo-tree{
-    height: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  /* ✅ Mobile-safe HERO TREE: rows wrap into a simple grid, connectors hidden */
+  .tree-row{
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 0.8rem;
-    padding-top: 0.6rem;
   }
 
-  .tree-lines{ display:none; } /* hide SVG connectors on mobile */
+  .tree-top::before,
+  .tree-branch{ display:none; } /* hide connector lines on mobile */
 
   .tree-node{
-    position: static;      /* stop absolute positioning */
-    width: 100%;
-    height: auto;
+    width: 42%;
+    aspect-ratio: auto;
     min-height: 78px;
-  }
-
-  /* cancel absolute offsets */
-  .node-cobionix,.node-uw,.node-abyss,.node-bahria,
-  .node-apple,.node-keysight,.node-rogers{
-    left: auto; top: auto;
   }
 }
 
 @media (max-width: 420px){
-  .logo-tree{
-    grid-template-columns: 1fr; /* single column for very small phones */
+  .tree-node{
+    width: 100%; /* single column for very small phones */
   }
 }

@@ -192,30 +192,69 @@ p { color: rgb(70,70,70); }
 
 /* ===================== HERO TREE ===================== */
 .logo-tree{
-  position: relative;
-  width: min(900px, 100%);   /* ✅ matches the 900x260 SVG viewBox exactly */
-  aspect-ratio: 900 / 260;   /* ✅ height scales together with width, keeping nodes+lines aligned at any size */
-  margin: 0.6rem 0 0 auto;   /* pushes the tree to the right, extra top space for the branch lines */
+  width: min(620px, 100%);   /* ✅ smaller overall footprint so it comfortably fits the column */
+  margin: 0.5rem 0 0 auto;
 }
 
-.tree-lines{
+.tree-row{
+  display:flex;
+  position:relative;
+}
+
+.tree-top{
+  justify-content: space-between;   /* even spacing; middle node (UW) lands exactly at center */
+}
+
+.tree-bottom{
+  justify-content: center;
+  gap: 4%;
+}
+
+/* Horizontal connector line running behind the top-row nodes */
+.tree-top::before{
+  content:"";
   position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  pointer-events:none;
+  left: 9%; right: 9%;   /* 9% = half a node's width, so the line reaches each node's center */
+  top: 50%;
+  height: 2px;
+  background: rgba(0,0,0,0.30);
+  z-index: 0;
 }
 
-.tree-lines line{
-  stroke: rgba(0,0,0,0.35);
-  stroke-width: 2;
-  stroke-linecap: butt;
+/* Branch zone between the two rows: stem down from UW, splitting to Keysight + Rogers */
+.tree-branch{
+  position: relative;
+  height: 1.8rem;
 }
+.tree-branch::before{  /* vertical stem from UW's center down to the split point */
+  content:"";
+  position:absolute;
+  left: 50%; top: 0; height: 55%;
+  width: 2px;
+  background: rgba(0,0,0,0.30);
+  transform: translateX(-50%);
+}
+.tree-branch::after{   /* horizontal bridge at the split point */
+  content:"";
+  position:absolute;
+  left: 39%; right: 39%; top: 55%;
+  height: 2px;
+  background: rgba(0,0,0,0.30);
+}
+.branch-left, .branch-right{  /* two verticals dropping into Keysight and Rogers */
+  position:absolute;
+  top: 55%; height: 45%;
+  width: 2px;
+  background: rgba(0,0,0,0.30);
+}
+.branch-left{ left: 39%; }
+.branch-right{ left: 61%; }
 
 .tree-node{
-  position:absolute;
-  width: 16.667%;   /* 150 / 900 */
-  height: 30.77%;   /* 80 / 260 */
+  position: relative;
+  z-index: 1;             /* sits above the connector lines */
+  width: 18%;
+  aspect-ratio: 15 / 8;
   background:#fff;
   border: 1px solid rgba(0,0,0,0.10);
   border-radius: 14px;
@@ -224,8 +263,8 @@ p { color: rgb(70,70,70); }
   flex-direction: column;
   align-items:center;
   justify-content:center;
-  gap: 8px;
-  padding: 10px;
+  gap: 6px;
+  padding: 6px;
   transition: transform 160ms ease, box-shadow 160ms ease;
   text-align:center;
 }
@@ -235,30 +274,17 @@ p { color: rgb(70,70,70); }
 }
 
 .tree-node img{
-  height: 28px;
+  height: 20px;
   width:auto;
   max-width: 85%;
   object-fit: contain;
 }
 
-
-
 .tree-node span{
-  font-size: 0.88rem;
+  font-size: 0.72rem;
   color:#555;
   line-height: 1.1;
 }
-
-/* Positions on the 900x260 grid, expressed as % so the tree scales cleanly at any width.
-   Top row (evenly spaced, 25px gaps at 900px scale): Apple, Cobionix, UW, Abyss, Bahria
-   Bottom row (centered under UW, matching the SVG branch): Keysight, Rogers */
-.node-apple   { left: 2.778%;  top: 0%; }        /* 25 / 900 */
-.node-cobionix{ left: 22.222%; top: 0%; }        /* 200 / 900 */
-.node-uw      { left: 41.667%; top: 0%; }        /* 375 / 900 */
-.node-abyss   { left: 61.111%; top: 0%; }        /* 550 / 900 */
-.node-bahria  { left: 80.556%; top: 0%; }        /* 725 / 900 */
-.node-keysight{ left: 31.111%; top: 65.385%; }   /* left 280/900, top 170/260 */
-.node-rogers  { left: 52.222%; top: 65.385%; }   /* left 470/900, top 170/260 */
 
 /* ===================== ABOUT ===================== */
 #about{ padding: 0.5rem 0 1.2rem; }
