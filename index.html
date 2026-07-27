@@ -9,11 +9,16 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="mediaqueries.css" />
 
-  <!-- ✅ Hero-tree styles pinned inline with !important so the tree always
-       renders correctly even if an older cached/mismatched style.css is
-       being served. This block is the source of truth for the tree. -->
+  <!-- ✅ Hero-tree AND hero-grid layout pinned inline with !important so they
+       always render correctly even if an older cached/mismatched style.css is
+       being served. This block is the source of truth for both. -->
   <style>
-    .logo-tree{ width:min(720px,100%) !important; margin:0.5rem 0 0 auto !important; position:static !important; }
+    /* --- Hero grid: photo column hugs the photo, tree column gets the rest --- */
+    .hero-grid{ display:grid !important; grid-template-columns: minmax(260px, 320px) 1fr !important; gap: 2rem !important; align-items:start !important; }
+    .hero-right{ transform:none !important; }
+    .hero-photo{ max-width:300px !important; }
+
+    .logo-tree{ width:min(760px,100%) !important; margin:0.5rem 0 0 auto !important; position:static !important; }
     .tree-row{ display:flex !important; position:relative !important; }
     .tree-top{ justify-content:space-between !important; }
     .tree-bottom{ justify-content:center !important; gap:4% !important; }
@@ -28,9 +33,9 @@
       position:relative !important;
       left:auto !important; top:auto !important;
       z-index:1 !important;
-      width:18% !important;
+      width:19.5% !important;
       height:auto !important;
-      min-height:5.6rem !important;
+      min-height:4.4rem !important;    /* ✅ shorter relative to width => rectangular, not square */
       aspect-ratio:auto !important;
       background:#fff !important;
       border:1px solid rgba(0,0,0,0.10) !important;
@@ -41,11 +46,15 @@
       align-items:center !important;
       justify-content:center !important;
       gap:6px !important;
-      padding:10px 6px !important;
+      padding:8px 6px !important;
       text-align:center !important;
     }
-    .tree-node img{ height:24px !important; width:auto !important; max-width:85% !important; object-fit:contain !important; }
-    .tree-node span{ font-size:0.78rem !important; color:#555 !important; line-height:1.15 !important; }
+    .tree-node img{ height:22px !important; width:auto !important; max-width:85% !important; object-fit:contain !important; }
+    .tree-node span{ font-size:0.76rem !important; color:#555 !important; line-height:1.15 !important; }
+    @media (max-width:900px){
+      .hero-grid{ grid-template-columns: 1fr !important; }
+      .hero-left{ display:flex !important; justify-content:center !important; }
+    }
     @media (max-width:760px){
       .tree-row{ flex-wrap:wrap !important; justify-content:center !important; gap:0.8rem !important; }
       .tree-top::before, .tree-branch{ display:none !important; }
