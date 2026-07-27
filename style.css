@@ -499,53 +499,97 @@ p { color: var(--text-muted); }
   color:#111;
 }
 
-/* ===================== EXPERIENCE ===================== */
-#experience{ padding: 0.5rem 0 1.2rem; }
-.exp-wrapper{ margin-top: 1.2rem; }
+/* ===================== EXPERIENCE: SOLAR SYSTEM ===================== */
+#experience{ padding: 0.5rem 0 2rem; }
 
-.exp-box{
-  display:flex;
-  gap: 1.7rem;
-  padding: 1.5rem 0;
-  align-items:flex-start;
+.solar-system{
+  position: relative;
+  width: min(600px, 92vw);
+  height: min(600px, 92vw);
+  margin: 2.5rem auto 1rem;
 }
 
-.exp-left{
-  width: 190px;
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  text-align:center;
-  gap: 0.35rem;
-  flex: 0 0 auto;
+.sun{
+  position:absolute;
+  top:50%; left:50%;
+  width: clamp(10px, 2.2vw, 16px);
+  height: clamp(10px, 2.2vw, 16px);
+  background: var(--text);
+  border-radius: 50%;
+  transform: translate(-50%,-50%);
+  box-shadow: 0 0 22px 6px var(--shadow);
+  z-index: 1;
 }
 
-.exp-logo{
-  width: 70px;
-  height: 70px;
+.orbit{
+  position:absolute;
+  top:50%; left:50%;
+  border-radius:50%;
+  border: 1px dashed var(--border-strong);
+  transform: translate(-50%,-50%);
+}
+
+/* inner -> outer: Bahria, Abyss, UW, Rogers+Keysight, Cobionix, Apple */
+.orbit-1{ width:20%;  height:20%;  animation: spin-cw  16s linear infinite; }
+.orbit-2{ width:36%;  height:36%;  animation: spin-ccw 22s linear infinite; }
+.orbit-3{ width:52%;  height:52%;  animation: spin-cw  28s linear infinite; }
+.orbit-4{ width:68%;  height:68%;  animation: spin-ccw 34s linear infinite; }
+.orbit-5{ width:84%;  height:84%;  animation: spin-cw  40s linear infinite; }
+.orbit-6{ width:100%; height:100%; animation: spin-ccw 46s linear infinite; }
+
+.orbit-1 .planet{ animation: spin-ccw 16s linear infinite; }
+.orbit-2 .planet{ animation: spin-cw  22s linear infinite; }
+.orbit-3 .planet{ animation: spin-ccw 28s linear infinite; }
+.orbit-4 .planet{ animation: spin-cw  34s linear infinite; }
+.orbit-5 .planet{ animation: spin-ccw 40s linear infinite; }
+.orbit-6 .planet{ animation: spin-cw  46s linear infinite; }
+
+@keyframes spin-cw{
+  from{ transform: translate(-50%,-50%) rotate(0deg); }
+  to{   transform: translate(-50%,-50%) rotate(360deg); }
+}
+@keyframes spin-ccw{
+  from{ transform: translate(-50%,-50%) rotate(0deg); }
+  to{   transform: translate(-50%,-50%) rotate(-360deg); }
+}
+
+.planet{
+  position:absolute;
+  top:0; left:50%;
+  width: clamp(36px, 8vw, 58px);
+  height: clamp(36px, 8vw, 58px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  box-shadow: 0 8px 20px var(--shadow);
+  z-index: 2;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.planet:hover{
+  box-shadow: 0 12px 26px var(--shadow);
+}
+
+.planet img{
+  width: 62%;
+  height: 62%;
   object-fit: contain;
 }
 
-.exp-date, .exp-location{
-  font-size: 0.95rem;
-  color: var(--text-soft);
+/* second planet sharing orbit-4 (Rogers + Keysight), placed on the opposite side */
+.orbit-4 .planet-b{ top:100%; }
+
+/* pause the motion on hover so logos are easy to click */
+.solar-system:hover .orbit,
+.solar-system:hover .planet{
+  animation-play-state: paused;
 }
 
-.exp-right{ flex: 1; min-width: 0; } /* prevents overflow */
-.exp-role{
-  font-weight: 600;
-  font-size: 1.15rem;
-  margin-bottom: 0.2rem;
+@media (prefers-reduced-motion: reduce){
+  .orbit, .planet{ animation: none !important; }
 }
-.exp-company{
-  color: var(--text-muted);
-  margin-bottom: 0.7rem;
-}
-.exp-desc{
-  margin-left: 1.2rem;
-  line-height: 1.65;
-}
-.exp-desc li{ margin-bottom: 0.35rem; }
 
 /* ===================== RESEARCH ===================== */
 #research{ padding: 0.5rem 0 1.2rem; }

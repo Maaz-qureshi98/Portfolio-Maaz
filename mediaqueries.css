@@ -14,18 +14,7 @@
   .about-layout{ flex-direction: column; }
   .about-image{ justify-content:center; }
 
-  .exp-box{
-    flex-direction: column;
-    gap: 0.9rem;
-  }
-  .exp-left{
-    width: 100%;
-    flex-direction: row;
-    justify-content:center;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-  .exp-date, .exp-location{ text-align:center; }
+  .solar-system{ margin: 1.6rem auto 0.5rem; }
 
   .edu-box{
     flex-direction: column;
