@@ -35,7 +35,7 @@
       z-index:1 !important;
       width:18% !important;
       height:auto !important;
-      min-height:3.9rem !important;    /* ✅ slightly smaller box */
+      min-height:4.7rem !important;    /* ✅ tall enough for the bigger logos, still compact */
       aspect-ratio:auto !important;
       background:#fff !important;
       border:1px solid rgba(0,0,0,0.10) !important;
@@ -50,7 +50,8 @@
       text-align:center !important;
     }
     .tree-node img{ height:28px !important; width:auto !important; max-width:85% !important; object-fit:contain !important; }
-    .tree-node img.logo-apple{ height:34px !important; }
+    .tree-node img.logo-apple{ height:40px !important; }
+    .tree-node img.logo-big{ height:34px !important; }
     .tree-node span{ font-size:0.76rem !important; color:#555 !important; line-height:1.15 !important; }
     @media (max-width:900px){
       .hero-grid{ grid-template-columns: 1fr !important; }
@@ -119,12 +120,12 @@
             </a>
 
             <a class="tree-node" href="https://www.cobionix.com/en/" target="_blank" rel="noopener">
-              <img src="./assets/cobionix.png" alt="Cobionix" loading="lazy" />
+              <img src="./assets/cobionix.png" alt="Cobionix" loading="lazy" class="logo-big" />
               <span>2025–Present</span>
             </a>
 
             <a class="tree-node" href="https://uwaterloo.ca/" target="_blank" rel="noopener">
-              <img src="./assets/uwaterloo.jpeg" alt="University of Waterloo" loading="lazy" />
+              <img src="./assets/uwaterloo.jpeg" alt="University of Waterloo" loading="lazy" class="logo-big" />
               <span>MASc (2024–2025)</span>
             </a>
 
@@ -134,7 +135,7 @@
             </a>
 
             <a class="tree-node" href="https://bahria.edu.pk/" target="_blank" rel="noopener">
-              <img src="./assets/bahria_university.jpeg" alt="Bahria University" loading="lazy" />
+              <img src="./assets/bahria_university.jpeg" alt="Bahria University" loading="lazy" class="logo-big" />
               <span>BSc (2017–2021)</span>
             </a>
           </div>
@@ -146,7 +147,7 @@
 
           <div class="tree-row tree-bottom">
             <a class="tree-node" href="https://www.keysight.com/us/en/home.html" target="_blank" rel="noopener">
-              <img src="./assets/keysight.png" alt="Keysight" loading="lazy" />
+              <img src="./assets/keysight.png" alt="Keysight" loading="lazy" class="logo-big" />
               <span>2024</span>
             </a>
 
@@ -277,6 +278,26 @@
     </div>
 
     <div class="research-wrapper">
+      <!-- 0: Multimodal Learning — Physical AI Deployment -->
+      <div class="research-box" data-tags="robotics ai">
+        <div class="research-media">
+          <img src="./assets/multimodal.png" class="project-thumb-lg" alt="Multimodal Learning: Physical AI Deployment with 7-DoF Manipulator" />
+        </div>
+        <div class="research-text">
+          <h2 class="project-title">Multimodal Learning: Physical AI Deployment with 7-DoF Manipulator</h2>
+          <p class="project-desc justify">
+            Real-time RGB-D sensor-fused multimodal pipeline (VLM, pose estimation, object detection,
+            and semantic segmentation) built in C++ with NVIDIA CUDA, and quantized with TensorRT
+            (FP16, INT8) for asynchronous pipelines that maximize throughput.
+          </p>
+          <div class="project-btn-row">
+            <a class="mini-btn" href="https://www.youtube.com/watch?v=uw-hooM_Wg0" target="_blank" rel="noopener">Video</a>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
       <!-- 1: CRADMap -->
       <div class="research-box" data-tags="robotics ai">
         <div class="research-media">
@@ -425,27 +446,6 @@
     <div class="exp-wrapper">
 
 
-                 <!-- Playroom Inc -->
-      <div class="exp-box">
-        <div class="exp-left">
-          <a href="https://joinplayroom.com/" target="_blank" rel="noopener">
-            <img src="./assets/playroom.png" class="exp-logo" alt="Playroom Inc Logo" />
-          </a>
-          <p class="exp-date">April 2026 – Present</p>
-          <p class="exp-location">Bay Area, California, USA and Canada</p>
-        </div>
-        <div class="exp-right">
-          <p class="exp-role">Software Engineer (Physical AI): Project Lead</p>
-          <p class="exp-company">Playroom Inc</p>
-          <ul class="exp-desc">
-            <li> Project lead for Machine Learning (VLAs/Imitation learning) for Robotics (physical AI) and World models from data generated from (i)
-Human Teleoperation and (ii) Game Environment. </li>
-          </ul>
-        </div>
-      </div>
-
-      <hr />
-
             <!-- Apple -->
       <div class="exp-box">
         <div class="exp-left">
@@ -456,12 +456,28 @@ Human Teleoperation and (ii) Game Environment. </li>
           <p class="exp-location">Waterloo, Canada</p>
         </div>
         <div class="exp-right">
-          <p class="exp-role">Research Engineering</p>
+          <p class="exp-role">Research Engineer</p>
           <p class="exp-company">Apple</p>
           <ul class="exp-desc">
-            <li> Confidential-NDA project. Leading the research on VLAs model learning, and Software Pipeline for Apple Robotics project. </li>
-            <li> Research is jointly conducted with the University of Waterloo. </li>
-            <li> </li>
+            <li>Confidential NDA project — leading research on VLA model learning and the software pipeline for Apple's robotics project.</li>
+            <li>Research is jointly conducted with the University of Waterloo.</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr />
+
+                 <!-- Stealth Startup -->
+      <div class="exp-box">
+        <div class="exp-left">
+          <p class="exp-date">April 2026 – Present</p>
+          <p class="exp-location">Bay Area, California, USA and Canada</p>
+        </div>
+        <div class="exp-right">
+          <p class="exp-role">Software Engineer (Physical AI): Project Lead</p>
+          <p class="exp-company">Stealth Startup</p>
+          <ul class="exp-desc">
+            <li>Project lead for machine learning (VLAs/imitation learning) for robotics (Physical AI) and world models, using data generated from (i) human teleoperation and (ii) game environments.</li>
           </ul>
         </div>
       </div>
