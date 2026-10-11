@@ -234,7 +234,7 @@ p { color: var(--text-muted); }
   font-size: 0.8rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--text);
   margin-bottom: 0.5rem;
   display: inline-flex;
   align-items: center;
@@ -815,13 +815,48 @@ button:focus-visible,
 }
 
 /* Subtle lift on research thumbnails for a more polished feel */
-.research-media{ overflow: hidden; border-radius: 16px; }
+.research-media{ overflow: hidden; border-radius: 16px; position: relative; }
 .project-thumb-lg{ transition: transform 320ms ease; }
 .research-box:hover .project-thumb-lg{ transform: scale(1.03); }
+
+/* Clickable media: whole thumbnail links to the project's video/resource */
+.media-link{ display: block; position: relative; cursor: pointer; }
+.media-link:focus-visible{ outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* Play badge on video thumbnails */
+.research-media.has-video .media-link::before{
+  content: "";
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 58px; height: 58px;
+  z-index: 2;
+  background:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='black' fill-opacity='0.55'/><polygon points='40,30 40,70 72,50' fill='white'/></svg>")
+    center / contain no-repeat;
+  opacity: 0.9;
+  transition: transform 220ms ease, opacity 220ms ease;
+  pointer-events: none;
+}
+/* Gentle darken on hover so the play badge pops */
+.research-media.has-video .media-link::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.0);
+  transition: background 220ms ease;
+  z-index: 1;
+  pointer-events: none;
+}
+.media-link:hover::before,
+.media-link:focus-visible::before{ transform: translate(-50%, -50%) scale(1.08); opacity: 1; }
+.research-media.has-video .media-link:hover::after,
+.research-media.has-video .media-link:focus-visible::after{ background: rgba(0,0,0,0.18); }
 
 @media (prefers-reduced-motion: reduce){
   .project-thumb-lg{ transition: none; }
   .research-box:hover .project-thumb-lg{ transform: none; }
+  .media-link::before{ transition: none; }
 }
 
 /* ===================== TOP-CLASS DESIGN SYSTEM POLISH ===================== */
@@ -938,9 +973,3 @@ body.dark-mode .focus-chip{ color: var(--accent-strong); }
 /* About body copy emphasis */
 .about-text strong{ color: var(--text); font-weight: 600; }
 
-/* Scroll-reveal (JS adds .reveal, then .in-view). Content stays visible without JS. */
-.reveal{ opacity: 0; transform: translateY(18px); transition: opacity 620ms ease, transform 620ms ease; }
-.reveal.in-view{ opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce){
-  .reveal{ opacity: 1 !important; transform: none !important; transition: none !important; }
-}
