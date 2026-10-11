@@ -240,17 +240,17 @@ p { color: var(--text-muted); }
 }
 
 .title{
-  font-size: clamp(2rem, 4.2vw, 2.9rem);
+  font-size: clamp(1.65rem, 2.4vw + 0.6rem, 2.1rem);
   font-weight: 700;
-  line-height: 1.06;
-  letter-spacing: -0.03em;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
 }
 
 .section__text__p2{
-  font-size: 1.16rem;
+  font-size: 1.05rem;
   color: var(--text-muted);
-  margin-top: 0.8rem;
-  margin-bottom: 1rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0.9rem;
 }
 
 /* Hero value-prop tagline */
@@ -720,9 +720,9 @@ p { color: var(--text-muted); }
 }
 
 .project-title{
-  font-size: 1.3rem;
-  font-weight: 700;
-  line-height: 1.25;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.3;
   margin-bottom: 0.5rem;
 }
 

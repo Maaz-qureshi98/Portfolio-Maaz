@@ -26,8 +26,8 @@
 }
 
 @media (max-width: 760px){
-  .title{ font-size: 2.05rem; }
-  .section__text__p2{ font-size: 1.05rem; }
+  .title{ font-size: 1.7rem; }
+  .section__text__p2{ font-size: 1rem; }
 
   /* ✅ Mobile-safe HERO TREE: rows wrap into a simple grid, connectors hidden */
   .tree-row{
