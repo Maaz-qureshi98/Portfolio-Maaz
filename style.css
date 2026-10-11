@@ -444,22 +444,22 @@ p { color: var(--text-muted); }
 }
 
 .about-text{ flex: 1.2; }
-.about-text p{ margin-bottom: 1rem; line-height: 1.65; }
+.about-text p{ margin-bottom: 0.8rem; line-height: 1.55; font-size: 0.92rem; }
 
 .about-image{ flex: 0.8; display:flex; justify-content:flex-end; }
 .about-pic{
-  width: min(420px, 100%);
-  border-radius: 18px;
+  width: min(340px, 100%);
+  border-radius: 16px;
   border: 1px solid var(--border);
-  box-shadow: 0 12px 30px var(--shadow);
+  box-shadow: 0 10px 26px var(--shadow);
 }
 
 /* ===================== EDUCATION / ACADEMIC BACKGROUND ===================== */
 .academic-heading{
-  margin-top: 1.0rem;
-  font-size: 1.0rem;
-  padding-bottom: 0.35rem;
-  border-bottom: 1px solid rgba(0,0,0,0.12);
+  margin-top: 0.8rem;
+  font-size: 0.95rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--border);
 }
 
 .education-wrapper{
@@ -469,24 +469,24 @@ p { color: var(--text-muted); }
 
 .edu-box{
   display:flex;
-  gap: 1.2rem;
-  padding: 0.9rem 0;          /* tighter than 1.4rem */
+  gap: 1rem;
+  padding: 0.7rem 0;
   align-items:flex-start;
 }
 
 .edu-left{
-  width: 100px;
+  width: 84px;
   display:flex;
   flex-direction: column;     /* stack logo + timeline */
   align-items: center;        /* center under logo */
   justify-content: flex-start;
-  gap: 0.35rem;               /* spacing between logo and timeline */
+  gap: 0.3rem;                /* spacing between logo and timeline */
   flex: 0 0 auto;
 }
 
 .edu-logo{
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
 }
 
@@ -496,28 +496,28 @@ p { color: var(--text-muted); }
 }
 
 .edu-title{
-  font-size: 1.0rem;
-  margin-bottom: 0.15rem;
+  font-size: 0.92rem;
+  margin-bottom: 0.12rem;
   line-height: 1.2;
 }
 
 .edu-degree{
-  font-size: 0.85rem;         /* readable */
-  color:#444;
+  font-size: 0.8rem;
+  color: var(--text-muted);
   margin-bottom: 0.03rem;
   line-height: 1.25;
 }
 
 .edu-detail{
-  font-size: 0.85rem;         /* readable */
+  font-size: 0.8rem;
   margin-bottom: 0.03rem;     /* tight spacing between Thesis/CGPA */
   line-height: 1.25;
 }
 
 .edu-duration{
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   margin-top: 0;              /* since it's now under logo */
-  color:#666;
+  color: var(--text-soft);
   text-align: center;
   line-height: 1.2;
 }
