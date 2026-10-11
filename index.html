@@ -76,6 +76,8 @@
     .tree-node img{ height:28px !important; width:auto !important; max-width:85% !important; object-fit:contain !important; }
     .tree-node img.logo-apple{ height:40px !important; }
     .tree-node img.logo-big{ height:34px !important; }
+    .node-logos{ display:flex !important; align-items:center !important; justify-content:center !important; gap:7px !important; }
+    .tree-node img.logo-flag{ height:20px !important; border:1px solid rgba(0,0,0,0.12) !important; border-radius:3px !important; }
     .tree-node span{ font-size:0.76rem !important; color:#555 !important; line-height:1.15 !important; }
     @media (max-width:900px){
       .hero-grid{ grid-template-columns: 1fr !important; }
@@ -155,7 +157,10 @@
 
           <div class="tree-row tree-top">
             <a class="tree-node" href="https://www.apple.com/" target="_blank" rel="noopener">
-              <img src="./assets/apple.png" alt="Apple" loading="lazy" class="logo-apple" />
+              <span class="node-logos">
+                <img src="./assets/apple.png" alt="Apple" loading="lazy" class="logo-apple" />
+                <img src="./assets/us-flag.png" alt="United States" loading="lazy" class="logo-flag" />
+              </span>
               <span>2026 – Present</span>
             </a>
 
