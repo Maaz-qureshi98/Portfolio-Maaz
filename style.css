@@ -694,3 +694,51 @@ footer{
   text-align:center;
   color:#666;
 }
+
+/* ===================== POLISH: STICKY NAV, ANCHORS, FOCUS ===================== */
+/* Keep the navigation reachable while scrolling, with a full-width translucent bar
+   behind the centered nav content. Preserves the existing monochrome look. */
+#desktop-nav,
+#hamburger-nav{
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+#desktop-nav::before,
+#hamburger-nav::before{
+  content:"";
+  position:absolute;
+  top:0; bottom:0; left:50%;
+  width:100vw;
+  transform:translateX(-50%);
+  background: var(--surface);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  z-index:-1;
+}
+
+/* Anchor links land below the sticky bar instead of hidden beneath it */
+section[id]{ scroll-margin-top: 84px; }
+
+/* Visible keyboard focus for accessibility (only shows for keyboard users) */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+.mini-btn:focus-visible,
+.filter-btn:focus-visible,
+.theme-toggle:focus-visible{
+  outline: 2px solid var(--text);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* Subtle lift on research thumbnails for a more polished feel */
+.research-media{ overflow: hidden; border-radius: 16px; }
+.project-thumb-lg{ transition: transform 320ms ease; }
+.research-box:hover .project-thumb-lg{ transform: scale(1.03); }
+
+@media (prefers-reduced-motion: reduce){
+  .project-thumb-lg{ transition: none; }
+  .research-box:hover .project-thumb-lg{ transform: none; }
+}
