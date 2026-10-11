@@ -1004,6 +1004,14 @@ body.dark-mode .focus-chip{ color: var(--accent-strong); }
   .hero-photo{ max-width:240px !important; }
   .about-pic{ width:min(240px,100%) !important; }
 
+  /* Keep the research list compact (small thumbnail + text), not full-width */
+  .research-box{
+    grid-template-columns: 170px 1fr !important;
+    gap: 1rem !important;
+    align-items: start !important;
+  }
+  .research-media{ align-self: center; }
+
   /* Freeze the Journey orbits into a tidy static spread */
   .orbit-1{ transform: translate(-50%,-50%) rotate(38deg) !important; }
   .orbit-1 .planet{ transform: rotate(-38deg) !important; }
