@@ -935,6 +935,43 @@ body.dark-mode .focus-chip{ color: var(--accent-strong); }
 /* Divider uses token so it adapts to dark mode too */
 .section-divider{ border-top-color: var(--border); }
 
+/* About: short lead + skimmable highlights */
+.about-lead{
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  margin-bottom: 1.1rem;
+}
+.about-highlights{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.about-highlights li{
+  position: relative;
+  padding-left: 1.6rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+.about-highlights li strong{ color: var(--text); font-weight: 600; }
+.about-highlights li::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--accent);
+  transform: rotate(45deg);
+}
+
 /* Scroll-reveal (JS adds .reveal, then .in-view). Content stays visible without JS. */
 .reveal{ opacity: 0; transform: translateY(18px); transition: opacity 620ms ease, transform 620ms ease; }
 .reveal.in-view{ opacity: 1; transform: none; }
