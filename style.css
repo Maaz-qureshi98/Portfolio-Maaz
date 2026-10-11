@@ -237,16 +237,6 @@ p { color: var(--text-muted); }
   text-transform: uppercase;
   color: var(--text);
   margin-bottom: 0.5rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-}
-.section__text__p1::before{
-  content:"";
-  width: 26px;
-  height: 2px;
-  background: var(--accent);
-  border-radius: 2px;
 }
 
 .title{
