@@ -30,8 +30,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <link rel="stylesheet" href="style.css?v=25" />
-  <link rel="stylesheet" href="mediaqueries.css?v=25" />
+  <link rel="stylesheet" href="style.css?v=26" />
+  <link rel="stylesheet" href="mediaqueries.css?v=26" />
 
   <!-- ✅ Hero-tree AND hero-grid layout pinned inline with !important so they
        always render correctly even if an older cached/mismatched style.css is
@@ -77,7 +77,7 @@
     .tree-node img.logo-apple{ height:40px !important; }
     .tree-node img.logo-big{ height:34px !important; }
     .node-logos{ display:flex !important; align-items:center !important; justify-content:center !important; gap:8px !important; }
-    .tree-node span{ font-size:0.76rem !important; color:#555 !important; line-height:1.15 !important; }
+    .tree-node span{ font-size:var(--fs-meta) !important; color:#555 !important; line-height:1.15 !important; }
     @media (max-width:900px){
       .hero-grid{ grid-template-columns: 1fr !important; }
       .hero-left{ display:flex !important; justify-content:center !important; }

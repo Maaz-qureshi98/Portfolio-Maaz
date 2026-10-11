@@ -25,6 +25,12 @@ html { scroll-behavior: smooth; }
 
   --font-display: "Roboto", system-ui, -apple-system, sans-serif;
   --font-body: "Roboto", system-ui, -apple-system, sans-serif;
+
+  /* Consistent type scale used across the whole portfolio */
+  --fs-meta: 0.8rem;      /* eyebrows, dates, chips, buttons, captions */
+  --fs-body: 0.9rem;      /* all paragraph / descriptive text */
+  --fs-subhead: 1rem;     /* content sub-headings: project & institution titles */
+  --fs-lead: 1.05rem;     /* hero role line */
 }
 body {
   font-family: var(--font-body);
@@ -233,7 +239,7 @@ p { color: var(--text-muted); }
 .section__text__p1{
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 0.8rem;
+  font-size: var(--fs-meta);
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text);
@@ -248,7 +254,7 @@ p { color: var(--text-muted); }
 }
 
 .section__text__p2{
-  font-size: 1.05rem;
+  font-size: var(--fs-lead);
   color: var(--text-muted);
   margin-top: 0.6rem;
   margin-bottom: 0.9rem;
@@ -429,7 +435,7 @@ p { color: var(--text-muted); }
 }
 
 .tree-node span{
-  font-size: 0.78rem;
+  font-size: var(--fs-meta);
   color: var(--text-soft);
   line-height: 1.15;
 }
@@ -445,7 +451,7 @@ p { color: var(--text-muted); }
 }
 
 .about-text{ flex: 1.2; }
-.about-text p{ margin-bottom: 0.8rem; line-height: 1.55; font-size: 0.92rem; }
+.about-text p{ margin-bottom: 0.8rem; line-height: 1.55; font-size: var(--fs-body); }
 
 .about-image{ flex: 0.8; display:flex; justify-content:flex-end; }
 .about-pic{
@@ -458,7 +464,7 @@ p { color: var(--text-muted); }
 /* ===================== EDUCATION / ACADEMIC BACKGROUND ===================== */
 .academic-heading{
   margin-top: 0.7rem;
-  font-size: 0.86rem;
+  font-size: var(--fs-subhead);
   padding-bottom: 0.28rem;
   border-bottom: 1px solid var(--border);
 }
@@ -497,26 +503,26 @@ p { color: var(--text-muted); }
 }
 
 .edu-title{
-  font-size: 0.76rem;
+  font-size: var(--fs-subhead);
   margin-bottom: 0.1rem;
   line-height: 1.3;
 }
 
 .edu-degree{
-  font-size: 0.76rem;
+  font-size: var(--fs-body);
   color: var(--text-muted);
   margin-bottom: 0.03rem;
   line-height: 1.3;
 }
 
 .edu-detail{
-  font-size: 0.76rem;
+  font-size: var(--fs-body);
   margin-bottom: 0.03rem;     /* tight spacing between Thesis/CGPA */
   line-height: 1.3;
 }
 
 .edu-duration{
-  font-size: 0.76rem;
+  font-size: var(--fs-meta);
   margin-top: 0;              /* since it's now under logo */
   color: var(--text-soft);
   text-align: center;
@@ -544,7 +550,7 @@ p { color: var(--text-muted); }
   background:#fff;
   color:#111;               /* ✅ always readable: this pill stays white in both themes */
   font-weight: 600;
-  font-size: 0.8rem;
+  font-size: var(--fs-meta);
   min-height: 30px;
 }
 .mini-btn:hover{
@@ -685,14 +691,14 @@ p { color: var(--text-muted); }
 }
 
 .project-title{
-  font-size: 1rem;
+  font-size: var(--fs-subhead);
   font-weight: 600;
   line-height: 1.3;
   margin-bottom: 0.3rem;
 }
 
 .project-desc{
-  font-size: 0.86rem;
+  font-size: var(--fs-body);
   line-height: 1.5;
   margin-bottom: 0.6rem;
 }
@@ -724,6 +730,8 @@ p { color: var(--text-muted); }
   align-items:center;
   gap: 0.6rem;
 }
+.contact-info-container p,
+.contact-info-container a{ font-size: var(--fs-body); }
 
 .email-icon{ width: 34px; height: 34px; }
 
@@ -731,6 +739,7 @@ footer{
   padding: 1.5rem 0 2.2rem;
   text-align:center;
   color:#666;
+  font-size: var(--fs-meta);
 }
 
 /* ===================== POLISH: STICKY NAV, ANCHORS, FOCUS ===================== */
@@ -857,7 +866,7 @@ button:focus-visible,
 }
 .focus-chip{
   font-family: var(--font-display);
-  font-size: 0.78rem;
+  font-size: var(--fs-meta);
   font-weight: 600;
   letter-spacing: 0.01em;
   padding: 0.4rem 0.8rem;
@@ -907,7 +916,7 @@ body.dark-mode .focus-chip{ color: var(--accent-strong); }
 }
 .scholar-badge:hover{ border-color: var(--accent); box-shadow: 0 10px 24px -14px var(--accent); }
 .scholar-badge p,
-.scholar-badge span{ font-weight: 600; font-size: 0.9rem; color: var(--text); }
+.scholar-badge span{ font-weight: 600; font-size: var(--fs-meta); color: var(--text); }
 
 /* Row of profile shortcut pills (GitHub, Google Scholar) */
 .profile-badges{
