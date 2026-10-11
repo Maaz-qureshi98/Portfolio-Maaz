@@ -253,15 +253,6 @@ p { color: var(--text-muted); }
   margin-bottom: 0.9rem;
 }
 
-/* Hero value-prop tagline */
-.hero-tagline{
-  font-size: 1.02rem;
-  line-height: 1.6;
-  color: var(--text-muted);
-  max-width: 42rem;
-  margin-top: 0.1rem;
-  margin-bottom: 0.4rem;
-}
 
 .justify{ text-align: justify; }
 
