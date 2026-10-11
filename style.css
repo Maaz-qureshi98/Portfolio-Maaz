@@ -931,7 +931,18 @@ body.dark-mode .focus-chip{ color: var(--accent-strong); }
   transition: border-color 160ms ease, box-shadow 160ms ease;
 }
 .scholar-badge:hover{ border-color: var(--accent); box-shadow: 0 10px 24px -14px var(--accent); }
-.scholar-badge p{ font-weight: 600; font-size: 0.9rem; }
+.scholar-badge p,
+.scholar-badge span{ font-weight: 600; font-size: 0.9rem; color: var(--text); }
+
+/* Row of profile shortcut pills (GitHub, Google Scholar) */
+.profile-badges{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 0.4rem 0 1.4rem;
+}
+.profile-badges .scholar-badge{ margin: 0 !important; }
 
 /* Contact card a touch more premium */
 .contact-info-upper-container{
