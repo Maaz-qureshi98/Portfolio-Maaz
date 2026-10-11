@@ -17,11 +17,11 @@ html { scroll-behavior: smooth; }
   --shadow-strong: rgba(16,22,40,0.14);
   --hover-bg: rgba(12,14,20,0.04);
 
-  /* Single accent used sparingly for intent, links, and focus */
-  --accent: #4f46e5;
-  --accent-strong: #4338ca;
-  --accent-soft: rgba(79,70,229,0.10);
-  --ring: rgba(79,70,229,0.40);
+  /* Monochrome: "accent" resolves to black (text color) in light mode */
+  --accent: #0c0e14;
+  --accent-strong: #000000;
+  --accent-soft: rgba(12,14,20,0.07);
+  --ring: rgba(12,14,20,0.40);
 
   --font-display: "Space Grotesk", "Inter", sans-serif;
   --font-body: "Inter", system-ui, -apple-system, sans-serif;
@@ -50,10 +50,11 @@ body.dark-mode {
   --shadow-strong: rgba(0,0,0,0.42);
   --hover-bg: rgba(255,255,255,0.06);
 
-  --accent: #818cf8;
-  --accent-strong: #a5b4fc;
-  --accent-soft: rgba(129,140,248,0.14);
-  --ring: rgba(129,140,248,0.45);
+  /* Monochrome: "accent" resolves to white (text color) in dark mode */
+  --accent: #f4f5f8;
+  --accent-strong: #ffffff;
+  --accent-soft: rgba(255,255,255,0.12);
+  --ring: rgba(255,255,255,0.45);
 }
 
 body.dark-mode .tree-node{
@@ -930,6 +931,12 @@ body.dark-mode .focus-chip{ color: var(--accent-strong); }
   border-color: var(--accent) !important;
   transform: translateY(-1px);
 }
+
+/* Keep text readable when the (monochrome) accent is near-white in dark mode */
+body.dark-mode .btn-color-1,
+body.dark-mode .filter-btn.active{ color: #07090f; }
+body.dark-mode .mini-btn:hover{ color: #07090f !important; }
+body.dark-mode .focus-chip{ color: var(--accent-strong); }
 
 /* Scholar badge reads as a pill link */
 .scholar-badge{
