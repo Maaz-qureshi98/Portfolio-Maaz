@@ -1,30 +1,45 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 :root {
   color-scheme: light;
-  --bg: #fff;
-  --surface: rgba(255,255,255,0.96);
+  --bg: #ffffff;
+  --bg-tint: #f7f8fb;              /* subtle alternating section wash */
+  --surface: rgba(255,255,255,0.80);
   --surface-strong: #ffffff;
-  --text: #111;
-  --text-muted: #444;
-  --text-soft: #666;
-  --border: rgba(0,0,0,0.10);
-  --border-strong: rgba(0,0,0,0.12);
-  --shadow: rgba(0,0,0,0.08);
-  --hover-bg: rgba(0,0,0,0.04);
+  --text: #0c0e14;
+  --text-muted: #434857;
+  --text-soft: #717784;
+  --border: rgba(12,14,20,0.09);
+  --border-strong: rgba(12,14,20,0.14);
+  --shadow: rgba(16,22,40,0.08);
+  --shadow-strong: rgba(16,22,40,0.14);
+  --hover-bg: rgba(12,14,20,0.04);
+
+  /* Single accent used sparingly for intent, links, and focus */
+  --accent: #4f46e5;
+  --accent-strong: #4338ca;
+  --accent-soft: rgba(79,70,229,0.10);
+  --ring: rgba(79,70,229,0.40);
+
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
 }
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   color: var(--text);
   background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   overflow-x: hidden; /* IMPORTANT: prevents horizontal scroll on mobile */
 }
 body.dark-mode {
   color-scheme: dark;
   --bg: #07090f;
-  --surface: rgba(25, 27, 35, 0.96);
+  --bg-tint: #0b0e16;
+  --surface: rgba(17, 21, 31, 0.80);
   --surface-strong: #11151f;
   --text: #f4f5f8;
   --text-muted: #c7cbd5;
@@ -32,7 +47,13 @@ body.dark-mode {
   --border: rgba(255,255,255,0.12);
   --border-strong: rgba(255,255,255,0.16);
   --shadow: rgba(0,0,0,0.28);
+  --shadow-strong: rgba(0,0,0,0.42);
   --hover-bg: rgba(255,255,255,0.06);
+
+  --accent: #818cf8;
+  --accent-strong: #a5b4fc;
+  --accent-soft: rgba(129,140,248,0.14);
+  --ring: rgba(129,140,248,0.45);
 }
 
 body.dark-mode .tree-node{
@@ -65,10 +86,24 @@ body.dark-mode .menu-links{
 
 img { max-width: 100%; height: auto; display: block; }
 
+h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.015em; }
+
 a { color: var(--text); text-decoration: none; }
 a:hover { color: var(--text-soft); }
 
 p { color: var(--text-muted); }
+
+/* Inline links within body copy get the accent + underline affordance */
+.about-text a,
+.project-desc a{
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+.about-text a:hover,
+.project-desc a:hover{ color: var(--accent-strong); }
 
 .container{
   width: min(1180px, 92%);
@@ -194,14 +229,30 @@ p { color: var(--text-muted); }
 
 /* ===================== TYPO ===================== */
 .section__text__p1{
+  font-family: var(--font-display);
   font-weight: 600;
-  color: var(--text-soft);
-  margin-bottom: 0.4rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+.section__text__p1::before{
+  content:"";
+  width: 26px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
 }
 
 .title{
-  font-size: 2.0rem;
-  line-height: 1.08;
+  font-size: clamp(2rem, 4.2vw, 2.9rem);
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: -0.03em;
 }
 
 .section__text__p2{
@@ -209,6 +260,16 @@ p { color: var(--text-muted); }
   color: var(--text-muted);
   margin-top: 0.8rem;
   margin-bottom: 1rem;
+}
+
+/* Hero value-prop tagline */
+.hero-tagline{
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 42rem;
+  margin-top: 0.1rem;
+  margin-bottom: 0.4rem;
 }
 
 .justify{ text-align: justify; }
@@ -266,24 +327,33 @@ p { color: var(--text-muted); }
 }
 
 .btn{
+  font-family: var(--font-display);
   font-weight: 600;
-  padding: 0.9rem 1.2rem;
+  letter-spacing: -0.01em;
+  padding: 0.85rem 1.5rem;
   border-radius: 999px;
   cursor:pointer;
-  border: 1px solid var(--border);
-  transition: all 200ms ease;
+  border: 1px solid var(--border-strong);
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, border-color 180ms ease;
   background: var(--surface-strong);
   color: var(--text);
-  min-height: 44px; /* tap target */
+  min-height: 46px; /* tap target */
 }
+.btn:hover{ transform: translateY(-2px); }
 
 .btn-color-1{
-  background: #111;
+  background: var(--accent);
   color: #fff;
-  border-color: #111;
+  border-color: var(--accent);
+  box-shadow: 0 10px 24px -8px var(--accent);
 }
-.btn-color-1:hover{ background: #000; }
-.btn-color-2:hover{ background: var(--hover-bg); }
+.btn-color-1:hover{
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
+  box-shadow: 0 14px 30px -8px var(--accent);
+}
+.btn-color-2{ background: var(--surface-strong); }
+.btn-color-2:hover{ background: var(--hover-bg); border-color: var(--text-soft); }
 
 /* ===================== HERO TREE ===================== */
 .logo-tree{
@@ -624,19 +694,29 @@ p { color: var(--text-muted); }
   font-size: 0.95rem;
   min-height: 40px;
 }
-.filter-btn:hover{ background: var(--hover-bg); }
+.filter-btn:hover{ background: var(--hover-bg); border-color: var(--text-soft); }
 .filter-btn.active{
-  background: var(--text);
-  color: var(--surface-strong);
-  border-color: var(--text);
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 8px 20px -8px var(--accent);
 }
 
 .research-box{
   display:grid;
   grid-template-columns: minmax(340px, 410px) 1fr;
-  gap: 1.7rem;
+  gap: 1.9rem;
   align-items:center;
-  padding: 1.6rem 0;
+  padding: 1.6rem;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  transition: border-color 220ms ease, box-shadow 220ms ease, transform 220ms ease, background 220ms ease;
+}
+.research-box:hover{
+  border-color: var(--border);
+  background: var(--surface-strong);
+  box-shadow: 0 20px 48px -24px var(--shadow-strong);
+  transform: translateY(-3px);
 }
 
 .project-thumb-lg{
@@ -649,8 +729,9 @@ p { color: var(--text-muted); }
 }
 
 .project-title{
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: 700;
+  line-height: 1.25;
   margin-bottom: 0.5rem;
 }
 
@@ -728,7 +809,7 @@ button:focus-visible,
 .mini-btn:focus-visible,
 .filter-btn:focus-visible,
 .theme-toggle:focus-visible{
-  outline: 2px solid var(--text);
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
   border-radius: 8px;
 }
@@ -741,4 +822,122 @@ button:focus-visible,
 @media (prefers-reduced-motion: reduce){
   .project-thumb-lg{ transition: none; }
   .research-box:hover .project-thumb-lg{ transform: none; }
+}
+
+/* ===================== TOP-CLASS DESIGN SYSTEM POLISH ===================== */
+
+/* Brand mark in nav picks up the display font + an accent dot */
+.logo{ font-family: var(--font-display); letter-spacing: -0.02em; }
+#desktop-nav .logo::after{
+  content:"";
+  display:inline-block;
+  width: 7px; height: 7px;
+  margin-left: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  vertical-align: middle;
+}
+
+/* Nav link hover → accent underline instead of gray */
+.nav-links a{ position: relative; font-weight: 500; }
+.nav-links a:hover{ color: var(--text); border-bottom: none; }
+.nav-links a::after{
+  content:"";
+  position:absolute; left:0; right:0; bottom:-4px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 200ms ease;
+}
+.nav-links a:hover::after{ transform: scaleX(1); }
+
+/* Generous, consistent vertical rhythm between major sections */
+#about, #research, #journey, #contact{ padding-top: 2.4rem; padding-bottom: 2.4rem; }
+
+/* Hero focus/expertise chips */
+.hero-focus{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.9rem 0 0.2rem;
+}
+.focus-chip{
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+body.dark-mode .focus-chip{ color: var(--accent-strong); }
+
+/* Research list: card rhythm instead of hard rules */
+.research-wrapper{ display:flex; flex-direction: column; gap: 0.4rem; }
+.research-wrapper > hr{ display:none; }
+
+/* Mini buttons adopt the system (accent ghost that fills on hover) */
+.mini-btn{
+  font-family: var(--font-display);
+  border-color: var(--border-strong) !important;
+  background: var(--surface-strong) !important;
+  color: var(--text) !important;
+  transition: background 160ms ease, color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+.mini-btn:hover{
+  background: var(--accent) !important;
+  color: #fff !important;
+  border-color: var(--accent) !important;
+  transform: translateY(-1px);
+}
+
+/* Scholar badge reads as a pill link */
+.scholar-badge{
+  flex-direction: row !important;
+  width: fit-content;
+  margin: 0.4rem auto 1.4rem !important;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface-strong);
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+.scholar-badge:hover{ border-color: var(--accent); box-shadow: 0 10px 24px -14px var(--accent); }
+.scholar-badge p{ font-weight: 600; font-size: 0.9rem; }
+
+/* Contact card a touch more premium */
+.contact-info-upper-container{
+  background: var(--surface-strong);
+  box-shadow: 0 16px 40px -28px var(--shadow-strong);
+}
+
+/* Social icons: rounded hit area with hover lift */
+#socials-container .icon{
+  padding: 8px;
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface-strong);
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+#socials-container .icon:hover{
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 22px -12px var(--accent);
+}
+#socials-container{ gap: 0.7rem; }
+
+/* Divider uses token so it adapts to dark mode too */
+.section-divider{ border-top-color: var(--border); }
+
+/* Scroll-reveal (JS adds .reveal, then .in-view). Content stays visible without JS. */
+.reveal{ opacity: 0; transform: translateY(18px); transition: opacity 620ms ease, transform 620ms ease; }
+.reveal.in-view{ opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity: 1 !important; transform: none !important; transition: none !important; }
 }

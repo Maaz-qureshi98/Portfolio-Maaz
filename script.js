@@ -79,6 +79,35 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+/* ===================== SCROLL REVEAL ===================== */
+/* Progressive enhancement: we only add the hiding class (.reveal) from JS,
+   so if JS is disabled all content stays fully visible. */
+document.addEventListener("DOMContentLoaded", () => {
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  const revealTargets = document.querySelectorAll(
+    ".hero-right, .about-layout, .edu-box, .research-box, .solar-system, .contact-info-upper-container, #research > .section__text__p1, #research > .title, #journey > .section__text__p1, #journey > .title, #contact > .section__text__p1, #contact > .title"
+  );
+
+  if (prefersReduced || !("IntersectionObserver" in window)) return;
+
+  revealTargets.forEach((el, i) => {
+    el.classList.add("reveal");
+    el.style.transitionDelay = `${Math.min(i % 4, 3) * 70}ms`;
+  });
+
+  const io = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in-view");
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+
+  revealTargets.forEach(el => io.observe(el));
+});
+
 /* ===================== RESEARCH FILTERS ===================== */
 const filterButtons = document.querySelectorAll(".filter-btn");
 const researchCards = document.querySelectorAll(".research-box");
