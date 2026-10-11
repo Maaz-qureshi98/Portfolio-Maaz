@@ -947,3 +947,61 @@ body.dark-mode .focus-chip{ color: var(--accent-strong); }
 /* About body copy emphasis */
 .about-text strong{ color: var(--text); font-weight: 600; }
 
+
+/* ===================== PRINT / SAVE-AS-PDF ===================== */
+@media print {
+  /* Always print on a clean light theme, regardless of dark mode */
+  :root,
+  :root[data-theme="dark"],
+  body.dark-mode{
+    --bg:#ffffff; --bg-tint:#ffffff; --surface:#ffffff; --surface-strong:#ffffff;
+    --text:#000000; --text-muted:#222222; --text-soft:#444444;
+    --border:rgba(0,0,0,0.28); --border-strong:rgba(0,0,0,0.35);
+    --shadow:rgba(0,0,0,0.12); --shadow-strong:rgba(0,0,0,0.18);
+    --accent:#000000; --accent-strong:#000000; --accent-soft:rgba(0,0,0,0.06);
+    --ring:rgba(0,0,0,0.4);
+  }
+  body, body.dark-mode{
+    background:#ffffff !important;
+    color:#000000 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  @page{ margin: 14mm; }
+
+  /* Full width, no clipping */
+  .container{ width:100% !important; }
+
+  /* Hide interactive chrome that is useless in a PDF */
+  #desktop-nav, #hamburger-nav, .theme-toggle, .menu-links{ display:none !important; }
+
+  /* Flatten shadows and animations for crisp output */
+  *{ box-shadow:none !important; text-shadow:none !important; }
+  .orbit, .planet{ animation:none !important; }
+
+  a{ color:#000 !important; }
+
+  /* Keep logical blocks from splitting across pages */
+  .research-box, .edu-box, .tree-node, .about-image,
+  .solar-system, .contact-info-upper-container{
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  h1, h2, h3{ break-after: avoid; page-break-after: avoid; }
+  #about, #research, #journey, #contact{ padding-top:1rem !important; padding-bottom:1rem !important; }
+
+  /* Keep hero media a sensible size on paper */
+  .hero-photo{ max-width:240px !important; }
+  .about-pic{ width:min(240px,100%) !important; }
+
+  /* Freeze the Journey orbits into a tidy static spread */
+  .orbit-1{ transform: translate(-50%,-50%) rotate(38deg) !important; }
+  .orbit-1 .planet{ transform: rotate(-38deg) !important; }
+  .orbit-2{ transform: translate(-50%,-50%) rotate(-42deg) !important; }
+  .orbit-2 .planet{ transform: rotate(42deg) !important; }
+  .orbit-4{ transform: translate(-50%,-50%) rotate(95deg) !important; }
+  .orbit-4 .planet{ transform: rotate(-95deg) !important; }
+  .orbit-5{ transform: translate(-50%,-50%) rotate(-100deg) !important; }
+  .orbit-5 .planet{ transform: rotate(100deg) !important; }
+}

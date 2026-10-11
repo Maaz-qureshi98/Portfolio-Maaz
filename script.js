@@ -79,3 +79,22 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+/* ===================== PRINT / PDF: force lazy images to load ===================== */
+(function () {
+  function eagerLoadImages() {
+    document.querySelectorAll('img[loading="lazy"]').forEach(function (img) {
+      img.loading = "eager";
+      if (img.decode) { try { img.decode().catch(function () {}); } catch (e) {} }
+    });
+  }
+  // Fired by the browser right before the print/Save-as-PDF dialog renders.
+  window.addEventListener("beforeprint", eagerLoadImages);
+  // Safari/Firefox path via matchMedia.
+  if (window.matchMedia) {
+    var mql = window.matchMedia("print");
+    if (mql.addEventListener) {
+      mql.addEventListener("change", function (e) { if (e.matches) eagerLoadImages(); });
+    }
+  }
+})();
