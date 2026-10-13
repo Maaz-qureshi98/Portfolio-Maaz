@@ -1,529 +1,572 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Maaz Portfolio</title>
-  <meta name="description" content="Maaz is a Research Engineer in Embodied AI and robot learning: learned policies (RL, VLA, imitation), and multimodal perception." />
-  <meta name="author" content="Maaz Qureshi" />
-  <meta name="keywords" content="Maaz Qureshi, Research Engineer, Embodied AI, Robot Learning, Policy Learning, Reinforcement Learning, VLA, VLM, Imitation Learning, Physical AI, Robotics, Manipulation, Perception, Foundation Models, University of Waterloo" />
-  <meta name="theme-color" content="#07090f" />
-  <link rel="canonical" href="https://maaz-qureshi98.github.io/Portfolio-Maaz/" />
-  <!-- Open Graph / social sharing -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Maaz Portfolio" />
-  <meta property="og:description" content="Embodied AI and robot learning: learned policies (RL, VLA, imitation), multimodal perception, and real-world multi-robot systems." />
-  <meta property="og:url" content="https://maaz-qureshi98.github.io/Portfolio-Maaz/" />
-  <meta property="og:image" content="https://maaz-qureshi98.github.io/Portfolio-Maaz/assets/profile-pic.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Maaz Qureshi" />
-  <meta name="twitter:description" content="Embodied AI and robot learning: learned policies (RL, VLA, imitation), multimodal perception, and real-world multi-robot systems." />
-  <meta name="twitter:image" content="https://maaz-qureshi98.github.io/Portfolio-Maaz/assets/profile-pic.jpg" />
-  <!-- Favicon (uses the profile photo; swap for a dedicated icon anytime) -->
-  <link rel="icon" href="./assets/profile-pic.jpg" />
-  <link rel="apple-touch-icon" href="./assets/profile-pic.jpg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="style.css?v=27" />
-  <link rel="stylesheet" href="mediaqueries.css?v=27" />
-  <!-- ✅ Hero-tree AND hero-grid layout pinned inline with !important so they
-       always render correctly even if an older cached/mismatched style.css is
-       being served. This block is the source of truth for both. -->
-  <style>
-    /* --- Hero grid: photo column hugs the photo, tree column gets the rest --- */
-    .hero-grid{ display:grid !important; grid-template-columns: minmax(260px, 320px) 1fr !important; gap: 2rem !important; align-items:start !important; }
-    .hero-right{ transform:none !important; }
-    .hero-photo{ max-width:300px !important; }
-    .logo-tree{ width:min(760px,100%) !important; margin:0.5rem 0 0 auto !important; position:static !important; }
-    .tree-row{ display:flex !important; position:relative !important; }
-    .tree-top{ justify-content:space-between !important; }
-    .tree-bottom{ justify-content:center !important; gap:4% !important; }
-    .tree-top::before{ content:"" !important; position:absolute !important; left:9% !important; right:9% !important; top:50% !important; height:2px !important; background:rgba(0,0,0,0.30) !important; z-index:0 !important; }
-    .tree-branch{ position:relative !important; height:1.8rem !important; }
-    .tree-branch::before{ content:"" !important; position:absolute !important; left:50% !important; top:0 !important; height:55% !important; width:2px !important; background:rgba(0,0,0,0.30) !important; transform:translateX(-50%) !important; }
-    .tree-branch::after{ content:"" !important; position:absolute !important; left:39% !important; right:39% !important; top:55% !important; height:2px !important; background:rgba(0,0,0,0.30) !important; }
-    .branch-left, .branch-right{ position:absolute !important; top:55% !important; height:45% !important; width:2px !important; background:rgba(0,0,0,0.30) !important; }
-    .branch-left{ left:39% !important; }
-    .branch-right{ left:61% !important; }
-    .tree-node{
-      position:relative !important;
-      left:auto !important; top:auto !important;
-      z-index:1 !important;
-      width:18% !important;
-      height:auto !important;
-      min-height:4.7rem !important;    /* ✅ tall enough for the bigger logos, still compact */
-      aspect-ratio:auto !important;
-      background:#fff !important;
-      border:1px solid rgba(0,0,0,0.10) !important;
-      border-radius:14px !important;
-      box-shadow:0 10px 22px rgba(0,0,0,0.06) !important;
-      display:flex !important;
-      flex-direction:column !important;
-      align-items:center !important;
-      justify-content:center !important;
-      gap:6px !important;
-      padding:8px 6px !important;
-      text-align:center !important;
-    }
-    .tree-node img{ height:28px !important; width:auto !important; max-width:85% !important; object-fit:contain !important; }
-    .tree-node img.logo-apple{ height:40px !important; }
-    .tree-node img.logo-big{ height:34px !important; }
-    .node-logos{ display:flex !important; align-items:center !important; justify-content:center !important; gap:8px !important; }
-    .tree-node span{ font-size:var(--fs-meta) !important; color:#555 !important; line-height:1.15 !important; }
-    @media (max-width:900px){
-      .hero-grid{ grid-template-columns: 1fr !important; }
-      .hero-left{ display:flex !important; justify-content:center !important; }
-    }
-    @media (max-width:760px){
-      .tree-row{ flex-wrap:wrap !important; justify-content:center !important; gap:0.8rem !important; }
-      .tree-top::before, .tree-branch{ display:none !important; }
-      .tree-node{ width:42% !important; min-height:78px !important; }
-    }
-    @media (max-width:420px){
-      .tree-node{ width:100% !important; }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 
+  <title>Maaz Portfolio</title>
+  <meta name="description" content="Maaz is a Research Engineer in Embodied AI and robot learning: learned policies (RL, VLA, imitation), and multimodal perception." />
+  <meta name="author" content="Maaz Qureshi" />
+  <meta name="keywords" content="Maaz Qureshi, Research Engineer, Embodied AI, Robot Learning, Policy Learning, Reinforcement Learning, VLA, VLM, Imitation Learning, Physical AI, Robotics, Manipulation, Perception, Foundation Models, University of Waterloo" />
+  <meta name="theme-color" content="#07090f" />
+  <link rel="canonical" href="https://maaz-qureshi98.github.io/Portfolio-Maaz/" />
+
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Maaz Portfolio" />
+  <meta property="og:description" content="Embodied AI and robot learning: learned policies (RL, VLA, imitation), multimodal perception, and real-world multi-robot systems." />
+  <meta property="og:url" content="https://maaz-qureshi98.github.io/Portfolio-Maaz/" />
+  <meta property="og:image" content="https://maaz-qureshi98.github.io/Portfolio-Maaz/assets/profile-pic.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Maaz Qureshi" />
+  <meta name="twitter:description" content="Embodied AI and robot learning: learned policies (RL, VLA, imitation), multimodal perception, and real-world multi-robot systems." />
+  <meta name="twitter:image" content="https://maaz-qureshi98.github.io/Portfolio-Maaz/assets/profile-pic.jpg" />
+
+  <!-- Favicon (uses the profile photo; swap for a dedicated icon anytime) -->
+  <link rel="icon" href="./assets/profile-pic.jpg" />
+  <link rel="apple-touch-icon" href="./assets/profile-pic.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link rel="stylesheet" href="style.css?v=27" />
+  <link rel="stylesheet" href="mediaqueries.css?v=27" />
+
+  <!-- ✅ Hero-tree AND hero-grid layout pinned inline with !important so they
+       always render correctly even if an older cached/mismatched style.css is
+       being served. This block is the source of truth for both. -->
+  <style>
+    /* --- Hero grid: photo column hugs the photo, tree column gets the rest --- */
+    .hero-grid{ display:grid !important; grid-template-columns: minmax(260px, 320px) 1fr !important; gap: 2rem !important; align-items:start !important; }
+    .hero-right{ transform:none !important; }
+    .hero-photo{ max-width:300px !important; }
+
+    .logo-tree{ width:min(760px,100%) !important; margin:0.5rem 0 0 auto !important; position:static !important; }
+    .tree-row{ display:flex !important; position:relative !important; }
+    .tree-top{ justify-content:space-between !important; }
+    .tree-bottom{ justify-content:center !important; gap:4% !important; }
+    .tree-top::before{ content:"" !important; position:absolute !important; left:9% !important; right:9% !important; top:50% !important; height:2px !important; background:rgba(0,0,0,0.30) !important; z-index:0 !important; }
+    .tree-branch{ position:relative !important; height:1.8rem !important; }
+    .tree-branch::before{ content:"" !important; position:absolute !important; left:50% !important; top:0 !important; height:55% !important; width:2px !important; background:rgba(0,0,0,0.30) !important; transform:translateX(-50%) !important; }
+    .tree-branch::after{ content:"" !important; position:absolute !important; left:39% !important; right:39% !important; top:55% !important; height:2px !important; background:rgba(0,0,0,0.30) !important; }
+    .branch-left, .branch-right{ position:absolute !important; top:55% !important; height:45% !important; width:2px !important; background:rgba(0,0,0,0.30) !important; }
+    .branch-left{ left:39% !important; }
+    .branch-right{ left:61% !important; }
+    .tree-node{
+      position:relative !important;
+      left:auto !important; top:auto !important;
+      z-index:1 !important;
+      width:18% !important;
+      height:auto !important;
+      min-height:4.7rem !important;    /* ✅ tall enough for the bigger logos, still compact */
+      aspect-ratio:auto !important;
+      background:#fff !important;
+      border:1px solid rgba(0,0,0,0.10) !important;
+      border-radius:14px !important;
+      box-shadow:0 10px 22px rgba(0,0,0,0.06) !important;
+      display:flex !important;
+      flex-direction:column !important;
+      align-items:center !important;
+      justify-content:center !important;
+      gap:6px !important;
+      padding:8px 6px !important;
+      text-align:center !important;
+    }
+    .tree-node img{ height:28px !important; width:auto !important; max-width:85% !important; object-fit:contain !important; }
+    .tree-node img.logo-apple{ height:40px !important; }
+    .tree-node img.logo-big{ height:34px !important; }
+    .node-logos{ display:flex !important; align-items:center !important; justify-content:center !important; gap:8px !important; }
+    .tree-node span{ font-size:var(--fs-meta) !important; color:#555 !important; line-height:1.15 !important; }
+    @media (max-width:900px){
+      .hero-grid{ grid-template-columns: 1fr !important; }
+      .hero-left{ display:flex !important; justify-content:center !important; }
+    }
+    @media (max-width:760px){
+      .tree-row{ flex-wrap:wrap !important; justify-content:center !important; gap:0.8rem !important; }
+      .tree-top::before, .tree-branch{ display:none !important; }
+      .tree-node{ width:42% !important; min-height:78px !important; }
+    }
+    @media (max-width:420px){
+      .tree-node{ width:100% !important; }
+    }
+  </style>
 </head>
+
 <body>
-  <!-- ===================== NAVIGATION ===================== -->
-  <nav id="desktop-nav" class="container">
-    <div class="logo">Portfolio</div>
-    <div class="nav-actions">
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#journey">Journey</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button id="themeToggleBtnDesktop" class="theme-toggle" type="button" aria-label="Toggle dark mode">
-        <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
-        <span class="theme-toggle__label">Dark</span>
-      </button>
-    </div>
-  </nav>
-  <nav id="hamburger-nav" class="container" aria-label="Mobile Navigation">
-    <div class="logo">Maaz Portfolio</div>
-    <button id="themeToggleBtnMobile" class="theme-toggle theme-toggle--mobile" type="button" aria-label="Toggle dark mode">
-      <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
-      <span class="theme-toggle__label">Dark</span>
-    </button>
-    <div class="hamburger-menu">
-      <button class="hamburger-icon" id="hamburgerBtn" type="button"
-              aria-label="Open menu" aria-expanded="false" aria-controls="menuLinks">
-        <span></span><span></span><span></span>
-      </button>
-      <div class="menu-links" id="menuLinks">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#journey">Journey</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </nav>
-  <!-- ===================== PROFILE / HERO ===================== -->
-  <section id="profile" class="container">
-    <div class="hero-grid">
-      <div class="hero-left">
-        <div class="hero-photo">
-          <img src="./assets/profile-pic.jpg" alt="Maaz Qureshi portrait" loading="lazy" />
-        </div>
-      </div>
-      <div class="hero-right">
-        <p class="section__text__p1">Hi, I'm</p>
-        <h1 class="title">Maaz Qureshi</h1>
-        <p class="section__text__p2">Research Engineer · Embodied AI & Robot Learning</p>
-        <div class="hero-focus">
-          <span class="focus-chip">Embodied AI</span>
-          <span class="focus-chip">Robot Learning</span>
-          <span class="focus-chip">Policy Learning (RL / VLA)</span>
-          <span class="focus-chip">Perception & Manipulation</span>
-        </div>
-        <!-- ===================== HERO TREE (CLICKABLE) ===================== -->
-        <div class="logo-tree" aria-label="Career and education tree">
-          <div class="tree-row tree-top">
-            <a class="tree-node" href="https://www.apple.com/" target="_blank" rel="noopener">
-              <span class="node-logos">
-                <img src="./assets/apple.png" alt="Apple" loading="lazy" class="logo-apple" />
-                <img src="./assets/uwaterloo.jpeg" alt="University of Waterloo" loading="lazy" class="logo-big" />
-              </span>
-              <span>2026 – Present</span>
-            </a>
-            <a class="tree-node" href="https://www.cobionix.com/en/" target="_blank" rel="noopener">
-              <img src="./assets/cobionix.png" alt="Cobionix" loading="lazy" class="logo-big" />
-              <span>2025 – 2026</span>
-            </a>
-            <a class="tree-node" href="https://uwaterloo.ca/" target="_blank" rel="noopener">
-              <img src="./assets/uwaterloo.jpeg" alt="University of Waterloo" loading="lazy" class="logo-big" />
-              <span>MASc · 2024 – 2025</span>
-            </a>
-            <a class="tree-node" href="https://abysssolutions.co/" target="_blank" rel="noopener">
-              <img src="./assets/abyss.png" alt="Abyss Solutions" loading="lazy" />
-              <span>2022 – 2023</span>
-            </a>
-            <a class="tree-node" href="https://bahria.edu.pk/" target="_blank" rel="noopener">
-              <img src="./assets/bahria_university.jpeg" alt="Bahria University" loading="lazy" class="logo-big" />
-              <span>BE · 2017 – 2021</span>
-            </a>
-          </div>
-          <div class="tree-branch" aria-hidden="true">
-            <span class="branch-left"></span>
-            <span class="branch-right"></span>
-          </div>
-          <div class="tree-row tree-bottom">
-            <a class="tree-node" href="https://www.keysight.com/us/en/home.html" target="_blank" rel="noopener">
-              <img src="./assets/keysight.png" alt="Keysight" loading="lazy" class="logo-big" />
-              <span>2024</span>
-            </a>
-            <a class="tree-node" href="https://www.rogers.com/" target="_blank" rel="noopener">
-              <img src="./assets/rogers.png" alt="Rogers" loading="lazy" />
-              <span>2024 – 2025</span>
-            </a>
-          </div>
-        </div>
-        <div class="btn-container">
-          <button class="btn btn-color-2" onclick="window.open('./assets/Resume_Maaz.pdf')">Download CV</button>
-          <button class="btn btn-color-1" onclick="location.href='#contact'">Contact Info</button>
-        </div>
-        <div id="socials-container">
-          <img src="./assets/linkedin.png" class="icon" alt="LinkedIn"
-               onclick="location.href='https://www.linkedin.com/in/maaz-ahmad-046c/'" />
-          <img src="./assets/github.png" class="icon" alt="GitHub"
-               onclick="location.href='https://github.com/Maaz-qureshi98'" />
-          <img src="./assets/google-scholar.png" class="icon" alt="Google Scholar"
-               onclick="location.href='https://scholar.google.ca/citations?user=hC7tswoAAAAJ&hl=en'" />
-        </div>
-      </div>
-    </div>
-  </section>
-  <hr class="section-divider" />
-  <!-- ===================== ABOUT ===================== -->
-    <section id="about" class="container">
-  <p class="section__text__p1">Get To Know More</p>
-  <!-- <h1 class="title">About Me</h1> -->
-  <!-- Text LEFT, Image RIGHT -->
-  <div class="about-layout">
-    <div class="about-text">
-      <p class="justify">
-        I'm a Research Engineer focused on <strong>Embodied AI</strong> and <strong>robot learning</strong>, teaching
-        robots to perceive, reason, and act in the physical world. My work spans learned control <strong>policies</strong>
-        (reinforcement learning, VLA, and imitation learning), multimodal and foundation models (CNNs, VLMs, VLAs, and
-        world-action models), and the real-time systems that deploy them on multi-robot platforms.
-      </p>
-      <p class="justify">
-        During my research at the University of Waterloo, I worked with
-        <a href="https://uwaterloo.ca/mechanical-mechatronics-engineering/profile/wmelek" target="_blank" rel="noopener">Dr. William Melek</a>
-        and
-        <a href="https://uwaterloo.ca/electrical-computer-engineering/profile/gshaker" target="_blank" rel="noopener">Dr. George Shaker</a>,
-        collaborating with Apple, UW RoboHub, Keysight, and Rogers on smart-factory robotics.
-      </p>
-      <p class="justify">
-        My fascination with autonomy started early: I built a swarm-robotics system that won 3rd place for Best
-        Engineering Project at the national level.
-      </p>
-      <!-- ✅ ACADEMIC BACKGROUND MOVED HERE (below 3rd paragraph) -->
-      <h2 class="academic-heading">Academic Background</h2>
-      <div class="education-wrapper">
-        <!-- UW -->
-        <div class="edu-box">
-          <div class="edu-left">
-            <img src="./assets/uwaterloo.jpeg" class="edu-logo" alt="University of Waterloo Logo" />
-            <p class="edu-duration edu-duration-left">Jan 2024 – Aug 2025</p>
-          </div>
-          <div class="edu-right">
-            <h3 class="edu-title">University of Waterloo, Canada</h3>
-            <p class="edu-degree">Masters of Applied Sciences (M.A.Sc), Mechatronics Engineering</p>
-            <p class="edu-detail"><strong>Thesis:</strong> Intelligent Multi-Robot Autonomy with Connected AMRs and Manipulators for SMART Factory(s)</p>
-            <p class="edu-detail"><strong>CGPA:</strong> 93.5% (A+)</p>
-            <div class="edu-btn-row">
-              <a class="mini-btn" href="https://uwspace.uwaterloo.ca/items/17af2309-7924-47ad-802d-10f313d2a378" target="_blank" rel="noopener">Thesis</a>
-              <a class="mini-btn" href="https://www.youtube.com/watch?v=eTLxCY2rRMA" target="_blank" rel="noopener">Video 1</a>
-              <a class="mini-btn" href="https://www.youtube.com/watch?v=fgeb6k_P9mg" target="_blank" rel="noopener">Video 2</a>
-            </div>
-          </div>
-        </div>
-        <hr class="edu-divider" />
-        <!-- Bahria -->
-        <div class="edu-box">
-          <div class="edu-left">
-            <img src="./assets/bahria_university.jpeg" class="edu-logo" alt="Bahria University Logo" />
-            <p class="edu-duration">Sept 2017 – Aug 2021</p>
-          </div>
-          <div class="edu-right">
-            <h3 class="edu-title">Bahria University</h3>
-            <p class="edu-degree">Bachelor of Engineering (B.E.), Electrical (Electronics) Engineering</p>
-            <p class="edu-detail"><strong>Thesis:</strong> Swarm Robotics: Centralized Multi-Robot Autonomy for Path Planning and Patterns</p>
-            <p class="edu-detail"><strong>CGPA:</strong> A+</p>
-            <div class="edu-btn-row">
-              <a class="mini-btn" href="http://dspace.bahria.edu.pk:8080/xmlui/handle/123456789/12616" target="_blank" rel="noopener">Thesis</a>
-              <a class="mini-btn" href="https://youtu.be/-lVYkj_FrYI" target="_blank" rel="noopener">Video</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- ✅ END ACADEMIC BACKGROUND -->
-    </div>
-    <div class="about-image">
-      <img src="./assets/about-pic.jpg" class="about-pic" alt="About Maaz" />
-    </div>
-  </div>
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav id="desktop-nav" class="container">
+    <div class="logo">Portfolio</div>
+    <div class="nav-actions">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#journey">Journey</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="themeToggleBtnDesktop" class="theme-toggle" type="button" aria-label="Toggle dark mode">
+        <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+        <span class="theme-toggle__label">Dark</span>
+      </button>
+    </div>
+  </nav>
+
+  <nav id="hamburger-nav" class="container" aria-label="Mobile Navigation">
+    <div class="logo">Maaz Portfolio</div>
+    <button id="themeToggleBtnMobile" class="theme-toggle theme-toggle--mobile" type="button" aria-label="Toggle dark mode">
+      <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+      <span class="theme-toggle__label">Dark</span>
+    </button>
+    <div class="hamburger-menu">
+      <button class="hamburger-icon" id="hamburgerBtn" type="button"
+              aria-label="Open menu" aria-expanded="false" aria-controls="menuLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="menu-links" id="menuLinks">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#journey">Journey</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== PROFILE / HERO ===================== -->
+  <section id="profile" class="container">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <div class="hero-photo">
+          <img src="./assets/profile-pic.jpg" alt="Maaz Qureshi portrait" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <p class="section__text__p1">Hi, I'm</p>
+        <h1 class="title">Maaz Qureshi</h1>
+        <p class="section__text__p2">Research Engineer · Embodied AI &amp; Robot Learning</p>
+        <div class="hero-focus">
+          <span class="focus-chip">Embodied AI</span>
+          <span class="focus-chip">Robot Learning</span>
+          <span class="focus-chip">Policy Learning (RL / VLA)</span>
+          <span class="focus-chip">Perception &amp; Manipulation</span>
+        </div>
+
+        <!-- ===================== HERO TREE (CLICKABLE) ===================== -->
+        <div class="logo-tree" aria-label="Career and education tree">
+
+          <div class="tree-row tree-top">
+            <a class="tree-node" href="https://www.apple.com/" target="_blank" rel="noopener">
+              <span class="node-logos">
+                <img src="./assets/apple.png" alt="Apple" loading="lazy" class="logo-apple" />
+                <img src="./assets/uwaterloo.jpeg" alt="University of Waterloo" loading="lazy" class="logo-big" />
+              </span>
+              <span>2026 – Present</span>
+            </a>
+
+            <a class="tree-node" href="https://www.cobionix.com/en/" target="_blank" rel="noopener">
+              <img src="./assets/cobionix.png" alt="Cobionix" loading="lazy" class="logo-big" />
+              <span>2025 – 2026</span>
+            </a>
+
+            <a class="tree-node" href="https://uwaterloo.ca/" target="_blank" rel="noopener">
+              <img src="./assets/uwaterloo.jpeg" alt="University of Waterloo" loading="lazy" class="logo-big" />
+              <span>MASc · 2024 – 2025</span>
+            </a>
+
+            <a class="tree-node" href="https://abysssolutions.co/" target="_blank" rel="noopener">
+              <img src="./assets/abyss.png" alt="Abyss Solutions" loading="lazy" />
+              <span>2022 – 2023</span>
+            </a>
+
+            <a class="tree-node" href="https://bahria.edu.pk/" target="_blank" rel="noopener">
+              <img src="./assets/bahria_university.jpeg" alt="Bahria University" loading="lazy" class="logo-big" />
+              <span>BE · 2017 – 2021</span>
+            </a>
+          </div>
+
+          <div class="tree-branch" aria-hidden="true">
+            <span class="branch-left"></span>
+            <span class="branch-right"></span>
+          </div>
+
+          <div class="tree-row tree-bottom">
+            <a class="tree-node" href="https://www.keysight.com/us/en/home.html" target="_blank" rel="noopener">
+              <img src="./assets/keysight.png" alt="Keysight" loading="lazy" class="logo-big" />
+              <span>2024</span>
+            </a>
+
+            <a class="tree-node" href="https://www.rogers.com/" target="_blank" rel="noopener">
+              <img src="./assets/rogers.png" alt="Rogers" loading="lazy" />
+              <span>2024 – 2025</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="btn-container">
+          <button class="btn btn-color-2" onclick="window.open('./assets/Resume_Maaz.pdf')">Download CV</button>
+          <button class="btn btn-color-1" onclick="location.href='#contact'">Contact Info</button>
+        </div>
+
+        <div id="socials-container">
+          <img src="./assets/linkedin.png" class="icon" alt="LinkedIn"
+               onclick="location.href='https://www.linkedin.com/in/maaz-ahmad-046c/'" />
+          <img src="./assets/github.png" class="icon" alt="GitHub"
+               onclick="location.href='https://github.com/Maaz-qureshi98'" />
+          <img src="./assets/google-scholar.png" class="icon" alt="Google Scholar"
+               onclick="location.href='https://scholar.google.ca/citations?user=hC7tswoAAAAJ&hl=en'" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- ===================== ABOUT ===================== -->
+    <section id="about" class="container">
+  <p class="section__text__p1">Get To Know More</p>
+  <!-- <h1 class="title">About Me</h1> -->
+
+  <!-- Text LEFT, Image RIGHT -->
+  <div class="about-layout">
+    <div class="about-text">
+      <p class="justify">
+        I'm a Research Engineer focused on <strong>Embodied AI</strong> and <strong>robot learning</strong>, teaching
+        robots to perceive, reason, and act in the physical world. My work spans learned control <strong>policies</strong>
+        (reinforcement learning, VLA, and imitation learning), multimodal and foundation models (CNNs, VLMs, VLAs, and
+        world-action models), and the real-time systems that deploy them on multi-robot platforms.
+      </p>
+
+      <p class="justify">
+        During my research at the University of Waterloo, I worked with
+        <a href="https://uwaterloo.ca/mechanical-mechatronics-engineering/profile/wmelek" target="_blank" rel="noopener">Dr. William Melek</a>
+        and
+        <a href="https://uwaterloo.ca/electrical-computer-engineering/profile/gshaker" target="_blank" rel="noopener">Dr. George Shaker</a>,
+        collaborating with Apple, UW RoboHub, Keysight, and Rogers on smart-factory robotics.
+      </p>
+
+      <p class="justify">
+        My fascination with autonomy started early: I built a swarm-robotics system that won 3rd place for Best
+        Engineering Project at the national level.
+      </p>
+
+      <!-- ✅ ACADEMIC BACKGROUND MOVED HERE (below 3rd paragraph) -->
+      <h2 class="academic-heading">Academic Background</h2>
+
+      <div class="education-wrapper">
+        <!-- UW -->
+        <div class="edu-box">
+          <div class="edu-left">
+            <img src="./assets/uwaterloo.jpeg" class="edu-logo" alt="University of Waterloo Logo" />
+            <p class="edu-duration edu-duration-left">Jan 2024 – Aug 2025</p>
+          </div>
+          <div class="edu-right">
+            <h3 class="edu-title">University of Waterloo, Canada</h3>
+            <p class="edu-degree">Masters of Applied Sciences (M.A.Sc), Mechatronics Engineering</p>
+            <p class="edu-detail"><strong>Thesis:</strong> Intelligent Multi-Robot Autonomy with Connected AMRs and Manipulators for SMART Factory(s)</p>
+            <p class="edu-detail"><strong>CGPA:</strong> 93.5% (A+)</p>
+            <div class="edu-btn-row">
+              <a class="mini-btn" href="https://uwspace.uwaterloo.ca/items/17af2309-7924-47ad-802d-10f313d2a378" target="_blank" rel="noopener">Thesis</a>
+              <a class="mini-btn" href="https://www.youtube.com/watch?v=eTLxCY2rRMA" target="_blank" rel="noopener">Video 1</a>
+              <a class="mini-btn" href="https://www.youtube.com/watch?v=fgeb6k_P9mg" target="_blank" rel="noopener">Video 2</a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="edu-divider" />
+
+        <!-- Bahria -->
+        <div class="edu-box">
+          <div class="edu-left">
+            <img src="./assets/bahria_university.jpeg" class="edu-logo" alt="Bahria University Logo" />
+            <p class="edu-duration">Sept 2017 – Aug 2021</p>
+
+          </div>
+          <div class="edu-right">
+            <h3 class="edu-title">Bahria University</h3>
+            <p class="edu-degree">Bachelor of Engineering (B.E.), Electrical (Electronics) Engineering</p>
+            <p class="edu-detail"><strong>Thesis:</strong> Swarm Robotics: Centralized Multi-Robot Autonomy for Path Planning and Patterns</p>
+            <p class="edu-detail"><strong>CGPA:</strong> A+</p>
+            <div class="edu-btn-row">
+              <a class="mini-btn" href="http://dspace.bahria.edu.pk:8080/xmlui/handle/123456789/12616" target="_blank" rel="noopener">Thesis</a>
+              <a class="mini-btn" href="https://youtu.be/-lVYkj_FrYI" target="_blank" rel="noopener">Video</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ✅ END ACADEMIC BACKGROUND -->
+    </div>
+
+    <div class="about-image">
+      <img src="./assets/about-pic.jpg" class="about-pic" alt="About Maaz" />
+    </div>
+  </div>
 </section>
+
 <hr class="section-divider" />
-  <!-- ===================== RESEARCH (MOVED AFTER ABOUT) ===================== -->
-  <section id="research" class="container">
-    <h1 class="title">Research</h1>
-    <!-- Profile shortcuts: GitHub + Google Scholar -->
-    <div class="profile-badges">
-      <a class="scholar-badge" href="https://github.com/Maaz-qureshi98" target="_blank" rel="noopener">
-        <img src="./assets/github.png" class="icon" alt="GitHub" />
-        <span>GitHub</span>
-      </a>
-      <a class="scholar-badge" href="https://scholar.google.ca/citations?user=hC7tswoAAAAJ&hl=en" target="_blank" rel="noopener">
-        <img src="./assets/google-scholar.png" class="icon" alt="Scholar" />
-        <span>Scholar</span>
-      </a>
-    </div>
-    <div class="research-wrapper">
-      <!-- BEGIN hidden first research project
-Physical AI: VLA & Diffusion Policy on Franka
-      <div class="research-box" data-tags="robotics ai">
-        <div class="research-media has-video">
-          <a class="media-link" href="https://youtu.be/lUI7DXrHwX4" target="_blank" rel="noopener" aria-label="Watch video: Physical AI, VLA and Diffusion Policy deployment with Franka">
-            <img src="./assets/physicalai.jpg" class="project-thumb-lg" alt="Physical AI: VLA and Diffusion Policy deployment with a Franka manipulator" loading="lazy" />
-          </a>
-        </div>
-        <div class="research-text">
-          <h2 class="project-title">Physical AI Robot Policy Deployment with Cobot</h2>
-          <p class="project-desc justify">
-            Deployed Vision-Language-Action (VLA) models and Diffusion Policies on a Franka 7-DoF manipulator,
-            learning closed-loop visuomotor control for real-world robotic manipulation tasks.
-          </p>
-          <div class="project-btn-row">
-            <a class="mini-btn" href="https://youtu.be/lUI7DXrHwX4" target="_blank" rel="noopener">Video</a>
-          </div>
-        </div>
-      </div>
-      <hr />
-      END hidden first research project -->
-  \<!-- 0: Multimodal Learning: Physical AI Deployment -->
-      <div class="research-box" data-tags="robotics ai">
-        <div class="research-media has-video">
-          <a class="media-link" href="https://www.youtube.com/watch?v=uw-hooM_Wg0" target="_blank" rel="noopener" aria-label="Watch video: Multimodal Learning: Physical AI Deployment">
-            <img src="./assets/multimodal.png" class="project-thumb-lg" alt="Multimodal Learning: Physical AI Deployment with 7-DoF Manipulator" />
-          </a>
-        </div>
-        <div class="research-text">
-          <h2 class="project-title">Multimodal AI/ML Learning Deployment with 7-DoF Manipulator</h2>
-          <p class="project-desc justify">
-            Real-time RGB-D sensor-fused multimodal pipeline (VLM, pose estimation, object detection,
-            and semantic segmentation) built in C++ with NVIDIA CUDA, and quantized with TensorRT
-            (FP16, INT8) for asynchronous pipelines that maximize throughput.
-          </p>
-          <div class="project-btn-row">
-            <a class="mini-btn" href="https://www.youtube.com/watch?v=uw-hooM_Wg0" target="_blank" rel="noopener">Video</a>
-          </div>
-        </div>
-      </div>
-      <hr />
-      <!-- 1: CRADMap -->
-      <div class="research-box" data-tags="robotics ai">
-        <div class="research-media has-video">
-          <a class="media-link" href="https://www.youtube.com/watch?v=eTLxCY2rRMA" target="_blank" rel="noopener" aria-label="Watch video: CRADMap">
-            <img src="./assets/project1.png" class="project-thumb-lg" alt="CRADMap Project" />
-          </a>
-        </div>
-        <div class="research-text">
-          <h2 class="project-title">CRADMap: Applied Distributed Volumetric Mapping with 5G-Connected Multi-Robots and 4D Radar Perception</h2>
-          <p class="project-desc justify">
-            Distributed volumetric mapping integrating ORB-SLAM3 (front-end), TSDF–Octree fusion,
-            4D mmWave radar + RGB-D perception, and 5G offloading for real-time mapping under occlusions
-            and degraded visibility.
-          </p>
-          <div class="project-btn-row">
-            <a class="mini-btn" href="https://www.youtube.com/watch?v=eTLxCY2rRMA" target="_blank" rel="noopener">Video</a>
-            <a class="mini-btn" href="https://github.com/Maaz-qureshi98/CRADMap-Beyond-the-Visible" target="_blank" rel="noopener">GitHub</a>
-            <a class="mini-btn" href="https://arxiv.org/pdf/2503.00262" target="_blank" rel="noopener">Publication</a>
-          </div>
-        </div>
-      </div>
-      <hr />
-      <!-- 2: RAPTAR -->
-      <div class="research-box" data-tags="robotics ai">
-        <div class="research-media has-video">
-          <a class="media-link" href="https://www.youtube.com/watch?v=fgeb6k_P9mg" target="_blank" rel="noopener" aria-label="Watch video: RAPTAR">
-            <img src="./assets/project2.png" class="project-thumb-lg" alt="RAPTAR Project" />
-          </a>
-        </div>
-        <div class="research-text">
-          <h2 class="project-title">RAPTAR: Radar Radiation Pattern Acquisition through Automated Collaborative Robotics</h2>
-          <p class="project-desc justify">
-            Automated collaborative-robot framework using OMPL RRT-Connect and quaternion kinematics
-            for high-precision mmWave antenna radiation pattern measurement in 3D space.
-          </p>
-          <div class="project-btn-row">
-            <a class="mini-btn" href="https://www.youtube.com/watch?v=fgeb6k_P9mg" target="_blank" rel="noopener">Video</a>
-            <a class="mini-btn" href="https://github.com/Maaz-qureshi98/RAPTAR-Motion-Planning" target="_blank" rel="noopener">GitHub</a>
-            <a class="mini-btn" href="https://arxiv.org/pdf/2507.16988" target="_blank" rel="noopener">Publication</a>
-          </div>
-        </div>
-      </div>
-      <hr />
-      <!-- 3: NAO HRI -->
-      <div class="research-box" data-tags="ai robotics">
-        <div class="research-media">
-          <a class="media-link" href="https://drive.google.com/file/d/1IvIz7Xvnk-jjGcVKldO5CLgQ5YhUBckr/view" target="_blank" rel="noopener" aria-label="Open preprint: Humanoid Robotics Non-Verbal Gesture Learning">
-            <img src="./assets/project3.1.png" class="project-thumb-lg" alt="Humanoid Robotics Project" />
-          </a>
-        </div>
-        <div class="research-text">
-          <h2 class="project-title">Humanoid Robotics: Non-Verbal Gesture Learning</h2>
-          <p class="project-desc justify">
-            Integrated LLaMA 3 with gesture and vision sensing for real-time multimodal control of NAO robot,
-            enabling non-verbal HRI via IMU-based motion interpretation.
-          </p>
-          <div class="project-btn-row">
-            <a class="mini-btn" href="https://drive.google.com/file/d/1IvIz7Xvnk-jjGcVKldO5CLgQ5YhUBckr/view" target="_blank" rel="noopener">Preprint</a>
-          </div>
-        </div>
-      </div>
-      <hr />
-      <!-- 4: Swarm -->
-      <div class="research-box" data-tags="robotics">
-        <div class="research-media has-video">
-          <a class="media-link" href="https://youtu.be/-lVYkj_FrYI" target="_blank" rel="noopener" aria-label="Watch video: SWARM Autobots">
-            <img src="./assets/project4.png" class="project-thumb-lg" alt="Swarm Autobots Project" />
-          </a>
-        </div>
-        <div class="research-text">
-          <h2 class="project-title">SWARM Autobots</h2>
-          <p class="project-desc justify">
-            Developed synchronized control and formation algorithms for multi-robot UGV teams enabling coordinated navigation,
-            wireless peer-to-peer communication, and real-time trajectory execution.
-          </p>
-          <div class="project-btn-row">
-            <a class="mini-btn" href="https://youtu.be/-lVYkj_FrYI" target="_blank" rel="noopener">Video</a>
-            <a class="mini-btn" href="https://github.com/Maaz-qureshi98/Swarm-Autobots" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </div>
-      </div>
-      <hr />
-      <!-- 5: Dam inspection -->
-      <div class="research-box" data-tags="field robotics">
-        <div class="research-media">
-          <a class="media-link" href="https://drive.google.com/drive/folders/18bYmCwY1LIwICQbEdHR-Cqnino6fR8KQ" target="_blank" rel="noopener" aria-label="Open documents: Underwater Digital-Twin DAM Inspection">
-            <img src="./assets/project5.jpg" class="project-thumb-lg" alt="DAM Inspection Project" />
-          </a>
-        </div>
-        <div class="research-text">
-          <h2 class="project-title">Underwater Digital-Twin DAM Inspection Using ROV/AUV</h2>
-          <p class="project-desc justify">
-            Structure inspection of the NJHEP dam using multi-beam sonar, profiling sonar, and monochrome camera on ROVs/AUVs
-            over 18 km tethered operation, the largest inspection of its kind in Asia.
-          </p>
-          <div class="project-btn-row">
-            <a class="mini-btn" href="https://drive.google.com/drive/folders/18bYmCwY1LIwICQbEdHR-Cqnino6fR8KQ" target="_blank" rel="noopener">Documents</a>
-          </div>
-        </div>
-      </div>
-      <hr />
-      <!-- 6: Canal -->
-      <div class="research-box" data-tags="field robotics">
-        <div class="research-media">
-          <a class="media-link" href="https://drive.google.com/drive/folders/1DCBUf8P2L1ouxMgX6NgQNlcq-DcO5vRq" target="_blank" rel="noopener" aria-label="Open documents: Canal Crack-Propagation Inspection">
-            <img src="./assets/project6.jpg" class="project-thumb-lg" alt="Canal Inspection Project" />
-          </a>
-        </div>
-        <div class="research-text">
-          <h2 class="project-title">Canal Crack-Propagation Inspection Using ROV + Sonar</h2>
-          <p class="project-desc justify">
-            Integrated Oculus 750d sonar on a custom ROV frame and performed underwater crack-propagation analysis at 9m depth
-            and 2.3 m/s water velocity.
-          </p>
-          <div class="project-btn-row">
-            <a class="mini-btn" href="https://drive.google.com/drive/folders/1DCBUf8P2L1ouxMgX6NgQNlcq-DcO5vRq" target="_blank" rel="noopener">Documents</a>
-          </div>
-        </div>
-      </div>
-      <hr />
-      <!-- 7: Healthcare robot -->
-      <div class="research-box" data-tags="ai robotics">
-        <div class="research-media has-video">
-          <a class="media-link" href="https://drive.google.com/drive/folders/1-T06cVyxKgZP9MekK_Ysm3ULUgkmd1S9" target="_blank" rel="noopener" aria-label="Watch video: Autonomous Pill-Dispensing Healthcare Robot">
-            <img src="./assets/project7.jpg" class="project-thumb-lg" alt="Healthcare Robot Project" />
-          </a>
-        </div>
-        <div class="research-text">
-          <h2 class="project-title">Autonomous Pill-Dispensing Healthcare Robot (COVID-19)</h2>
-          <p class="project-desc justify">
-            Designed an autonomous robot integrating facial recognition, RFID-based navigation, and multi-pill dispensing
-            for safe patient-care workflows during COVID-19.
-          </p>
-          <div class="project-btn-row">
-            <a class="mini-btn" href="https://drive.google.com/drive/folders/1-T06cVyxKgZP9MekK_Ysm3ULUgkmd1S9" target="_blank" rel="noopener">Video</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <hr class="section-divider" />
-  <!-- ===================== Journey ===================== -->
-  <section id="journey" class="container">
-    <h1 class="title">Journey</h1>
-    <div class="solar-system" aria-label="Career orbit: Bahria University, Abyss Solutions, University of Waterloo, Rogers and Keysight, Cobionix, Apple">
-      <div class="sun">
-        <span class="sun-label">ML & Robotics</span>
-      </div>
-      <div class="orbit orbit-1">
-        <a class="planet" href="https://bahria.edu.pk/" target="_blank" rel="noopener" aria-label="Bahria University">
-          <img src="./assets/bahria_university.jpeg" alt="Bahria University" loading="lazy" />
-        </a>
-      </div>
-      <div class="orbit orbit-2">
-        <a class="planet" href="https://abysssolutions.co/" target="_blank" rel="noopener" aria-label="Abyss Solutions">
-          <img src="./assets/abyss.png" alt="Abyss Solutions" loading="lazy" />
-        </a>
-      </div>
-      <div class="orbit orbit-3">
-        <a class="planet planet-a" href="https://uwaterloo.ca/" target="_blank" rel="noopener" aria-label="University of Waterloo">
-          <img src="./assets/uwaterloo.jpeg" alt="University of Waterloo" loading="lazy" />
-        </a>
-        <a class="planet planet-b" href="https://www.rogers.com/" target="_blank" rel="noopener" aria-label="Rogers Communications">
-          <img src="./assets/rogers.png" alt="Rogers" loading="lazy" />
-        </a>
-        <a class="planet planet-c" href="https://www.keysight.com/us/en/home.html" target="_blank" rel="noopener" aria-label="Keysight Technologies">
-          <img src="./assets/keysight.png" alt="Keysight" loading="lazy" />
-        </a>
-      </div>
-      <div class="orbit orbit-4">
-        <a class="planet" href="https://www.cobionix.com/en/" target="_blank" rel="noopener" aria-label="Cobionix">
-          <img src="./assets/cobionix.png" alt="Cobionix" loading="lazy" />
-        </a>
-      </div>
-      <div class="orbit orbit-5">
-        <a class="planet" href="https://www.apple.com/" target="_blank" rel="noopener" aria-label="Apple">
-          <img src="./assets/apple.png" alt="Apple" loading="lazy" />
-        </a>
-      </div>
-    </div>
-  </section>
-  <hr class="section-divider" />
-  <!-- ===================== CONTACT ===================== -->
-  <section id="contact" class="container">
-    <h1 class="title">Contact</h1>
-    <div class="contact-info-upper-container">
-      <div class="contact-info-container">
-        <img src="./assets/email.png" class="icon contact-icon email-icon" alt="Email icon" />
-        <p><a href="mailto:m23qures@uwaterloo.ca">m23qures@uwaterloo.ca</a></p>
-      </div>
-      <div class="contact-info-container">
-        <img src="./assets/linkedin.png" class="icon contact-icon" alt="LinkedIn icon" />
-        <p><a href="https://www.linkedin.com/in/maaz-ahmad-046c/" target="_blank" rel="noopener">LinkedIn</a></p>
-      </div>
-    </div>
-  </section>
-  <footer class="container">
-    <p>© Maaz Qureshi. All rights reserved.</p>
-  </footer>
-  <script src="script.js"></script>
+  <!-- ===================== RESEARCH (MOVED AFTER ABOUT) ===================== -->
+  <section id="research" class="container">
+    <h1 class="title">Research</h1>
+
+    <!-- Profile shortcuts: GitHub + Google Scholar -->
+    <div class="profile-badges">
+      <a class="scholar-badge" href="https://github.com/Maaz-qureshi98" target="_blank" rel="noopener">
+        <img src="./assets/github.png" class="icon" alt="GitHub" />
+        <span>GitHub</span>
+      </a>
+
+    </div>
+
+    <div class="research-wrapper">
+      <!-- Physical AI: VLA & Diffusion Policy on Franka -->
+       
+
+      <!-- 0: Multimodal Learning: Physical AI Deployment -->
+      <div class="research-box" data-tags="robotics ai">
+        <div class="research-media has-video">
+          <a class="media-link" href="https://www.youtube.com/watch?v=uw-hooM_Wg0" target="_blank" rel="noopener" aria-label="Watch video: Multimodal Learning: Physical AI Deployment">
+            <img src="./assets/multimodal.png" class="project-thumb-lg" alt="Multimodal Learning: Physical AI Deployment with 7-DoF Manipulator" />
+          </a>
+        </div>
+        <div class="research-text">
+          <h2 class="project-title">Multimodal AI/ML Learning Deployment with 7-DoF Manipulator</h2>
+          <p class="project-desc justify">
+            Real-time RGB-D sensor-fused multimodal pipeline (VLM, pose estimation, object detection,
+            and semantic segmentation) built in C++ with NVIDIA CUDA, and quantized with TensorRT
+            (FP16, INT8) for asynchronous pipelines that maximize throughput.
+          </p>
+          <div class="project-btn-row">
+            <a class="mini-btn" href="https://www.youtube.com/watch?v=uw-hooM_Wg0" target="_blank" rel="noopener">Video</a>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- 1: CRADMap -->
+      <div class="research-box" data-tags="robotics ai">
+        <div class="research-media has-video">
+          <a class="media-link" href="https://www.youtube.com/watch?v=eTLxCY2rRMA" target="_blank" rel="noopener" aria-label="Watch video: CRADMap">
+            <img src="./assets/project1.png" class="project-thumb-lg" alt="CRADMap Project" />
+          </a>
+        </div>
+        <div class="research-text">
+          <h2 class="project-title">CRADMap: Applied Distributed Volumetric Mapping with 5G-Connected Multi-Robots and 4D Radar Perception</h2>
+          <p class="project-desc justify">
+            Distributed volumetric mapping integrating ORB-SLAM3 (front-end), TSDF–Octree fusion,
+            4D mmWave radar + RGB-D perception, and 5G offloading for real-time mapping under occlusions
+            and degraded visibility.
+          </p>
+          <div class="project-btn-row">
+            <a class="mini-btn" href="https://www.youtube.com/watch?v=eTLxCY2rRMA" target="_blank" rel="noopener">Video</a>
+            <a class="mini-btn" href="https://github.com/Maaz-qureshi98/CRADMap-Beyond-the-Visible" target="_blank" rel="noopener">GitHub</a>
+            <a class="mini-btn" href="https://arxiv.org/pdf/2503.00262" target="_blank" rel="noopener">Publication</a>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- 2: RAPTAR -->
+      <div class="research-box" data-tags="robotics ai">
+        <div class="research-media has-video">
+          <a class="media-link" href="https://www.youtube.com/watch?v=fgeb6k_P9mg" target="_blank" rel="noopener" aria-label="Watch video: RAPTAR">
+            <img src="./assets/project2.png" class="project-thumb-lg" alt="RAPTAR Project" />
+          </a>
+        </div>
+        <div class="research-text">
+          <h2 class="project-title">RAPTAR: Radar Radiation Pattern Acquisition through Automated Collaborative Robotics</h2>
+          <p class="project-desc justify">
+            Automated collaborative-robot framework using OMPL RRT-Connect and quaternion kinematics
+            for high-precision mmWave antenna radiation pattern measurement in 3D space.
+          </p>
+          <div class="project-btn-row">
+            <a class="mini-btn" href="https://www.youtube.com/watch?v=fgeb6k_P9mg" target="_blank" rel="noopener">Video</a>
+            <a class="mini-btn" href="https://github.com/Maaz-qureshi98/RAPTAR-Motion-Planning" target="_blank" rel="noopener">GitHub</a>
+            <a class="mini-btn" href="https://arxiv.org/pdf/2507.16988" target="_blank" rel="noopener">Publication</a>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- 3: NAO HRI -->
+      <div class="research-box" data-tags="ai robotics">
+        <div class="research-media">
+          <a class="media-link" href="https://drive.google.com/file/d/1IvIz7Xvnk-jjGcVKldO5CLgQ5YhUBckr/view" target="_blank" rel="noopener" aria-label="Open preprint: Humanoid Robotics Non-Verbal Gesture Learning">
+            <img src="./assets/project3.1.png" class="project-thumb-lg" alt="Humanoid Robotics Project" />
+          </a>
+        </div>
+        <div class="research-text">
+          <h2 class="project-title">Humanoid Robotics: Non-Verbal Gesture Learning</h2>
+          <p class="project-desc justify">
+            Integrated LLaMA 3 with gesture and vision sensing for real-time multimodal control of NAO robot,
+            enabling non-verbal HRI via IMU-based motion interpretation.
+          </p>
+          <div class="project-btn-row">
+            <a class="mini-btn" href="https://drive.google.com/file/d/1IvIz7Xvnk-jjGcVKldO5CLgQ5YhUBckr/view" target="_blank" rel="noopener">Preprint</a>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- 4: Swarm -->
+      <div class="research-box" data-tags="robotics">
+        <div class="research-media has-video">
+          <a class="media-link" href="https://youtu.be/-lVYkj_FrYI" target="_blank" rel="noopener" aria-label="Watch video: SWARM Autobots">
+            <img src="./assets/project4.png" class="project-thumb-lg" alt="Swarm Autobots Project" />
+          </a>
+        </div>
+        <div class="research-text">
+          <h2 class="project-title">SWARM Autobots</h2>
+          <p class="project-desc justify">
+            Developed synchronized control and formation algorithms for multi-robot UGV teams enabling coordinated navigation,
+            wireless peer-to-peer communication, and real-time trajectory execution.
+          </p>
+          <div class="project-btn-row">
+            <a class="mini-btn" href="https://youtu.be/-lVYkj_FrYI" target="_blank" rel="noopener">Video</a>
+            <a class="mini-btn" href="https://github.com/Maaz-qureshi98/Swarm-Autobots" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- 5: Dam inspection -->
+      <div class="research-box" data-tags="field robotics">
+        <div class="research-media">
+          <a class="media-link" href="https://drive.google.com/drive/folders/18bYmCwY1LIwICQbEdHR-Cqnino6fR8KQ" target="_blank" rel="noopener" aria-label="Open documents: Underwater Digital-Twin DAM Inspection">
+            <img src="./assets/project5.jpg" class="project-thumb-lg" alt="DAM Inspection Project" />
+          </a>
+        </div>
+        <div class="research-text">
+          <h2 class="project-title">Underwater Digital-Twin DAM Inspection Using ROV/AUV</h2>
+          <p class="project-desc justify">
+            Structure inspection of the NJHEP dam using multi-beam sonar, profiling sonar, and monochrome camera on ROVs/AUVs
+            over 18 km tethered operation, the largest inspection of its kind in Asia.
+          </p>
+          <div class="project-btn-row">
+            <a class="mini-btn" href="https://drive.google.com/drive/folders/18bYmCwY1LIwICQbEdHR-Cqnino6fR8KQ" target="_blank" rel="noopener">Documents</a>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- 6: Canal -->
+      <div class="research-box" data-tags="field robotics">
+        <div class="research-media">
+          <a class="media-link" href="https://drive.google.com/drive/folders/1DCBUf8P2L1ouxMgX6NgQNlcq-DcO5vRq" target="_blank" rel="noopener" aria-label="Open documents: Canal Crack-Propagation Inspection">
+            <img src="./assets/project6.jpg" class="project-thumb-lg" alt="Canal Inspection Project" />
+          </a>
+        </div>
+        <div class="research-text">
+          <h2 class="project-title">Canal Crack-Propagation Inspection Using ROV + Sonar</h2>
+          <p class="project-desc justify">
+            Integrated Oculus 750d sonar on a custom ROV frame and performed underwater crack-propagation analysis at 9m depth
+            and 2.3 m/s water velocity.
+          </p>
+          <div class="project-btn-row">
+            <a class="mini-btn" href="https://drive.google.com/drive/folders/1DCBUf8P2L1ouxMgX6NgQNlcq-DcO5vRq" target="_blank" rel="noopener">Documents</a>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- 7: Healthcare robot -->
+      <div class="research-box" data-tags="ai robotics">
+        <div class="research-media has-video">
+          <a class="media-link" href="https://drive.google.com/drive/folders/1-T06cVyxKgZP9MekK_Ysm3ULUgkmd1S9" target="_blank" rel="noopener" aria-label="Watch video: Autonomous Pill-Dispensing Healthcare Robot">
+            <img src="./assets/project7.jpg" class="project-thumb-lg" alt="Healthcare Robot Project" />
+          </a>
+        </div>
+        <div class="research-text">
+          <h2 class="project-title">Autonomous Pill-Dispensing Healthcare Robot (COVID-19)</h2>
+          <p class="project-desc justify">
+            Designed an autonomous robot integrating facial recognition, RFID-based navigation, and multi-pill dispensing
+            for safe patient-care workflows during COVID-19.
+          </p>
+          <div class="project-btn-row">
+            <a class="mini-btn" href="https://drive.google.com/drive/folders/1-T06cVyxKgZP9MekK_Ysm3ULUgkmd1S9" target="_blank" rel="noopener">Video</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- ===================== Journey ===================== -->
+  <section id="journey" class="container">
+    <h1 class="title">Journey</h1>
+
+    <div class="solar-system" aria-label="Career orbit: Bahria University, Abyss Solutions, University of Waterloo, Rogers and Keysight, Cobionix, Apple">
+      <div class="sun">
+        <span class="sun-label">ML &amp; Robotics</span>
+      </div>
+
+      <div class="orbit orbit-1">
+        <a class="planet" href="https://bahria.edu.pk/" target="_blank" rel="noopener" aria-label="Bahria University">
+          <img src="./assets/bahria_university.jpeg" alt="Bahria University" loading="lazy" />
+        </a>
+      </div>
+
+      <div class="orbit orbit-2">
+        <a class="planet" href="https://abysssolutions.co/" target="_blank" rel="noopener" aria-label="Abyss Solutions">
+          <img src="./assets/abyss.png" alt="Abyss Solutions" loading="lazy" />
+        </a>
+      </div>
+
+      <div class="orbit orbit-3">
+        <a class="planet planet-a" href="https://uwaterloo.ca/" target="_blank" rel="noopener" aria-label="University of Waterloo">
+          <img src="./assets/uwaterloo.jpeg" alt="University of Waterloo" loading="lazy" />
+        </a>
+        <a class="planet planet-b" href="https://www.rogers.com/" target="_blank" rel="noopener" aria-label="Rogers Communications">
+          <img src="./assets/rogers.png" alt="Rogers" loading="lazy" />
+        </a>
+        <a class="planet planet-c" href="https://www.keysight.com/us/en/home.html" target="_blank" rel="noopener" aria-label="Keysight Technologies">
+          <img src="./assets/keysight.png" alt="Keysight" loading="lazy" />
+        </a>
+      </div>
+
+      <div class="orbit orbit-4">
+        <a class="planet" href="https://www.cobionix.com/en/" target="_blank" rel="noopener" aria-label="Cobionix">
+          <img src="./assets/cobionix.png" alt="Cobionix" loading="lazy" />
+        </a>
+      </div>
+
+      <div class="orbit orbit-5">
+        <a class="planet" href="https://www.apple.com/" target="_blank" rel="noopener" aria-label="Apple">
+          <img src="./assets/apple.png" alt="Apple" loading="lazy" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact" class="container">
+    <h1 class="title">Contact</h1>
+
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" class="icon contact-icon email-icon" alt="Email icon" />
+        <p><a href="mailto:m23qures@uwaterloo.ca">m23qures@uwaterloo.ca</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" class="icon contact-icon" alt="LinkedIn icon" />
+        <p><a href="https://www.linkedin.com/in/maaz-ahmad-046c/" target="_blank" rel="noopener">LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="container">
+    <p>© Maaz Qureshi. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
+ 
